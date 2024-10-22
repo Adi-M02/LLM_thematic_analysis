@@ -130,6 +130,16 @@ ENV/
 env.bak/
 venv.bak/
 virt/
+bin/
+compiler_compat/
+conda-meta/
+etc/
+include/
+man/
+share/
+ssl/
+x86_64-conda-linux-gnu/
+x86_64-conda_cos7-linux-gnu/
 
 # Spyder project settings
 .spyderproject
