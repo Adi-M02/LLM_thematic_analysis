@@ -2,11 +2,11 @@ from pymongo import MongoClient
 import mongo_database as db
 
 
-AUTHORS = set()
-with open('data/authors.txt', 'r') as f:
-    for line in f:
-        AUTHORS.add(line.strip())
-BOTS = db.ignored_users
+# AUTHORS = set()
+# with open('data/authors.txt', 'r') as f:
+#     for line in f:
+#         AUTHORS.add(line.strip())
+# BOTS = db.ignored_users
 
 def list_databases():
     client = MongoClient()
@@ -111,26 +111,40 @@ def count_commenters(collection):
         print(f"Number of unique authors where is_post is False: {doc['unique_authors']}")
 
 def get_posts_in_subreddits(collection, subreddit_list):
-    pipeline = [
-        {
-            "$match": {
-                "is_post": True,
-                "subreddit": {"$in": subreddit_list},
-                "created_utc": {
-                    "$gte": 1609459200,  # January 1, 2021
-                    "$lte": 1672444799   # December 31, 2022 (end of day)
-                }
-            }
+    query = {
+        "is_post": True,
+        "subreddit": {"$in": subreddit_list},
+        "created_utc": {
+            "$gte": 1609459200,  # January 1, 2021
+            "$lte": 1672444799   # December 31, 2022 (end of day)
         }
+    }
+    posts = list(collection.find(query))
+    return posts
+
+def drop_collection(database, collection):
+    database.drop_collection(collection)
+
+def get_random_post(collection):
+    pipeline = [
+        {"$sample": {"size": 1}}
     ]
     cursor = collection.aggregate(pipeline)
-    return cursor
+    for post in cursor:
+        print("TITLE: ", post['title'])
+        print("SELFTEXT: ", post['selftext'])
+        if post['has_gist']:
+            print("GIST: ", post['gist'])
+
+def count_gists(collection):
+    num_entries = collection.count_documents({
+        "has_gist": True,
+    })
+    print(num_entries)
 
 if __name__ == "__main__":
     client = MongoClient()
     db = client['reddit']
-    collection = db['posts_and_comments']
-    get_posts_in_subreddits(collection, ["opiatesrecovery", "opiates"])
-
-
+    collection = db['gist_test']
+    get_random_post(collection)
     client.close()
