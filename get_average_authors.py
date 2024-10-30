@@ -66,7 +66,6 @@ if __name__ == "__main__":
     client = MongoClient()
     db = client['data']
     collection = db['author_submissions']
-    # print(list_average_authors(collection, OWR_LIST))
-    print_authors_posts_in_order(collection, 'xantafanta')
-    # print_posts_in_subreddit(collection, 'ColdCop', 10)
-# ['Bird_Man_Plz', 'darknetviagra', 'xantafanta', 'illFien', 'Charzane', 'SloppyBitcoins', 'autmnskyy', 'Geezyrider']
+    # print(list_average_authors(collection, OTOR_LIST))
+    # print_authors_posts_in_order(collection, 'hebruiser79')
+# ['ophelia0103', 'hannahfitched12', 'GratefulDanny', 'DryMouthMonster', 'hebruiser79']
