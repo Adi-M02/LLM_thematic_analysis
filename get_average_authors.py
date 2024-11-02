@@ -21,12 +21,6 @@ OR_SUBREDDITS = ['opiates', 'opiatechurch', 'poppytea', 'heroin', 'glassine', 'o
 
 IGNORED_USERS = db.ignored_users
 
-AUTHORS = set()
-with open('data/authors.txt', 'r') as f:
-    for line in f:
-        AUTHORS.add(line.strip())
-
-
 def list_average_authors(collection, user_list):
     pipeline = [
         {"$match": {
@@ -43,6 +37,24 @@ def list_average_authors(collection, user_list):
     ]
     return [obj['_id'] for  obj in list(collection.aggregate(pipeline))]
 
+def list_users_in_subreddit(collection, subreddit, threshold):
+    pipeline = [
+        {"$match": {
+            "is_post": True,
+            "subreddit": subreddit,
+            "author": {"$nin": IGNORED_USERS},
+            "selftext": {"$nin": ["", "[removed]"]}
+        }},
+        {"$group": {
+            "_id": "$author",
+            "count": {"$sum": 1}
+        }},
+        {"$match": {
+            "count": {"$gte": threshold, "$lt": 25}
+        }}
+    ]
+    return [obj['_id'] for obj in list(collection.aggregate(pipeline))]
+
 def write_authors_posts_in_order(collection, author):
     pipeline = [
         {"$match": {
@@ -56,7 +68,6 @@ def write_authors_posts_in_order(collection, author):
     with open(f"author_post_histories/{author}.txt", 'w') as f:
         cursor = collection.aggregate(pipeline)
         for doc in cursor:
-            print(doc)
             if doc['is_post']:
                 output = (
                     f"POST:\n"
@@ -69,27 +80,47 @@ def write_authors_posts_in_order(collection, author):
                     f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, "
                     f"BODY: {doc['body']}\n\n"
                 )      
-            # f.write(output)          
+            f.write(output)          
 
 
-# def print_author_post_and_comment_chain_in_order(collection, author):
-#     pipeline = [
-#         {"$match": {
-#             "author": author
-#         }},
+def print_author_post_and_comment_chain_in_order(collection, author):
+    pipeline = [
+        {"$match": {
+            "author": author
+        }},
         
-#         {"$sort": {
-#             "created_utc": 1
-#         }}
-#     ]
-#     cursor = collection.aggregate(pipeline)
-#     for doc in cursor:
+        {"$sort": {
+            "created_utc": 1
+        }}
+    ]
+    cursor = collection.aggregate(pipeline)
+    for doc in cursor:
 
-#         if doc['is_post']:
-#             print(f"POST:\nSUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, TITLE: {doc['title']}, POST BODY: {doc['selftext']}, URL: {doc['url']}\n\n\n\n")
-#         else:
+        if doc['is_post']:
+            print(f"POST:\nSUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, TITLE: {doc['title']}, POST BODY: {doc['selftext']}, URL: {doc['url']}\n\n\n\n")
+        else:
             
-#             print(f"COMMENT:\nSUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, BODY: {doc['body']}\n\n\n\n")    
+            print(f"COMMENT:\nSUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, BODY: {doc['body']}\n\n\n\n")    
+
+def print_author_full_post(collection, author):
+    pipeline = [
+        {"$match": {
+            "author": author
+        }},
+        
+        {"$sort": {
+            "created_utc": 1
+        }}
+    ]
+    cursor = collection.aggregate(pipeline)
+    for doc in cursor:
+        if doc['is_post']:
+            print(f"POST:\nSUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, TITLE: {doc['title']}, POST BODY: {doc['selftext']}, URL: {doc['url']}\n\n\n\n")
+            link_id = "t3_" + doc['id']
+            related_comments = collection.find({"link_id": link_id}).sort("created_utc", 1)
+            for related_doc in related_comments:
+                print(f"RELATED COMMENT:\nSUBREDDIT: {related_doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(related_doc['created_utc'])}, BODY: {related_doc['body']}\n\n\n\n")
+
 
 def print_posts_in_subreddit(collection, subreddit, sample_size=5):
     pipeline = [
@@ -162,4 +193,6 @@ if __name__ == "__main__":
     collection = db['posts_and_comments']
     # valid users to look at
     # 'eyeXpatch', 'BurnedToAshes', 'pymmit', 'jordan_boros', 'BattlinBro', 'verafast', 'PURPLEFLVCKO', 'tevablue', 'fentanyl_ferry', 'allusernamestaken55', 'TheHumanRace612', 'scumbagjohnny612'
-    write_authors_posts_in_order(collection, 'pymmit')
+    # print(list_users_in_subreddit(collection, 'opiatesrecovery', 5))
+    write_authors_posts_in_order(collection, 'krazikat')
+    # print_author_full_post(collection, 'JohnJoint')

@@ -170,3 +170,6 @@ def sample_user_list_in_subreddit_list_filtered(client, user_list, sample_size, 
         selftext = post['selftext']
         results.append(selftext)
     return preprocess_posts(results)
+
+if __name__ == "__main__":
+    pass
