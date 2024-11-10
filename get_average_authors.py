@@ -71,7 +71,7 @@ def write_authors_posts_in_order(collection, author):
             if doc['is_post']:
                 output = (
                     f"POST:\n"
-                    f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, "
+                    f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, # COMMENTS: {doc['num_comments']}, SCORE: {doc['score']}\n"
                     f"TITLE: {doc['title']}, POST BODY: {doc['selftext']}, PERMALINK: {doc['permalink']}\n\n"
                 )
             else:
@@ -194,5 +194,5 @@ if __name__ == "__main__":
     # valid users to look at
     # 'eyeXpatch', 'BurnedToAshes', 'pymmit', 'jordan_boros', 'BattlinBro', 'verafast', 'PURPLEFLVCKO', 'tevablue', 'fentanyl_ferry', 'allusernamestaken55', 'TheHumanRace612', 'scumbagjohnny612'
     # print(list_users_in_subreddit(collection, 'opiatesrecovery', 5))
-    write_authors_posts_in_order(collection, 'krazikat')
+    write_authors_posts_in_order(collection, 'Subutexas-Ranger')
     # print_author_full_post(collection, 'JohnJoint')
