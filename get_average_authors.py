@@ -55,17 +55,18 @@ def list_users_in_subreddit(collection, subreddit, threshold):
     ]
     return [obj['_id'] for obj in list(collection.aggregate(pipeline))]
 
-def write_authors_posts_in_order(collection, author):
+def write_authors_posts_in_order(collection, output_folder, author):
     pipeline = [
         {"$match": {
-            "author": author
+            "author": author, 
+            "subreddit": {"$in": OR_SUBREDDITS}
         }},
         
         {"$sort": {
             "created_utc": 1
         }}
     ]
-    with open(f"author_post_histories/{author}.txt", 'w') as f:
+    with open(f"{output_folder}/{author}.txt", 'w') as f:
         cursor = collection.aggregate(pipeline)
         for doc in cursor:
             if doc['is_post']:
@@ -77,7 +78,7 @@ def write_authors_posts_in_order(collection, author):
             else:
                 output = (
                     f"COMMENT:\n"
-                    f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, "
+                    f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, SCORE: {doc['score']}\n"
                     f"BODY: {doc['body']}\n\n"
                 )      
             f.write(output)          
@@ -194,5 +195,4 @@ if __name__ == "__main__":
     # valid users to look at
     # 'eyeXpatch', 'BurnedToAshes', 'pymmit', 'jordan_boros', 'BattlinBro', 'verafast', 'PURPLEFLVCKO', 'tevablue', 'fentanyl_ferry', 'allusernamestaken55', 'TheHumanRace612', 'scumbagjohnny612'
     # print(list_users_in_subreddit(collection, 'opiatesrecovery', 5))
-    write_authors_posts_in_order(collection, 'Subutexas-Ranger')
-    # print_author_full_post(collection, 'JohnJoint')
+    write_authors_posts_in_order(collection, 'influence/OR_influencial_users', 'dori_88')

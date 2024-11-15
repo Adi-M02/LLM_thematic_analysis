@@ -1,0 +1,328 @@
+POST:
+SUBREDDIT: opiates, TIME: 2018-01-10 08:40:32, # COMMENTS: 33, SCORE: 66
+TITLE: 😎, POST BODY: , PERMALINK: /r/opiates/comments/7pfz02/_/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-01-10 09:30:41, # COMMENTS: 68, SCORE: 159
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/7pgaea/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-01-10 14:46:49, # COMMENTS: 14, SCORE: 81
+TITLE: My life, POST BODY: , PERMALINK: /r/opiates/comments/7pilb2/my_life/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-01-12 05:30:41, # COMMENTS: 9, SCORE: 51
+TITLE: It's payday, POST BODY: , PERMALINK: /r/opiates/comments/7pw0be/its_payday/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-01-12 06:31:33, # COMMENTS: 28, SCORE: 186
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/7pwa5i/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-02-03 19:44:22, # COMMENTS: 11, SCORE: 105
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/7v3s1y/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-03-21 09:25:48, # COMMENTS: 14, SCORE: 70
+TITLE: So much fun weeee, POST BODY: , PERMALINK: /r/opiates/comments/862gvy/so_much_fun_weeee/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-03-23 15:59:28, # COMMENTS: 12, SCORE: 154
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/86o3dq/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-03-24 08:19:11, # COMMENTS: 13, SCORE: 187
+TITLE: And away....we....GO, POST BODY: , PERMALINK: /r/opiates/comments/86syir/and_awaywego/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-03-29 07:08:14, # COMMENTS: 2, SCORE: 0
+TITLE: Super cool people bus, POST BODY: , PERMALINK: /r/opiates/comments/880q5x/super_cool_people_bus/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-05-14 06:39:51, # COMMENTS: 38, SCORE: 325
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/8jbk44/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-05-14 06:49:52, # COMMENTS: 20, SCORE: 213
+TITLE: Who are we kidding, POST BODY: , PERMALINK: /r/opiates/comments/8jbm1x/who_are_we_kidding/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-05-16 17:31:11, # COMMENTS: 16, SCORE: 172
+TITLE: 😭, POST BODY: , PERMALINK: /r/opiates/comments/8jz4yn/_/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-05-23 14:45:51, # COMMENTS: 18, SCORE: 14
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/8lmb48/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-05-24 15:35:53, # COMMENTS: 10, SCORE: 190
+TITLE: Atreyu!, POST BODY: , PERMALINK: /r/opiates/comments/8lvy2v/atreyu/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-11 11:11:34, # COMMENTS: 0, SCORE: 30
+TITLE: 1 out of 3 ain't bad, POST BODY: , PERMALINK: /r/opiates/comments/8qartt/1_out_of_3_aint_bad/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-18 08:22:51, # COMMENTS: 24, SCORE: 200
+TITLE: Omw, POST BODY: , PERMALINK: /r/opiates/comments/8rzgoh/omw/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-19 10:57:20, # COMMENTS: 3, SCORE: 0
+TITLE: Dammit man, POST BODY: , PERMALINK: /r/opiates/comments/8s9z0z/dammit_man/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-23 09:03:53, # COMMENTS: 65, SCORE: 109
+TITLE: Real talk, POST BODY: , PERMALINK: /r/opiates/comments/8ta4kb/real_talk/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-23 12:10:33, # COMMENTS: 11, SCORE: 93
+TITLE: I know I'm excited hbu?, POST BODY: , PERMALINK: /r/opiates/comments/8tbd0k/i_know_im_excited_hbu/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-25 03:52:19, # COMMENTS: 33, SCORE: 232
+TITLE: Love you grandma, POST BODY: , PERMALINK: /r/opiates/comments/8tozf9/love_you_grandma/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-27 20:47:29, # COMMENTS: 5, SCORE: 1
+TITLE: Fast drugs are for losers, POST BODY: , PERMALINK: /r/opiates/comments/8ufc99/fast_drugs_are_for_losers/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-28 15:50:26, # COMMENTS: 25, SCORE: 93
+TITLE: Lol, POST BODY: , PERMALINK: /r/opiates/comments/8una3f/lol/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-06-30 08:47:49, # COMMENTS: 8, SCORE: 78
+TITLE: The size of a Volkswagen, POST BODY: , PERMALINK: /r/opiates/comments/8v1yb3/the_size_of_a_volkswagen/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-04 07:55:12, # COMMENTS: 4, SCORE: 22
+TITLE: Happy 4th fam, POST BODY: , PERMALINK: /r/opiates/comments/8w1fds/happy_4th_fam/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-04 10:42:22, # COMMENTS: 69, SCORE: 637
+TITLE: Yuh, POST BODY: , PERMALINK: /r/opiates/comments/8w2kn7/yuh/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-12 08:48:09, # COMMENTS: 6, SCORE: 20
+TITLE: *Angels singing*, POST BODY: , PERMALINK: /r/opiates/comments/8y9wyi/angels_singing/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-14 06:16:55, # COMMENTS: 23, SCORE: 204
+TITLE: Sigh, POST BODY: , PERMALINK: /r/opiates/comments/8ysl66/sigh/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-16 07:21:30, # COMMENTS: 22, SCORE: 63
+TITLE: Guess I dont need to quit after all!, POST BODY: , PERMALINK: /r/opiates/comments/8zagb4/guess_i_dont_need_to_quit_after_all/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-17 10:25:11, # COMMENTS: 45, SCORE: 198
+TITLE: I am a man of culture as well, POST BODY: , PERMALINK: /r/opiates/comments/8zm29k/i_am_a_man_of_culture_as_well/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-18 15:52:09, # COMMENTS: 0, SCORE: 6
+TITLE: Truth, POST BODY: , PERMALINK: /r/opiates/comments/8zzbgr/truth/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-18 15:59:59, # COMMENTS: 7, SCORE: 60
+TITLE: Truth, POST BODY: , PERMALINK: /r/opiates/comments/8zzdtw/truth/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-23 06:34:16, # COMMENTS: 28, SCORE: 157
+TITLE: God mode enabled, POST BODY: , PERMALINK: /r/opiates/comments/916a9a/god_mode_enabled/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-24 04:40:39, # COMMENTS: 5, SCORE: 41
+TITLE: Treat yoself, POST BODY: , PERMALINK: /r/opiates/comments/91fxyi/treat_yoself/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-24 04:41:25, # COMMENTS: 6, SCORE: 81
+TITLE: My chills are multiplying, POST BODY: , PERMALINK: /r/opiates/comments/91fy3b/my_chills_are_multiplying/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-24 09:47:41, # COMMENTS: 12, SCORE: 118
+TITLE: Its like you know me so well, POST BODY: , PERMALINK: /r/opiates/comments/91i0tz/its_like_you_know_me_so_well/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-25 17:12:23, # COMMENTS: 0, SCORE: 0
+TITLE: Ded, POST BODY: , PERMALINK: /r/opiates/comments/91wf04/ded/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-07-30 10:08:33, # COMMENTS: 71, SCORE: 461
+TITLE: Issa wife, POST BODY: , PERMALINK: /r/opiates/comments/934urk/issa_wife/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-08-15 04:00:04, # COMMENTS: 16, SCORE: 107
+TITLE: Unfriended, POST BODY: , PERMALINK: /r/opiates/comments/97gqmp/unfriended/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-08-15 04:00:36, # COMMENTS: 35, SCORE: 195
+TITLE: Doin a big relate, POST BODY: , PERMALINK: /r/opiates/comments/97gqqb/doin_a_big_relate/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-08-16 15:01:41, # COMMENTS: 10, SCORE: 18
+TITLE: Real talk, POST BODY: , PERMALINK: /r/opiates/comments/97vn0g/real_talk/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-08-19 11:07:53, # COMMENTS: 8, SCORE: 44
+TITLE: Mmmm, POST BODY: , PERMALINK: /r/opiates/comments/98laiz/mmmm/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-09-06 06:52:23, # COMMENTS: 12, SCORE: 34
+TITLE: Dont let your dreams be dreams, POST BODY: , PERMALINK: /r/opiates/comments/9dhqm1/dont_let_your_dreams_be_dreams/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-09-27 09:28:21, # COMMENTS: 15, SCORE: 67
+TITLE: Yall got anymore lamp?, POST BODY: , PERMALINK: /r/opiates/comments/9jdc75/yall_got_anymore_lamp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-10-11 10:25:25, # COMMENTS: 91, SCORE: 341
+TITLE: Whelp, POST BODY: , PERMALINK: /r/opiates/comments/9naxj9/whelp/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-10-20 11:18:51, # COMMENTS: 12, SCORE: 33
+TITLE: Lol, POST BODY: , PERMALINK: /r/opiates/comments/9pvenw/lol/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-10-22 06:36:41, # COMMENTS: 3, SCORE: 39
+TITLE: Same, POST BODY: , PERMALINK: /r/opiates/comments/9qczpw/same/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-10-25 08:23:17, # COMMENTS: 5, SCORE: 64
+TITLE: Grrr, POST BODY: , PERMALINK: /r/opiates/comments/9ra998/grrr/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-10-29 20:53:26, # COMMENTS: 16, SCORE: 116
+TITLE: Earl had to die, POST BODY: , PERMALINK: /r/opiates/comments/9sjm2o/earl_had_to_die/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-11-05 10:22:57, # COMMENTS: 20, SCORE: 66
+TITLE: Where's the lie 👀, POST BODY: , PERMALINK: /r/opiates/comments/9uexb0/wheres_the_lie/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-11-21 10:27:38, # COMMENTS: 25, SCORE: 264
+TITLE: Sheeiioott, POST BODY: , PERMALINK: /r/opiates/comments/9z4otr/sheeiioott/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-11-22 19:34:19, # COMMENTS: 9, SCORE: 102
+TITLE: Tryptophan i swear, POST BODY: , PERMALINK: /r/opiates/comments/9zjwu8/tryptophan_i_swear/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-12-07 16:36:14, # COMMENTS: 44, SCORE: 348
+TITLE: ISSA WIFE, POST BODY: , PERMALINK: /r/opiates/comments/a44xmi/issa_wife/
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-07 16:36:45, SCORE: 60
+BODY: Let's be honest i got it in a gumball machine
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-08 08:11:15, SCORE: 1
+BODY: Idk what that means lol
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-12-08 08:20:13, # COMMENTS: 42, SCORE: 256
+TITLE: Whenever someone asks me to go drinking, POST BODY: , PERMALINK: /r/opiates/comments/a4b26z/whenever_someone_asks_me_to_go_drinking/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-12-12 04:52:01, # COMMENTS: 33, SCORE: 335
+TITLE: 😂, POST BODY: , PERMALINK: /r/opiates/comments/a5h4gk/_/
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-12 04:52:49, SCORE: 1
+BODY: Thats literally what happened to me lol
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-12 17:17:16, SCORE: 1
+BODY: How long the high lasts
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-12-13 04:54:46, # COMMENTS: 13, SCORE: 90
+TITLE: I love them, POST BODY: , PERMALINK: /r/opiates/comments/a5shvu/i_love_them/
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-13 06:23:26, SCORE: 3
+BODY: Same i love them
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-13 06:43:16, SCORE: 8
+BODY: Idk because non menthols are gross
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-12-20 20:19:49, # COMMENTS: 2, SCORE: 17
+TITLE: Story of my life, POST BODY: , PERMALINK: /r/opiates/comments/a85d0h/story_of_my_life/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-12-25 18:31:56, # COMMENTS: 12, SCORE: 68
+TITLE: Merry Christmas, POST BODY: , PERMALINK: /r/opiates/comments/a9jtqp/merry_christmas/
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-28 16:14:08, SCORE: -1
+BODY: Snorting? What a waste
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-28 17:02:45, SCORE: -1
+BODY: Big mad hahah i dont do drugs anymore because i wanted to buy a car instead of taking the bus 
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-28 17:03:43, SCORE: 1
+BODY: I bet all those cool drugs you got would buy a sweet ride
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-28 17:18:13, SCORE: 1
+BODY: Having friends is a nice addition as well.
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-28 17:20:43, SCORE: 2
+BODY: Honestly i went to needles because my sinus collapsed from spending 10 years ingesting fillers from baking soda to mystery powder.  I guess its easier to maintain the illusion of control when you're snorting it.
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-29 06:06:56, SCORE: 1
+BODY: Depending on how much you snort a day i noticed no difference lol
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2018-12-29 06:10:55, SCORE: 1
+BODY: You took it the wrong way my dude. You're scientifically wasting the drugs because your sinus absorbs significantly less plus the fillers dont get absorbed and settle in your lungs depending on what it is.  I can tell that this is like your little stage of attention and you're not used to having conversations with people disagreeing with you over simple things lol its ok to not agree remember that 🙄
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-01-01 08:57:13, # COMMENTS: 37, SCORE: 310
+TITLE: Happy New Year, POST BODY: , PERMALINK: /r/opiates/comments/abiqh4/happy_new_year/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-01-12 14:02:54, # COMMENTS: 33, SCORE: 128
+TITLE: It's a fine art, POST BODY: , PERMALINK: /r/opiates/comments/afb16l/its_a_fine_art/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-01-12 21:40:14, # COMMENTS: 18, SCORE: 106
+TITLE: I dream a dream, POST BODY: , PERMALINK: /r/opiates/comments/affdrv/i_dream_a_dream/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-02-01 04:01:47, # COMMENTS: 44, SCORE: 326
+TITLE: That's love, POST BODY: , PERMALINK: /r/opiates/comments/am0juz/thats_love/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-02-16 07:44:07, # COMMENTS: 35, SCORE: 153
+TITLE: 💯, POST BODY: , PERMALINK: /r/opiates/comments/ar8vwh/_/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-08 11:05:45, # COMMENTS: 24, SCORE: 68
+TITLE: 💯, POST BODY: , PERMALINK: /r/opiates/comments/ayslal/_/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-26 17:57:51, # COMMENTS: 1, SCORE: 18
+TITLE: OOF, POST BODY: , PERMALINK: /r/opiates/comments/b5wmgy/oof/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-04-09 19:52:33, # COMMENTS: 4, SCORE: 15
+TITLE: Dragon Ball Z(ubsolv), POST BODY: , PERMALINK: /r/opiates/comments/bbftan/dragon_ball_zubsolv/
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2019-06-18 14:39:49, SCORE: 1
+BODY: We have one under Dank Recovery Support
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2019-06-25 08:24:37, SCORE: 1
+BODY: How are you doing
+
+COMMENT:
+SUBREDDIT: opiates, TIME: 2022-02-27 09:26:32, SCORE: 1
+BODY: Why do you need to get well?  Usually its dudes offering straight guys head for get well money.
+

@@ -1,0 +1,32 @@
+POST:
+SUBREDDIT: opiates, TIME: 2016-09-16 06:43:36, # COMMENTS: 5, SCORE: 2
+TITLE: Obama administration to launch new effort on heroin crisis, POST BODY: , PERMALINK: /r/opiates/comments/531gzc/obama_administration_to_launch_new_effort_on/
+
+POST:
+SUBREDDIT: opiates, TIME: 2017-10-13 06:54:00, # COMMENTS: 0, SCORE: 4
+TITLE: The Bronx's Quiet, Brutal War With Opioids, POST BODY: , PERMALINK: /r/opiates/comments/764a2q/the_bronxs_quiet_brutal_war_with_opioids/
+
+POST:
+SUBREDDIT: opiates, TIME: 2017-10-19 06:24:12, # COMMENTS: 4, SCORE: 3
+TITLE: The Opioid Epidemic Is Changing Too Fast for Any Solutions to Stick, POST BODY: , PERMALINK: /r/opiates/comments/77drdv/the_opioid_epidemic_is_changing_too_fast_for_any/
+
+POST:
+SUBREDDIT: opiates, TIME: 2017-11-13 06:14:05, # COMMENTS: 2, SCORE: 4
+TITLE: How The Opioid Crisis Is Affecting Native Americans, POST BODY: , PERMALINK: /r/opiates/comments/7cmp1p/how_the_opioid_crisis_is_affecting_native/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-02-06 12:30:24, # COMMENTS: 20, SCORE: 7
+TITLE: Trump Has Given Victims of the Opioid Crisis Nothing But Contempt, POST BODY: , PERMALINK: /r/opiates/comments/7vpeyz/trump_has_given_victims_of_the_opioid_crisis/
+
+POST:
+SUBREDDIT: opiates, TIME: 2018-02-13 09:20:36, # COMMENTS: 2, SCORE: 9
+TITLE: U.S. Opioid Crisis Has Cost $1 Trillion Since 2001, Economists Say, POST BODY: , PERMALINK: /r/opiates/comments/7xa2ob/us_opioid_crisis_has_cost_1_trillion_since_2001/
+
+POST:
+SUBREDDIT: recovery, TIME: 2020-03-11 17:17:25, # COMMENTS: 25, SCORE: 33
+TITLE: Alcoholics Anonymous vs. Other Approaches: The Evidence Is Now In -- An updated review shows it performs better than other common treatments and is less expensive., POST BODY: , PERMALINK: /r/recovery/comments/fh5itz/alcoholics_anonymous_vs_other_approaches_the/
+
+POST:
+SUBREDDIT: recovery, TIME: 2020-03-17 15:05:57, # COMMENTS: 2, SCORE: 15
+TITLE: Addiction in Isolation, POST BODY: , PERMALINK: /r/recovery/comments/fkc1u1/addiction_in_isolation/
+

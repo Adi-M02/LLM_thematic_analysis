@@ -1,0 +1,44 @@
+POST:
+SUBREDDIT: opiates, TIME: 2019-02-01 15:38:14, # COMMENTS: 37, SCORE: 600
+TITLE: Hate when this happens, POST BODY: , PERMALINK: /r/opiates/comments/am74d0/hate_when_this_happens/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-02-16 11:10:07, # COMMENTS: 190, SCORE: 886
+TITLE: No replacement, POST BODY: , PERMALINK: /r/opiates/comments/arapp7/no_replacement/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-02-21 15:28:11, # COMMENTS: 84, SCORE: 571
+TITLE: 10/10 I would try, POST BODY: , PERMALINK: /r/opiates/comments/at8ppb/1010_i_would_try/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-02 08:40:57, # COMMENTS: 73, SCORE: 687
+TITLE: Must be 🔥, POST BODY: , PERMALINK: /r/opiates/comments/awiddh/must_be/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-07 12:00:32, # COMMENTS: 42, SCORE: 962
+TITLE: Always some long drawn out process, POST BODY: , PERMALINK: /r/opiates/comments/ayfk2e/always_some_long_drawn_out_process/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-09 09:16:53, # COMMENTS: 114, SCORE: 473
+TITLE: Hopefully you can’t relate, POST BODY: , PERMALINK: /r/opiates/comments/az4gqn/hopefully_you_cant_relate/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-11 10:01:07, # COMMENTS: 145, SCORE: 594
+TITLE: Medium Rare, POST BODY: , PERMALINK: /r/opiates/comments/azufnd/medium_rare/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-12 02:00:56, # COMMENTS: 31, SCORE: 452
+TITLE: 🥴, POST BODY: , PERMALINK: /r/opiates/comments/b04pvp/_/
+
+POST:
+SUBREDDIT: opiates, TIME: 2019-03-27 21:35:02, # COMMENTS: 48, SCORE: 792
+TITLE: Revenge Hack, POST BODY: , PERMALINK: /r/opiates/comments/b6dddx/revenge_hack/
+
+POST:
+SUBREDDIT: opiatechurch, TIME: 2019-05-15 21:04:50, # COMMENTS: 3, SCORE: 88
+TITLE: On point, POST BODY: , PERMALINK: /r/OpiateChurch/comments/bp6ub0/on_point/
+
+POST:
+SUBREDDIT: opiatechurch, TIME: 2019-07-16 12:33:04, # COMMENTS: 4, SCORE: 141
+TITLE: Think bigger, POST BODY: , PERMALINK: /r/OpiateChurch/comments/ce07qo/think_bigger/
+
