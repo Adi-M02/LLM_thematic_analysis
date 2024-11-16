@@ -55,7 +55,7 @@ def list_users_in_subreddit(collection, subreddit, threshold):
     ]
     return [obj['_id'] for obj in list(collection.aggregate(pipeline))]
 
-def write_authors_posts_in_order(collection, output_folder, author):
+def write_authors_posts_in_subreddit_list_in_order(collection, output_folder, author):
     pipeline = [
         {"$match": {
             "author": author, 
@@ -81,7 +81,49 @@ def write_authors_posts_in_order(collection, output_folder, author):
                     f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, SCORE: {doc['score']}\n"
                     f"BODY: {doc['body']}\n\n"
                 )      
-            f.write(output)          
+            f.write(output)    
+
+def write_authors_posts_and_comments_in_order(collection, output_folder, author):
+    pipeline = [
+        {"$match": {
+            "author": author
+        }},
+        
+        {"$sort": {
+            "created_utc": 1
+        }}
+    ]
+    with open(f"{output_folder}/{author}.txt", 'w') as f:
+        cursor = collection.aggregate(pipeline)
+        for doc in cursor:
+            if doc['is_post']:
+                output = (
+                    f"POST:\n"
+                    f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, # COMMENTS: {doc['num_comments']}, SCORE: {doc['score']}\n"
+                    f"TITLE: {doc['title']}, POST BODY: {doc['selftext']}, PERMALINK: {doc['permalink']}\n\n"
+                )
+            else:
+                output = (
+                    f"COMMENT:\n"
+                    f"SUBREDDIT: {doc['subreddit']}, TIME: {datetime.datetime.fromtimestamp(doc['created_utc'])}, SCORE: {doc['score']}\n"
+                    f"BODY: {doc['body']}\n\n"
+                )      
+            f.write(output) 
+
+def count_user_posts_in_subreddits(collection, author):
+    pipeline = [
+        {"$match": {
+            "author": author
+        }},
+        {"$group": {
+            "_id": "$subreddit",
+            "count": {"$sum": 1}
+        }}
+    ]
+    result = list(collection.aggregate(pipeline))
+    result.sort(key=lambda x: x['count'], reverse=True)
+    return result
+
 
 
 def print_author_post_and_comment_chain_in_order(collection, author):
@@ -195,4 +237,5 @@ if __name__ == "__main__":
     # valid users to look at
     # 'eyeXpatch', 'BurnedToAshes', 'pymmit', 'jordan_boros', 'BattlinBro', 'verafast', 'PURPLEFLVCKO', 'tevablue', 'fentanyl_ferry', 'allusernamestaken55', 'TheHumanRace612', 'scumbagjohnny612'
     # print(list_users_in_subreddit(collection, 'opiatesrecovery', 5))
-    write_authors_posts_in_order(collection, 'influence/OR_influencial_users', 'dori_88')
+    # write_authors_posts_and_comments_in_order(collection, 'influence/OR_influencial_users/all_subreddits', 'MetroMaker')
+    print(count_user_posts_in_subreddits(collection, 'MetroMaker'))
