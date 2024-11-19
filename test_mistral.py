@@ -65,7 +65,7 @@ def RBIC_mistral(model, tokenizer, device, title, post):
             log_file.write(f"Error: {e}\n")
         return False
 
-    #fifth prompt
+    #fifth promptitle = html.unescape(title)
     messages.append(UserMessage(content=f"Generate a reasonable and clear one sentence causal gist without specifics based on 'Cause': '{generated_cause}' and 'Effect': '{generated_effect}' and your understanding of the post with the cause-effect relationship. Only provide the sentence."))
     completion_request = ChatCompletionRequest(messages=messages)
     tokens = tokenizer.encode_chat_completion(completion_request).tokens
