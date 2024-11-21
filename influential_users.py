@@ -39,6 +39,25 @@ def write_user_upvotes(collection, output):
     user_upvotes = {doc["_id"]: doc["total_score"] for doc in collection.aggregate(pipeline)}
     write_dict_to_csv(user_upvotes, output, ["author", "upvotes"])
 
+def write_user_num_commented(collection, output):
+    pipeline = [
+        {
+            "$match": {
+                "subreddit": {"$in": OR_SUBREDDITS}
+            }
+        },
+        {
+            "$group": {
+                "_id": "$author",
+                "total_score": {"$sum": "$num_comments"}
+            }
+        }
+    ]
+
+    # Execute the pipeline
+    user_upvotes = {doc["_id"]: doc["total_score"] for doc in collection.aggregate(pipeline)}
+    write_dict_to_csv(user_upvotes, output, ["author", "upvotes"])
+
 def write_user_upvotes_by_subreddit(collection, subreddit, output):
     pipeline = [
         {
@@ -59,10 +78,32 @@ def write_user_upvotes_by_subreddit(collection, subreddit, output):
     user_upvotes = dict(sorted(user_upvotes.items(), key=lambda item: item[1], reverse=True))
     write_dict_to_csv(user_upvotes, output, ["author", "upvotes"])
 
+def write_user_upvotes_per_post(collection, subreddit_list, output):
+    pipeline = [
+        {
+            "$match": {
+                "subreddit": {"$in": subreddit_list}
+            }
+        },
+        {
+            "$group": {
+                "_id": "$author",
+                "total_score": {"$sum": "$score"},
+                "num_posts": {"$sum": 1}
+            }
+        }
+    ]
+
+    # Execute the pipeline
+    user_upvotes = {doc["_id"]: doc["total_score"]/doc["num_posts"] for doc in collection.aggregate(pipeline)}
+    user_upvotes = dict(sorted(user_upvotes.items(), key=lambda item: item[1], reverse=True))
+    write_dict_to_csv(user_upvotes, output, ["author", "upvotes_per_post"])
+
 
 if __name__ == "__main__":
     client = MongoClient()
     db = client['reddit']
     collection = db['posts_only']
-    for subreddit in OPIATE_SUBREDDITS:
-        write_user_upvotes_by_subreddit(collection, subreddit, f"influence/user_upvotes_OR_subreddits/opiate_subreddits/{subreddit}.csv")
+    # for subreddit in OPIATE_SUBREDDITS:
+    #     write_user_upvotes_by_subreddit(collection, subreddit, f"influence/user_upvotes_OR_subreddits/opiate_subreddits/{subreddit}.csv")
+    write_user_upvotes_per_post(collection, ['opiates'], "influence/user_upvotes_OR_subreddits/opiate_upvotes_per_post.csv")

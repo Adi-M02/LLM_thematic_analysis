@@ -1,0 +1,12 @@
+"Model name llama3.2-vision-0temp"
+FROM llama3.2-vision:latest
+TEMPLATE """{{- range $index, $_ := .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
+
+{{ .Content }}
+{{- if gt (len (slice $.Messages $index)) 1 }}<|eot_id|>
+{{- else if ne .Role "assistant" }}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+{{ end }}
+{{- end }}"""
+PARAMETER temperature 0
+PARAMETER top_p 0.9
