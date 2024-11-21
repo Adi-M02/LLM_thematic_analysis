@@ -34,10 +34,10 @@ def parse_csv(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate
                 title, post = process_post_field(row['Post'])
                 post = html.unescape(post)
                 title = html.unescape(title)
-                posts_and_titles.append((post_id, post, title, state_label_to_string(int(state_label))))
+                posts_and_titles.append((post_id, post, title, state_label_to_string(int(state_label)), row['incorrect days clean']))
             except:
                 title = html.unescape(process_post_field(row['Post']))
-                posts_and_titles.append((post_id, None, title, state_label_to_string(int(state_label))))
+                posts_and_titles.append((post_id, None, title, state_label_to_string(int(state_label)), row['incorrect days clean']))
             question = row['question']
             incorrect_days_clean = row['incorrect days clean']
             tense = row['tense']

@@ -1,0 +1,63 @@
+hallucinations: 3
+true encodings: 0: 919, 1: 75
+predicted encodings: 0: 578, 1: 416
+accuracy: 0.6267605633802817
+f1 macro: 0.4982850970100418
+precision macro: 0.5591396060686719
+recall macro: 0.7063112078346028
+f1 weighted: 0.7138582453529493
+precision weighted: 0.9114364453958246
+recall weighted: 0.6267605633802817
+model: llama3.2-vision-0temp
+prompt: 
+"messages": [
+    {
+        "role": "system",
+        "content": "You are participating in an academic research study focused on posts about opiate use on Reddit. Your task is to classify posts into two categories based on whether the number of days clean is explicitly mentioned. Strictly follow the rules provided and respond with only '0' or '1'. Do not include reasoning, explanations, or additional text in your responses."
+    },
+    {
+        "role": "user",
+        "content": f"""Based on the following inputs:
+Post: {post}
+Title: {title}
+State label: {state_label}
+
+Follow these rules to classify the post:
+
+1. If the state label is 'use', respond with '0'.
+
+2. If the post includes a single, clear number of current days clean (e.g., 'I have been clean for 30 days'), respond with '0'.
+
+3. If the post does not mention days clean, mentions multiple numbers of days clean, includes vague terms (e.g., 'a few days', 'some time'), or the number of days clean is unclear, respond with '1'.
+
+Note: Ignore mentions of future intentions (e.g., 'I will be clean for 30 days') or past periods of being clean (e.g., 'I was clean for 30 days last year') unless they state the current number of days clean.
+
+Respond with exactly one digit: '0' or '1'. Do not include any other text."""
+    }
+], 
+"messages": [
+    {
+        "role": "system",
+        "content": "You are participating in an academic research study focused on posts about opiate use on Reddit. Your task is to classify post titles into two categories based on whether the number of days clean is explicitly mentioned. Strictly follow the rules provided and respond with only '0' or '1'. Do not include reasoning, explanations, or additional text in your responses."
+    },
+    {
+        "role": "user",
+        "content": f"""Based on the following inputs:
+Post title: {title}
+State label: {state_label}
+
+Note: Only the post title is available; there is no additional post content.
+
+Follow these rules to classify the post:
+
+1. **Priority Rule**: If the state label is 'use', respond with '0'.
+
+2. If the post title includes a single, clear number of current days clean (e.g., 'I have been clean for 30 days'), respond with '0'.
+
+3. If the post title does not mention days clean, mentions multiple numbers of days clean, includes vague terms (e.g., 'a few days', 'some time'), uses metaphorical language, or the number of days clean is unclear, respond with '1'.
+
+Note: Ignore mentions of future intentions (e.g., 'I will be clean for 30 days') or past periods of being clean (e.g., 'I was clean for 30 days last year') unless they state the current number of days clean.
+
+Respond with exactly one digit: '0' or '1'. Do not include any other text."""
+    }
+]
