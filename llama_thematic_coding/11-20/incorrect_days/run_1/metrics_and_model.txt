@@ -9,7 +9,7 @@ f1 weighted: 0.7138582453529493
 precision weighted: 0.9114364453958246
 recall weighted: 0.6267605633802817
 model: llama3.2-vision-0temp
-prompt: 
+prompt(s): 
 "messages": [
     {
         "role": "system",

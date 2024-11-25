@@ -1,0 +1,10 @@
+hallucinations: 0
+true encodings: 0: 0, 1: 0
+predicted encodings: 0: 0, 1: 0
+accuracy: nan
+f1 macro: nan
+precision macro: nan
+recall macro: nan
+f1 weighted: nan
+precision weighted: nan
+recall weighted: nan
