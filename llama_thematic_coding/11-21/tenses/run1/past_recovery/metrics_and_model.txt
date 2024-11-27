@@ -17,3 +17,210 @@ Performance Metrics:
     - F1 Score: 0.9476
     - Precision: 0.9909
     - Recall: 0.9105
+"model": "llama3.2-vision-0temp",
+            "messages": [
+    {
+        "role": "system",
+        "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond with only the specified code '0' or '1'. Do not include reasoning, explanations, or any additional text."
+    },
+    {
+        "role": "user",
+        "content": f"""
+Instructions:
+
+Analyze the addiction state language in the post title and classify it according to the following rules:
+
+1. Code '1': If the language which refers to the recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal', respond with '1'.
+
+2. Code '0': If the above condition is not met, respond with '0'.
+
+Important Notes:
+
+- Definitions of Addiction States Labels:
+
+  - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+
+  - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+
+  - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
+
+- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- State label is an input provided (either 'use', 'withdrawal', or 'recovery').
+
+Examples:
+
+- Example 1:
+
+  - Post Title: "I recovered from addiction last year"
+
+  - Addiction State Language: "recovered from addiction" (past tense, referring to recovery)
+
+  - State Label: 'use'
+
+  - Classification: '1'
+
+- Example 2:
+
+  - Post Title: "Currently in recovery and feeling hopeful"
+
+  - Addiction State Language: "in recovery and feeling hopeful" (present tense, referring to recovery)
+
+  - State Label: 'recovery'
+
+  - Classification: '0'
+
+- Example 3:
+
+  - Post Title: "I was sober for six months before relapse"
+
+  - Addiction State Language: "I was sober for six months" (past tense, referring to recovery)
+
+  - State Label: 'withdrawal'
+
+  - Classification: '1'
+
+- Example 4:
+
+  - Post Title: "Hoping to start recovery soon"
+
+  - Addiction State Language: "Hoping to start recovery" (future tense, referring to recovery)
+
+  - State Label: 'use'
+
+  - Classification: '0'
+
+- Example 5:
+
+  - Post Title: "Completed recovery but now back to using"
+
+  - Addiction State Language: "Completed recovery" (past tense, referring to recovery)
+
+  - State Label: 'use'
+
+  - Classification: '1'
+
+---
+
+Based on the following inputs:
+
+Post Title:
+
+{title}
+
+Post:
+
+{post}
+
+State Label:
+
+{state_label}
+
+---
+
+Your Response:
+
+Respond with digits: '0' or '1'. Do not include any other text."""
+    }
+]
+[
+    {
+        "role": "system",
+        "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond with only the specified code '0' or '1'. Do not include reasoning, explanations, or any additional text."
+    },
+    {
+        "role": "user",
+        "content": f"""
+Instructions:
+
+Analyze the addiction state language in the post title and classify it according to the following rules:
+
+1. Code '1': If the language which refers to the recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal', respond with '1'.
+
+2. Code '0': If the above condition is not met, respond with '0'.
+
+Important Notes:
+
+- Definitions of Addiction States Labels:
+
+  - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+
+  - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+
+  - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
+
+- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- State label is an input provided (either 'use', 'withdrawal', or 'recovery').
+
+Examples:
+
+- Example 1:
+
+  - Post Title: "I recovered from addiction last year"
+
+  - Addiction State Language: "recovered from addiction" (past tense, referring to recovery)
+
+  - State Label: 'use'
+
+  - Classification: '1'
+
+- Example 2:
+
+  - Post Title: "Currently in recovery and feeling hopeful"
+
+  - Addiction State Language: "in recovery and feeling hopeful" (present tense, referring to recovery)
+
+  - State Label: 'recovery'
+
+  - Classification: '0'
+
+- Example 3:
+
+  - Post Title: "I was sober for six months before relapse"
+
+  - Addiction State Language: "I was sober for six months" (past tense, referring to recovery)
+
+  - State Label: 'withdrawal'
+
+  - Classification: '1'
+
+- Example 4:
+
+  - Post Title: "Hoping to start recovery soon"
+
+  - Addiction State Language: "Hoping to start recovery" (future tense, referring to recovery)
+
+  - State Label: 'use'
+
+  - Classification: '0'
+
+- Example 5:
+
+  - Post Title: "Completed recovery but now back to using"
+
+  - Addiction State Language: "Completed recovery" (past tense, referring to recovery)
+
+  - State Label: 'use'
+
+  - Classification: '1'
+
+---
+
+Based on the following inputs:
+
+Post Title:
+
+{title}
+
+State Label:
+
+{state_label}
+
+---
+
+Your Response:
+
+Respond with digits: '0' or '1'. Do not include any other text."""
+    }
+]

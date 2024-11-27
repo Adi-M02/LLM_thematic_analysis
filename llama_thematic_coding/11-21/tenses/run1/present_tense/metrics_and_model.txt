@@ -17,3 +17,206 @@ Performance Metrics:
     - F1 Score: 0.5068
     - Precision: 0.7715
     - Recall: 0.3984
+model: 
+"model": "llama3.2-vision-0temp",
+            "messages": [
+    {
+        "role": "system",
+        "content": "You are a researcher in an academic research study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond with only the specified code '0' or '1'. Do not include reasoning, explanations, or any additional text."
+    },
+    {
+        "role": "user",
+        "content": f"""
+Instructions:
+
+Analyze the addiction state language in the post title and classify it according to the following rules:
+
+1. Code '1': If the language which refers to the user's addiction state is not in the past or future tense respond with '1'.
+
+2. Code '1': If there is language which refers to the user's addiction state in the present tense respond with '1'.
+
+3. Code '0': Otherwise respond with '0'.
+
+
+Important Notes:
+
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States Labels:
+
+  - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+
+  - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+
+  - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model (TTM) stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
+
+Examples:
+
+- Example 1:
+
+  - Post Title: "Struggling with addiction every day"
+  - Addiction State Language: "Struggling with addiction" (present tense)
+  - Classification: '1'
+
+- Example 2:
+
+  - Post Title: "I overcame my addiction last year"
+  - Addiction State Language: "Overcame my addiction" (past tense)
+  - Classification: '0'
+
+---
+
+Based on the following inputs:
+
+Post Title:
+
+{title}
+
+Post:
+
+{post}
+
+State Label:
+
+{state_label}
+
+---
+
+Your Response:
+
+Respond with digits: '0' or '1'. Do not include any other text."""
+    }
+],
+            "stream": False,
+        }
+    else:
+        data = {
+            "model": "llama3.2-vision-0temp",
+            "messages": [
+    {
+        "role": "system",
+        "content": "You are a researcher in an academic research study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond with only the specified code '0' or '1'. Do not include reasoning, explanations, or any additional text."
+    },
+    {
+        "role": "user",
+        "content": f"""
+Instructions:
+
+Analyze the addiction state language in the post title and classify it according to the following rules:
+
+1. Code '1': If the language which refers to the user's addiction state is in present tense, respond with '1'.
+
+2. Code '0': If there is any language which refers to the user's addiction state that is not in present tense, respond with '0'.
+
+Important Notes:
+
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States Labels:
+
+  - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+
+  - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+
+  - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model (TTM) stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
+
+Examples:
+
+- Example 1:
+
+  - Post Title: "Struggling with addiction every day"
+  - Addiction State Language: "Struggling with addiction" (present tense)
+  - Classification: '1'
+
+- Example 2:
+
+  - Post Title: "I overcame my addiction last year"
+  - Addiction State Language: "Overcame my addiction" (past tense)
+  - Classification: '0'
+
+---
+
+Based on the following inputs:
+
+Post Title:
+
+{title}
+
+State Label:
+
+{state_label}
+
+---
+
+Your Response:
+
+Respond with digits: '0' or '1'. Do not include any other text."""
+    }
+]
+"messages": [
+    {
+        "role": "system",
+        "content": "You are a researcher in an academic research study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond with only the specified code '0' or '1'. Do not include reasoning, explanations, or any additional text."
+    },
+    {
+        "role": "user",
+        "content": f"""
+Instructions:
+
+Analyze the addiction state language in the post title and classify it according to the following rules:
+
+1. Code '1': If the language which refers to the user's addiction state is in present tense, respond with '1'.
+
+2. Code '0': If there is any language which refers to the user's addiction state that is not in present tense, respond with '0'.
+
+Important Notes:
+
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States Labels:
+
+  - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+
+  - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+
+  - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model (TTM) stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
+
+Examples:
+
+- Example 1:
+
+  - Post Title: "Struggling with addiction every day"
+  - Addiction State Language: "Struggling with addiction" (present tense)
+  - Classification: '1'
+
+- Example 2:
+
+  - Post Title: "I overcame my addiction last year"
+  - Addiction State Language: "Overcame my addiction" (past tense)
+  - Classification: '0'
+
+---
+
+Based on the following inputs:
+
+Post Title:
+
+{title}
+
+State Label:
+
+{state_label}
+
+---
+
+Your Response:
+
+Respond with digits: '0' or '1'. Do not include any other text."""
+    }
+]

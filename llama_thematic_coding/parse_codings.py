@@ -178,4 +178,10 @@ def parse_feature(feature, coding_file='/Users/adimukundan/Downloads/Thematic An
 
      
 if __name__ == "__main__":
-    parse_csv(coding_file)
+    total = 0
+    posts_titles = parse_csv()
+    for post_title in posts_titles:
+        if post_title[1]:
+            total += len(post_title[1])
+        total += len(post_title[0])
+    print(total)
