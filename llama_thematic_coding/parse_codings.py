@@ -13,7 +13,7 @@ def state_label_to_string(state_label):
     elif state_label == 4:
         return "unknown"
     
-def parse_csv(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_csv(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     posts_and_titles = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         # Use the csv.DictReader to read rows as dictionaries
@@ -84,7 +84,7 @@ def process_post_field(post_field):
     except Exception as e:
         return f"Error processing post field: {str(e)}"
 
-def parse_incorrext_days_clean(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_incorrext_days_clean(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     incorrect_days_clean = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -119,7 +119,7 @@ def parse_incorrext_days_clean(coding_file='/Users/adimukundan/Downloads/Themati
 
         return incorrect_days_clean
     
-def parse_tense(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_tense(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     tense_list = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -155,7 +155,7 @@ def parse_tense(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opia
 
         return tense_list
     
-def parse_feature(feature, coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co_use": "co-use", "is_imputed": "Is imputed", "imputed": "imputed"}
     out = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
