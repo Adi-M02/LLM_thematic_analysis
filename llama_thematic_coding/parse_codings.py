@@ -126,24 +126,12 @@ def parse_tense(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
         i = 0
         for row in reader:
             i+=1
-            user = row['User']
-            subreddit = row['Subreddit']
             post_id = row['Post ID']
-            date_time = row['Date/Time']
-            empty = row['Empty']
             state_label = row['State Label']
-            question = row['question']
-            incorrect_days_clean = row['incorrect days clean']
             tense = row['tense']
             tense = [int(num) for num in tense.split(',')] if tense else []
-            atypical_information = row['atypical information']
-            special_cases = row['special cases']
-            use = row['use']
-            withdrawal = row['withdrawal']
-            recovery = row['recovery']
-            co_use = row['co-use']
-            is_imputed = row['Is imputed']
-            imputed = row['imputed']
+            if int(row['State Label']) == 4:
+                continue
             try:
                 title, post = process_post_field(row['Post'])
                 post = html.unescape(post)
