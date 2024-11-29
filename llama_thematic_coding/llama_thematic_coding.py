@@ -441,7 +441,7 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if all language referring to the user's addiction state is in the present tense or has no tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' If the language which refers to the user's addiction state is not in the past or future tense or if there is language which refers to the user's addiction state in the present tense. Provide a verbatim section of the text that supports the label.
 
 2. Label '0': Assign label '0' if any language referring to the user's addiction state is in the past or future tense. Provide a verbatim section of the text that supports the label.
 
@@ -499,9 +499,9 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'withdrawal' or 'recovery' and there is any language referring to the use in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' if the state label is 'withdrawal' or 'recovery' and there is any language referring to opioid use in the past tense. Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'use' or there is no language referring to use in the past tense. Do not include any example.
+2. Label '0': Assign label '0' if the state label is 'use' or there is no language referring to opioid use in the past tense. Do not include a verbatim example.
 
 Important Notes:
 
@@ -557,9 +557,9 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'use' or 'recovery' and there is any language referring to withdrawal in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' if the state label is 'use' or 'recovery' and there is any language referring to withdrawal from opioids in the past tense. Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'withdrawal' or there is no language referring to the withdrawal in the past tense. Do not include any example.
+2. Label '0': Assign label '0' if the state label is 'withdrawal' or there is no language referring to the withdrawal from opioids in the past tense. Do not include a verbatim example.
 
 Important Notes:
 
@@ -615,9 +615,9 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'use' or 'withdrawal' and there is any language referring to recovery in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' if the state label is 'use' or 'withdrawal' and there is any language referring to recovery from opioids in the past tense. Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to recovery in the past tense. Do not include any example.
+2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to recovery from opioids in the past tense. Do not include a verbatim example.
 
 Important Notes:
 
@@ -673,9 +673,9 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if there is any language referring to withdrawal in the future tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' if there is any language referring to withdrawal from opioids in the future tense. Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to withdrawal in the future tense. Do not include any example.
+2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to withdrawal from opioids in the future tense. Do not include a verbatim example.
 
 Important Notes:
 
