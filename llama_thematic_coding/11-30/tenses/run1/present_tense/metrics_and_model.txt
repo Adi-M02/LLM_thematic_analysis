@@ -1,26 +1,26 @@
-hallucinations/errors: 44
+hallucinations/errors: 0
 Encodings:
 - True Encodings:
-    - Class 0: 894
-    - Class 1: 7
+    - Class 0: 95
+    - Class 1: 850
 - Predicted Encodings:
-    - Class 0: 718
-    - Class 1: 183
+    - Class 0: 107
+    - Class 1: 838
 
 Performance Metrics:
-- Accuracy: 0.7958
+- Accuracy: 0.7884
 - Macro Averages:
-    - F1 Score: 0.4587
-    - Precision: 0.5054
-    - Recall: 0.6136
+    - F1 Score: 0.4457
+    - Precision: 0.4486
+    - Recall: 0.4429
 - Weighted Averages:
-    - F1 Score: 0.8792
-    - Precision: 0.9868
-    - Recall: 0.7958
+    - F1 Score: 0.7939
+    - Precision: 0.7995
+    - Recall: 0.7884
 Confusion Matrix:
-    [[TP: 3 (0.33%), FP: 180 (19.98%)]
-     [FN: 4 (0.44%), TN: 714 (79.25%)]]
-"model": "llama3.1:70b",
+    [[TP: 744 (78.73%), FP: 94 (9.95%)]
+     [FN: 106 (11.22%), TN: 1 (0.11%)]]
+"model": "llama3.2-vision",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -28,7 +28,7 @@ Confusion Matrix:
     "messages": [
       {
         "role": "system",
-        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other descriptions, reasoning, or additional text in your response."
+        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label'. Do not include any other descriptions, reasoning, or additional text in your response."
       },
       {
             "role": "user",
@@ -37,9 +37,9 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'use' or 'recovery' and there is any language referring to withdrawal from opioids in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' If the language which refers to the user's addiction state is not in the past or future tense or if there is language which refers to the user's addiction state in the present tense. Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'withdrawal' or there is no language referring to the withdrawal from opioids in the past tense. Do not include a verbatim example.
+2. Label '0': Assign label '0' if any language referring to the user's addiction state is in the past or future tense. Provide a verbatim section of the text that supports the label.
 
 Important Notes:
 
@@ -65,6 +65,6 @@ Based on the following inputs:
 
 Your Response:
 
-Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other text."""
+Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label'. Do not include any other text."""
         }
     ]
