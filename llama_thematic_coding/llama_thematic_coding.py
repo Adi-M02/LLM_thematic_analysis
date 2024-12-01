@@ -935,21 +935,20 @@ def compare_example_and_post(llm_output):
         fieldnames = reader.fieldnames
         for row in reader:
             post = parse.get_post_title_string(row['post_id'])
-            if row['verbatim_example'] == "ERROR":
-                row["exact_match"] = "ERROR"
-                continue
             if not post:
                 continue
             if row['verbatim_example']:
               if row['verbatim_example'].lower() in post.lower():
                   row["exact_match"] = "True"
+              elif row['verbatim_example'] == "ERROR":
+                  row["exact_match"] = "ERROR"
               elif row['verbatim_example'].strip() == "None":
                     row["exact_match"] = "True"
               else:
                   row["exact_match"] = "False"
                   num_diff += 1
             else:
-              row["exact_match"] = "True"
+              row["exact_match"] = "ERROR"
             modified_llm_output.append(row)
     with open(llm_output, 'w', newline='', encoding="utf-8") as file:
       writer = csv.DictWriter(file, fieldnames=fieldnames)

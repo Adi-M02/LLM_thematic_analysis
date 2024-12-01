@@ -1,0 +1,78 @@
+hallucinations/errors: 6
+responses with some hallucinated portion: 42
+Encodings:
+- True Encodings:
+    - Class 0: 934
+    - Class 1: 5
+- Predicted Encodings:
+    - Class 0: 746
+    - Class 1: 193
+
+Performance Metrics:
+- Accuracy: 0.7934
+- Macro Averages:
+    - F1 Score: 0.4524
+    - Precision: 0.5032
+    - Recall: 0.5978
+- Weighted Averages:
+    - F1 Score: 0.8799
+    - Precision: 0.9907
+    - Recall: 0.7934
+Confusion Matrix:
+    [[TP: 2 (0.21%), FP: 191 (20.34%)]
+     [FN: 3 (0.32%), TN: 743 (79.13%)]]
+"model": "llama3.2-vision:11b-instruct-q8_0",
+    "format": "json",
+    "options": {
+        "temperature": 0.0
+    },
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+        },
+        {
+            "role": "user",
+            "content": f"""
+Instructions:
+
+Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
+
+1. Label '1':
+   - Assign label '1' if all the language which refers to recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal'.
+   - Provide a verbatim section of the text from the post title that supports the label.
+
+2. Label '0':
+   - Assign label '0' if the above condition is not met.
+   - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
+
+- Example Responses:
+    Post: "Recovery is such a challenging process, and I’m trying my best to stay on track."
+    Post Title: "Navigating recovery one day at a time."
+    State Label: "recovery"
+    Example response: {{"label": 0, "language": "None"}}
+
+    Post: "I successfully completed recovery last year"
+    Post Title: "Recovery feels like a distant memory."
+    State Label: "use"
+    Example response: {{"label": 1, "language": "completed recovery last year"}}
+
+- Respond based on the following inputs:
+  Post: {post}
+  Post Title: {title}
+  State Label: {state_label}
+  """
+        }
+    ]
