@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import csv
 import os
 import random
+import time
 import logging
 
 url = "http://localhost:11434/api/chat"
@@ -462,15 +463,15 @@ Analyze the addiction state language in the post and post title, and classify it
   {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
 - Example Responses:
-  Post: "I'm struggling with addiction and need help."
-  Post Title: "Feeling lost"
-  State Label: "use"
-  Example response: {{"label": 1, "language": "struggling with addiction and need help"}}
-
   Post: "I quit using opiates last month and feel better now."
   Post Title: "My recovery journey"
   State Label: "recovery"
   Example response: {{"label": 0, "language": "I quit using opiates last month and feel better now."}}
+
+  Post: "I'm struggling with addiction and need help."
+  Post Title: "Feeling lost"
+  State Label: "use"
+  Example response: {{"label": 1, "language": "struggling with addiction and need help"}}
 
 - Respond based on the following inputs:
   Post: {post}
@@ -527,15 +528,15 @@ Consider the addiction state label and the addiction state language in the post 
   {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
 - Example Responses:
-    Post: "Currently struggling with opioid addiction using heroin regularly"
-    Post Title: "Currently struggling with opioid addiction"
-    State Label: "use"
-    Example response: {{"label": 0, "language": "None"}}
-
     Post: "I used opioids for years but now I'm clean"
     Post Title: "My opioid addiction recovery journey"
     State Label: "recovery"
     Example response: {{"label": 1, "language": "used opioids for years"}}
+
+    Post: "Currently struggling with opioid addiction using heroin regularly"
+    Post Title: "Currently struggling with opioid addiction"
+    State Label: "use"
+    Example response: {{"label": 0, "language": "None"}}
 
 - Respond based on the following inputs:
   Post: {post}
@@ -592,15 +593,15 @@ Consider the addiction state label and the addiction state language in the post 
   {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
 - Example Responses:
-    Post: "Withdrawal feels endless, and I don’t think I can keep going."
-    Post Title: "Struggling to get through withdrawal."
-    State Label: "withdrawal"
-    Example response: {{"label": 0, "language": "None"}}
-
     Post: "I stopped withdrawing last week and am starting to feel like myself again."
     Post Title: "I think recovery is possible."
     State Label: "recovery"
     Example response: {{"label": 1, "language": "stopped withdrawing last week"}}
+
+    Post: "Withdrawal feels endless, and I don’t think I can keep going."
+    Post Title: "Struggling to get through withdrawal."
+    State Label: "withdrawal"
+    Example response: {{"label": 0, "language": "None"}}
 
 - Respond based on the following inputs:
   Post: {post}
@@ -657,15 +658,15 @@ Consider the addiction state label and the addiction state language in the post 
   {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
 - Example Responses:
-    Post: "Recovery is such a challenging process, and I’m trying my best to stay on track."
-    Post Title: "Navigating recovery one day at a time."
-    State Label: "recovery"
-    Example response: {{"label": 0, "language": "None"}}
-
     Post: "I successfully completed recovery last year"
     Post Title: "Recovery feels like a distant memory."
     State Label: "use"
     Example response: {{"label": 1, "language": "completed recovery last year"}}
+
+    Post: "Recovery is such a challenging process, and I’m trying my best to stay on track."
+    Post Title: "Navigating recovery one day at a time."
+    State Label: "recovery"
+    Example response: {{"label": 0, "language": "None"}}
 
 - Respond based on the following inputs:
   Post: {post}
@@ -722,15 +723,15 @@ Analyze the addiction state language in the post and post title, and classify it
   {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
 - Example Responses:
-    Post: "Withdrawal is the hardest thing I’ve ever experienced, and I’m not sure I can keep going."
-    Post Title: "Struggling with withdrawal now."
-    State Label: "withdrawal"
-    Example response: {{"label": 0, "language": "None"}}
-
     Post: "I plan to start withdrawing next week after I meet with my doctor."
     Post Title: "Preparing for withdrawal next week."
     State Label: "withdrawal"
     Example response: {{"label": 1, "language": "preparing for withdrawal next week"}}
+
+    Post: "Withdrawal is the hardest thing I’ve ever experienced, and I’m not sure I can keep going."
+    Post Title: "Struggling with withdrawal now."
+    State Label: "withdrawal"
+    Example response: {{"label": 0, "language": "None"}}
 
 - Respond based on the following inputs:
   Post: {post}
@@ -1132,8 +1133,6 @@ Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': '
 
 
 if __name__ == "__main__":
-  encode_tenses("llama_thematic_coding/12-1/tenses/run1")
-#   files = ['llama_thematic_coding/11-30/tenses/run5/present_tense/present_tense_codes.csv',
-# 'llama_thematic_coding/11-30/tenses/run5/past_use/past_use_codes.csv',]
-#   for file in files:
-#     compare_example_and_post(file)
+  start = time.time()
+  encode_tenses("llama_thematic_coding/12-1/tenses/run3")
+  print(f"Time taken: {time.time() - start}/60 minutes")
