@@ -858,6 +858,13 @@ def tense_type_condition(tense_list, tense_type):
             return True
     return False
 
+def compare_example_to_post(post, example):
+    if example:
+        if example in post:
+            return True
+        return False
+    return True
+
 def process_tense(output, tense_type, parse_function, encode_function):
     # Create folder for the tense type
     directory_path = os.path.join(output, tense_type)
@@ -937,7 +944,7 @@ def encode_tenses(output):
     process_tense(output, "past_withdrawal", parse.parse_tense, thematically_encode_past_withdrawal)
     process_tense(output, "past_recovery", parse.parse_tense, thematically_encode_past_recovery)
     process_tense(output, "future_withdrawal", parse.parse_tense, thematically_encode_future_withdrawal)
-    
+
 
 def encode_feature(output, encoding_type, thematic_encoding_function):
     if not os.path.exists(output):

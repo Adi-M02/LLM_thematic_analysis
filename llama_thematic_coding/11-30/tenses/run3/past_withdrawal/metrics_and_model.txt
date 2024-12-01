@@ -1,25 +1,25 @@
-hallucinations/errors: 190
+hallucinations/errors: 0
 Encodings:
 - True Encodings:
-    - Class 0: 748
+    - Class 0: 938
     - Class 1: 7
 - Predicted Encodings:
-    - Class 0: 483
+    - Class 0: 673
     - Class 1: 272
 
 Performance Metrics:
-- Accuracy: 0.6490
+- Accuracy: 0.7196
 - Macro Averages:
-    - F1 Score: 0.4175
+    - F1 Score: 0.4428
     - Precision: 0.5129
-    - Recall: 0.8229
+    - Recall: 0.8587
 - Weighted Averages:
-    - F1 Score: 0.7779
-    - Precision: 0.9910
-    - Recall: 0.6490
+    - F1 Score: 0.8297
+    - Precision: 0.9928
+    - Recall: 0.7196
 Confusion Matrix:
-    [[TP: 7 (0.93%), FP: 265 (35.10%)]
-     [FN: 0 (0.00%), TN: 483 (63.97%)]]
+    [[TP: 7 (0.74%), FP: 265 (28.04%)]
+     [FN: 0 (0.00%), TN: 673 (71.22%)]]
 "model": "llama3.2-vision",
     "format": "json",
       "options": {
