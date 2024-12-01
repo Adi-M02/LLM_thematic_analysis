@@ -15,7 +15,7 @@ def thematically_encode_days_clean(state_label, title, post=None):
     }
     if post:
         data = {
-            "model": "llama3.2-vision:11b-instruct-q4_K_M",
+            "model": "llama3.1:70b",
             "messages": [
     {
         "role": "system",
@@ -215,7 +215,7 @@ Respond with exactly one digit: '0' or '1'. Do not include any other text."""
         }
     else:
         data = {
-            "model": "llama3.2-vision:11b-instruct-q4_K_M",
+            "model": "llama3.1:70b",
             "messages": [
     {
         "role": "system",
@@ -424,52 +424,59 @@ def thematically_encode_present_tense(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.2-vision:11b-instruct-q4_K_M",
+    "model": "llama3.1:70b",
     "format": "json",
-      "options": {
+    "options": {
         "temperature": 0.0
-      },
+    },
     "messages": [
-      {
-        "role": "system",
-        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label'. Do not include any other descriptions, reasoning, or additional text in your response."
-      },
-      {
+        {
+            "role": "system",
+            "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in the posts and post titles, classifying them based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
+        },
+        {
             "role": "user",
             "content": f"""
 Instructions:
 
-Analyze the addiction state language in the post and post title and classify it according to the following rules:
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
-1. Label '1': Assign label '1' If the language which refers to the user's addiction state is not in the past or future tense or if there is language which refers to the user's addiction state in the present tense. Provide a verbatim section of the text that supports the label.
+  1. Label '1':
+     - Assign label '1' if the language referring to the user's addiction state is in the present tense or has no tense.
+     - Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if any language referring to the user's addiction state is in the past or future tense. Provide a verbatim section of the text that supports the label.
+  2. Label '0':
+     - Assign label '0' if any language referring to the user's addiction state is in the past tense or future tense.
+     - Provide a verbatim section of the text that supports the label.
 
-Important Notes:
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
 
-- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
-Definitions of Addiction States Labels:
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
-    - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+- Example Responses:
+  Post: "I'm struggling with addiction and need help."
+  Post Title: "Feeling lost"
+  State Label: "use"
+  Example response: {{"label": 1, "language": "struggling with addiction and need help"}}
 
-    - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+  Post: "I quit using opiates last month and feel better now."
+  Post Title: "My recovery journey"
+  State Label: "recovery"
+  Example response: {{"label": 0, "language": "I quit using opiates last month and feel better now."}}
 
-    - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
-
-Based on the following inputs:
-
-**Post**: 
-{post}
-**Post Title**: 
-{title}
-**State Label**:
-{state_label}
-
-Your Response:
-
-Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label'. Do not include any other text."""
+- Respond based on the following inputs:
+  Post: {post}
+  Post Title: {title}
+  State Label: {state_label}
+  """
         }
     ],
     "stream": False
@@ -482,52 +489,59 @@ def thematically_encode_past_use(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.2-vision:11b-instruct-q4_K_M",
+    "model": "llama3.1:70b",
     "format": "json",
-      "options": {
+    "options": {
         "temperature": 0.0
-      },
+    },
     "messages": [
-      {
-        "role": "system",
-        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other descriptions, reasoning, or additional text in your response."
-      },
-      {
+        {
+            "role": "system",
+            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post and post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+        },
+        {
             "role": "user",
             "content": f"""
 Instructions:
 
-Analyze the addiction state language in the post and post title and classify it according to the following rules:
+Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'withdrawal' or 'recovery' and there is any language referring to opioid use in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1':
+   - Assign label '1' if all the language which refers to the use of opioids is in the past tense, and the state label is 'withdrawal' or 'recovery'.
+   - Provide a verbatim section of the text from the post title that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'use' or there is no language referring to opioid use in the past tense. Do not include a verbatim example.
+2. Label '0':
+   - Assign label '0' if the above condition is not met.
+   - Respond 'None' in the section of your response that supports the label.
 
-Important Notes:
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
 
-- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
-Definitions of Addiction States Labels:
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
-    - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+- Example Responses:
+    Post: "Currently struggling with opioid addiction using heroin regularly"
+    Post Title: "Currently struggling with opioid addiction"
+    State Label: "use"
+    Example response: {{"label": 0, "language": "None"}}
 
-    - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+    Post: "I used opioids for years but now I'm clean"
+    Post Title: "My opioid addiction recovery journey"
+    State Label: "recovery"
+    Example response: {{"label": 1, "language": "used opioids for years"}}
 
-    - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
-
-Based on the following inputs:
-
-**Post**: 
-{post}
-**Post Title**: 
-{title}
-**State Label**:
-{state_label}
-
-Your Response:
-
-Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other text."""
+- Respond based on the following inputs:
+  Post: {post}
+  Post Title: {title}
+  State Label: {state_label}
+  """
         }
     ],
     "stream": False
@@ -540,52 +554,59 @@ def thematically_encode_past_withdrawal(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.2-vision:11b-instruct-q4_K_M",
+    "model": "llama3.1:70b",
     "format": "json",
-      "options": {
+    "options": {
         "temperature": 0.0
-      },
+    },
     "messages": [
-      {
-        "role": "system",
-        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other descriptions, reasoning, or additional text in your response."
-      },
-      {
+        {
+            "role": "system",
+            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+        },
+        {
             "role": "user",
             "content": f"""
 Instructions:
 
-Analyze the addiction state language in the post and post title and classify it according to the following rules:
+Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'use' or 'recovery' and there is any language referring to withdrawal from opioids in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1':
+   - Assign label '1' if all the language which refers to the withdrawal from opioids is in the past tense, and the state label is 'use' or 'recovery'.
+   - Provide a verbatim section of the text from the post title that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'withdrawal' or there is no language referring to the withdrawal from opioids in the past tense. Do not include a verbatim example.
+2. Label '0':
+   - Assign label '0' if the above condition is not met.
+   - Respond 'None' in the section of your response that supports the label.
 
-Important Notes:
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
 
-- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
-Definitions of Addiction States Labels:
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
-    - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+- Example Responses:
+    Post: "Withdrawal feels endless, and I don’t think I can keep going."
+    Post Title: "Struggling to get through withdrawal."
+    State Label: "withdrawal"
+    Example response: {{"label": 0, "language": "None"}}
 
-    - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+    Post: "I stopped withdrawing last week and am starting to feel like myself again."
+    Post Title: "I think recovery is possible."
+    State Label: "recovery"
+    Example response: {{"label": 1, "language": "stopped withdrawing last week"}}
 
-    - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
-
-Based on the following inputs:
-
-**Post**: 
-{post}
-**Post Title**: 
-{title}
-**State Label**:
-{state_label}
-
-Your Response:
-
-Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other text."""
+- Respond based on the following inputs:
+  Post: {post}
+  Post Title: {title}
+  State Label: {state_label}
+  """
         }
     ],
     "stream": False
@@ -598,52 +619,59 @@ def thematically_encode_past_recovery(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.2-vision:11b-instruct-q4_K_M",
+    "model": "llama3.1:70b",
     "format": "json",
-      "options": {
+    "options": {
         "temperature": 0.0
-      },
+    },
     "messages": [
-      {
-        "role": "system",
-        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other descriptions, reasoning, or additional text in your response."
-      },
-      {
+        {
+            "role": "system",
+            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+        },
+        {
             "role": "user",
             "content": f"""
 Instructions:
 
-Analyze the addiction state language in the post and post title and classify it according to the following rules:
+Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'use' or 'withdrawal' and there is any language referring to recovery from opioids in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1':
+   - Assign label '1' if all the language which refers to recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal'.
+   - Provide a verbatim section of the text from the post title that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to recovery from opioids in the past tense. Do not include a verbatim example.
+2. Label '0':
+   - Assign label '0' if the above condition is not met.
+   - Respond 'None' in the section of your response that supports the label.
 
-Important Notes:
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
 
-- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
-Definitions of Addiction States Labels:
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
-    - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+- Example Responses:
+    Post: "Recovery is such a challenging process, and I’m trying my best to stay on track."
+    Post Title: "Navigating recovery one day at a time."
+    State Label: "recovery"
+    Example response: {{"label": 0, "language": "None"}}
 
-    - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+    Post: "I successfully completed recovery last year"
+    Post Title: "Recovery feels like a distant memory."
+    State Label: "use"
+    Example response: {{"label": 1, "language": "completed recovery last year"}}
 
-    - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
-
-Based on the following inputs:
-
-**Post**: 
-{post}
-**Post Title**: 
-{title}
-**State Label**:
-{state_label}
-
-Your Response:
-
-Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other text."""
+- Respond based on the following inputs:
+  Post: {post}
+  Post Title: {title}
+  State Label: {state_label}
+  """
         }
     ],
     "stream": False
@@ -656,52 +684,59 @@ def thematically_encode_future_withdrawal(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.2-vision:11b-instruct-q4_K_M",
+    "model": "llama3.1:70b",
     "format": "json",
-      "options": {
+    "options": {
         "temperature": 0.0
-      },
+    },
     "messages": [
-      {
-        "role": "system",
-        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other descriptions, reasoning, or additional text in your response."
-      },
-      {
+        {
+            "role": "system",
+            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+        },
+        {
             "role": "user",
             "content": f"""
 Instructions:
 
-Analyze the addiction state language in the post and post title and classify it according to the following rules:
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if there is any language referring to withdrawal from opioids in the future tense. Provide a verbatim section of the text that supports the label.
+1. Label '1':
+   - Assign label '1' if all the language which refers to withdrawal from opioids is in the future tense.
+   - Provide a verbatim section of the text from the post title that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to withdrawal from opioids in the future tense. Do not include a verbatim example.
+2. Label '0':
+   - Assign label '0' if the above condition is not met.
+   - Respond 'None' in the section of your response that supports the label.
 
-Important Notes:
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
 
-- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
-Definitions of Addiction States Labels:
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
 
-    - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+- Example Responses:
+    Post: "Withdrawal is the hardest thing I’ve ever experienced, and I’m not sure I can keep going."
+    Post Title: "Struggling with withdrawal now."
+    State Label: "withdrawal"
+    Example response: {{"label": 0, "language": "None"}}
 
-    - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+    Post: "I plan to start withdrawing next week after I meet with my doctor."
+    Post Title: "Preparing for withdrawal next week."
+    State Label: "withdrawal"
+    Example response: {{"label": 1, "language": "preparing for withdrawal next week"}}
 
-    - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
-
-Based on the following inputs:
-
-**Post**: 
-{post}
-**Post Title**: 
-{title}
-**State Label**:
-{state_label}
-
-Your Response:
-
-Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other text."""
+- Respond based on the following inputs:
+  Post: {post}
+  Post Title: {title}
+  State Label: {state_label}
+  """
         }
     ],
     "stream": False
@@ -903,6 +938,8 @@ def compare_example_and_post(llm_output):
             if row['verbatim_example']:
               if row['verbatim_example'].lower() in post.lower():
                   row["exact_match"] = "True"
+              elif row['verbatim_example'] == "None":
+                    row["exact_match"] = "True"
               else:
                   row["exact_match"] = "False"
                   num_diff += 1
@@ -1035,7 +1072,7 @@ def test_prompt(post, title):
     "Content-Type": "application/json"
   }
   data = {
-    "model": "llama3.2-vision:11b-instruct-q4_K_M",
+    "model": "llama3.1:70b",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -1090,4 +1127,4 @@ Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': '
 
 
 if __name__ == "__main__":
-  encode_tenses("llama_thematic_coding/11-30/tenses/run4")
+  # encode_tenses("llama_thematic_coding/11-30/tenses/run6")
