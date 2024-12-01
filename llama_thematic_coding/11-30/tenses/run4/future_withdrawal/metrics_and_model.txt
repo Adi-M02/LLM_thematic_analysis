@@ -1,26 +1,27 @@
-hallucinations/errors: 43
+hallucinations/errors: 0
+responses with some hallucinated portion: 302
 Encodings:
 - True Encodings:
-    - Class 0: 847
-    - Class 1: 55
+    - Class 0: 910
+    - Class 1: 35
 - Predicted Encodings:
-    - Class 0: 475
-    - Class 1: 427
+    - Class 0: 686
+    - Class 1: 259
 
 Performance Metrics:
-- Accuracy: 0.5765
+- Accuracy: 0.7354
 - Macro Averages:
-    - F1 Score: 0.4593
-    - Precision: 0.5533
-    - Recall: 0.7320
+    - F1 Score: 0.4965
+    - Precision: 0.5330
+    - Recall: 0.6841
 - Weighted Averages:
-    - F1 Score: 0.6803
-    - Precision: 0.9363
-    - Recall: 0.5765
+    - F1 Score: 0.8177
+    - Precision: 0.9479
+    - Recall: 0.7354
 Confusion Matrix:
-    [[TP: 50 (5.54%), FP: 377 (41.80%)]
-     [FN: 5 (0.55%), TN: 470 (52.11%)]]
-"model": llama3.1:70b,
+    [[TP: 22 (2.33%), FP: 237 (25.08%)]
+     [FN: 13 (1.38%), TN: 673 (71.22%)]]
+"model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -37,9 +38,9 @@ Instructions:
 
 Analyze the addiction state language in the post and post title and classify it according to the following rules:
 
-1. Label '1': Assign label '1' if the state label is 'withdrawal' or 'recovery' and there is any language referring to opioid use in the past tense. Provide a verbatim section of the text that supports the label.
+1. Label '1': Assign label '1' if there is any language referring to withdrawal from opioids in the future tense. Provide a verbatim section of the text that supports the label.
 
-2. Label '0': Assign label '0' if the state label is 'use' or there is no language referring to opioid use in the past tense. Do not include a verbatim example.
+2. Label '0': Assign label '0' if the state label is 'recovery' or there is no language referring to withdrawal from opioids in the future tense. Do not include a verbatim example.
 
 Important Notes:
 

@@ -8,7 +8,6 @@ import random
 import logging
 
 url = "http://localhost:11434/api/chat"
-MODEL = "llama3.2-vision"
 
 def thematically_encode_days_clean(state_label, title, post=None):
     headers = {
@@ -16,7 +15,7 @@ def thematically_encode_days_clean(state_label, title, post=None):
     }
     if post:
         data = {
-            "model": MODEL,
+            "model": "llama3.2-vision:11b-instruct-q4_K_M",
             "messages": [
     {
         "role": "system",
@@ -216,7 +215,7 @@ Respond with exactly one digit: '0' or '1'. Do not include any other text."""
         }
     else:
         data = {
-            "model": MODEL,
+            "model": "llama3.2-vision:11b-instruct-q4_K_M",
             "messages": [
     {
         "role": "system",
@@ -425,7 +424,7 @@ def thematically_encode_present_tense(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": MODEL,
+    "model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -483,7 +482,7 @@ def thematically_encode_past_use(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": MODEL,
+    "model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -541,7 +540,7 @@ def thematically_encode_past_withdrawal(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": MODEL,
+    "model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -599,7 +598,7 @@ def thematically_encode_past_recovery(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": MODEL,
+    "model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -657,7 +656,7 @@ def thematically_encode_future_withdrawal(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": MODEL,
+    "model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -723,6 +722,41 @@ def write_binary_classification_metrics(output_dir, num_hallucinations, true_enc
     text_path = os.path.join(output_dir, "metrics_and_model.txt")
     with open(text_path, 'w') as f:
         f.write(f"hallucinations/errors: {num_hallucinations}\n")
+        f.write(f"Encodings:\n")
+        f.write(f"- True Encodings:\n")
+        f.write(f"    - Class 0: {true_encodings.count(0)}\n")
+        f.write(f"    - Class 1: {true_encodings.count(1)}\n")
+        f.write(f"- Predicted Encodings:\n")
+        f.write(f"    - Class 0: {predicted_encodings.count(0)}\n")
+        f.write(f"    - Class 1: {predicted_encodings.count(1)}\n\n")
+        try:
+            f.write(f"Performance Metrics:\n")
+            f.write(f"- Accuracy: {accuracy_score(true_encodings, predicted_encodings):.4f}\n")
+            f.write(f"- Macro Averages:\n")
+            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"- Weighted Averages:\n")
+            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
+            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
+            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
+            f.write("Confusion Matrix:\n")
+            cm = confusion_matrix(true_encodings, predicted_encodings)
+            tn, fp, fn, tp = cm.ravel()
+            total = tn + fp + fn + tp
+            f.write(f"    [[TP: {tp} ({(tp / total) * 100:.2f}%), FP: {fp} ({(fp / total) * 100:.2f}%)]\n")
+            f.write(f"     [FN: {fn} ({(fn / total) * 100:.2f}%), TN: {tn} ({(tn / total) * 100:.2f}%)]]\n")
+        except Exception as e:
+            f.write(f"Error calculating metrics: {e}\n")
+    
+    print(f"Metrics written to {text_path}")
+
+def write_binary_classification_metrics_tense(output_dir, num_hallucinations, num_different_examples, true_encodings, predicted_encodings):
+    os.makedirs(output_dir, exist_ok=True)
+    text_path = os.path.join(output_dir, "metrics_and_model.txt")
+    with open(text_path, 'w') as f:
+        f.write(f"hallucinations/errors: {num_hallucinations}\n")
+        f.write(f"responses with some hallucinated portion: {num_different_examples}\n")
         f.write(f"Encodings:\n")
         f.write(f"- True Encodings:\n")
         f.write(f"    - Class 0: {true_encodings.count(0)}\n")
@@ -858,46 +892,59 @@ def tense_type_condition(tense_list, tense_type):
             return True
     return False
 
-def compare_example_to_post(post, example):
-    if example:
-        if example in post:
-            return True
-        return False
-    return True
+def compare_example_and_post(llm_output):
+    modified_llm_output = []
+    num_diff = 0
+    with open(llm_output, 'r') as file:
+        reader = csv.DictReader(file)
+        fieldnames = reader.fieldnames
+        for row in reader:
+            post = parse.get_post_title_string(row['post_id'])
+            if row['verbatim_example']:
+              if row['verbatim_example'].lower() in post.lower():
+                  row["exact_match"] = "True"
+              else:
+                  row["exact_match"] = "False"
+                  num_diff += 1
+            else:
+              row["exact_match"] = "True"
+            modified_llm_output.append(row)
+    with open(llm_output, 'w', newline='', encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in modified_llm_output:
+            writer.writerow(row)
+    return num_diff
+
 
 def process_tense(output, tense_type, parse_function, encode_function):
     # Create folder for the tense type
     directory_path = os.path.join(output, tense_type)
     create_directory(directory_path)
-
     # Set up a unique log for each tense type
     log_file_path = os.path.join(directory_path, f"{tense_type}_error_log.txt")
     logger = setup_logging(log_file_path)
-
     # Log processing information
     logger.info(f"{tense_type.upper()}: \n")
-
     # Set CSV path and create CSV file with headers
     csv_path = os.path.join(directory_path, f"{tense_type}_codes.csv")
     with open(csv_path, 'w', newline='', encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "verbatim_example", "true_tense"])
+        writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "true_tense", "verbatim_example", "exact_match"])
         writer.writeheader()
-
         # Parsing encodings
         encodings = parse_function()
         true_encodings = []
         predicted_encodings = []
         num_errors = 0
-
         # Iterate over encodings and process
         for encoding in encodings:
+            file.flush()
             post_id, post, title, state_label, tense_list = encoding
             try:
                 if tense_type_condition(tense_list, tense_type):
                     true_tense = 1
                 else:
                     true_tense = 0
-
                 response = encode_function(state_label, post, title)
                 try:
                     thematic_code_json = json.loads(response.json()['message']['content'])
@@ -906,7 +953,6 @@ def process_tense(output, tense_type, parse_function, encode_function):
                       verbatim_example = thematic_code_json['language']
                     except:
                       verbatim_example = "None"
-
                     writer.writerow({
                         "post_id": post_id,
                         "predicted_tense": thematic_code,
@@ -923,20 +969,17 @@ def process_tense(output, tense_type, parse_function, encode_function):
                     })
                     logger.error(f"JSON error: {e}, post id: {post_id}, response: {response.json()}")
                     continue
-
                 try:
                     predicted_encodings.append(int(thematic_code))
                     true_encodings.append(true_tense)
                 except Exception as e:
                     num_errors += 1
                     logger.error(f"Error appending: post id: {post_id}, {thematic_code}")
-
             except Exception as e:
                 num_errors += 1
                 logger.error(f"Error processing encoding {encoding}: {e}")
-
-        # Write metrics for classification
-        write_binary_classification_metrics(directory_path, num_errors, true_encodings, predicted_encodings)
+        num_different_examples = compare_example_and_post(csv_path)
+        write_binary_classification_metrics_tense(directory_path, num_errors, num_different_examples, true_encodings, predicted_encodings)
 
 def encode_tenses(output):
     process_tense(output, "present_tense", parse.parse_tense, thematically_encode_present_tense)
@@ -944,7 +987,6 @@ def encode_tenses(output):
     process_tense(output, "past_withdrawal", parse.parse_tense, thematically_encode_past_withdrawal)
     process_tense(output, "past_recovery", parse.parse_tense, thematically_encode_past_recovery)
     process_tense(output, "future_withdrawal", parse.parse_tense, thematically_encode_future_withdrawal)
-
 
 def encode_feature(output, encoding_type, thematic_encoding_function):
     if not os.path.exists(output):
@@ -993,7 +1035,7 @@ def test_prompt(post, title):
     "Content-Type": "application/json"
   }
   data = {
-    "model": MODEL,
+    "model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -1048,4 +1090,4 @@ Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': '
 
 
 if __name__ == "__main__":
-  encode_tenses("llama_thematic_coding/11-30/tenses/run3")
+  encode_tenses("llama_thematic_coding/11-30/tenses/run4")

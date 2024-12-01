@@ -1,26 +1,27 @@
-hallucinations/errors: 43
+hallucinations/errors: 0
+responses with some hallucinated portion: 334
 Encodings:
 - True Encodings:
-    - Class 0: 847
+    - Class 0: 890
     - Class 1: 55
 - Predicted Encodings:
-    - Class 0: 475
-    - Class 1: 427
+    - Class 0: 513
+    - Class 1: 432
 
 Performance Metrics:
-- Accuracy: 0.5765
+- Accuracy: 0.5926
 - Macro Averages:
-    - F1 Score: 0.4593
-    - Precision: 0.5533
-    - Recall: 0.7320
+    - F1 Score: 0.4675
+    - Precision: 0.5551
+    - Recall: 0.7496
 - Weighted Averages:
-    - F1 Score: 0.6803
-    - Precision: 0.9363
-    - Recall: 0.5765
+    - F1 Score: 0.6955
+    - Precision: 0.9413
+    - Recall: 0.5926
 Confusion Matrix:
-    [[TP: 50 (5.54%), FP: 377 (41.80%)]
-     [FN: 5 (0.55%), TN: 470 (52.11%)]]
-"model": llama3.1:70b,
+    [[TP: 51 (5.40%), FP: 381 (40.32%)]
+     [FN: 4 (0.42%), TN: 509 (53.86%)]]
+"model": "llama3.2-vision:11b-instruct-q4_K_M",
     "format": "json",
       "options": {
         "temperature": 0.0

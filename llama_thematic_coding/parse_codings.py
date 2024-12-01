@@ -163,6 +163,22 @@ def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.cs
                 title = html.unescape(process_post_field(row['Post']))
                 out.append((post_id, None, title, state_label_to_string(int(state_label)), feature_list))
         return out
+    
+def get_post_title_string(post_id, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
+    with open(coding_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['Post ID'] == post_id:
+                try:
+                    post, title = process_post_field(row['Post'])
+                    post = html.unescape(post)
+                    title = html.unescape(title)
+                    return str(post) + " " + str(title)
+                except:
+                    title = process_post_field(row['Post'])
+                    title = html.unescape(title)
+                    return str(title)
+                
 
      
 if __name__ == "__main__":
