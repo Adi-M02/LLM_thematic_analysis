@@ -1,5 +1,5 @@
 hallucinations/errors: 6
-responses with some hallucinated portion: 110
+responses with some hallucinated portion: 89
 Encodings:
 - True Encodings:
     - Class 0: 93

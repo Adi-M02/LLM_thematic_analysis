@@ -15,7 +15,7 @@ def thematically_encode_days_clean(state_label, title, post=None):
     }
     if post:
         data = {
-            "model": "llama3.1:70b",
+            "model": "llama3.2-vision:11b-instruct-q8_0",
             "messages": [
     {
         "role": "system",
@@ -215,7 +215,7 @@ Respond with exactly one digit: '0' or '1'. Do not include any other text."""
         }
     else:
         data = {
-            "model": "llama3.1:70b",
+            "model": "llama3.2-vision:11b-instruct-q8_0",
             "messages": [
     {
         "role": "system",
@@ -424,7 +424,7 @@ def thematically_encode_present_tense(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
     "options": {
         "temperature": 0.0
@@ -489,7 +489,7 @@ def thematically_encode_past_use(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
     "options": {
         "temperature": 0.0
@@ -554,7 +554,7 @@ def thematically_encode_past_withdrawal(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
     "options": {
         "temperature": 0.0
@@ -619,7 +619,7 @@ def thematically_encode_past_recovery(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
     "options": {
         "temperature": 0.0
@@ -684,7 +684,7 @@ def thematically_encode_future_withdrawal(state_label, post, title):
         "Content-Type": "application/json"
     }
     data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
     "options": {
         "temperature": 0.0
@@ -935,10 +935,15 @@ def compare_example_and_post(llm_output):
         fieldnames = reader.fieldnames
         for row in reader:
             post = parse.get_post_title_string(row['post_id'])
+            if row['verbatim_example'] == "ERROR":
+                row["exact_match"] = "ERROR"
+                continue
+            if not post:
+                continue
             if row['verbatim_example']:
               if row['verbatim_example'].lower() in post.lower():
                   row["exact_match"] = "True"
-              elif row['verbatim_example'] == "None":
+              elif row['verbatim_example'].strip() == "None":
                     row["exact_match"] = "True"
               else:
                   row["exact_match"] = "False"
@@ -947,10 +952,11 @@ def compare_example_and_post(llm_output):
               row["exact_match"] = "True"
             modified_llm_output.append(row)
     with open(llm_output, 'w', newline='', encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
-        writer.writeheader()
-        for row in modified_llm_output:
-            writer.writerow(row)
+      writer = csv.DictWriter(file, fieldnames=fieldnames)
+      writer.writeheader()
+      for row in modified_llm_output:
+          filtered_row = {key: row.get(key, '') for key in fieldnames}
+          writer.writerow(filtered_row)
     return num_diff
 
 
@@ -1072,7 +1078,7 @@ def test_prompt(post, title):
     "Content-Type": "application/json"
   }
   data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -1127,4 +1133,8 @@ Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': '
 
 
 if __name__ == "__main__":
-  # encode_tenses("llama_thematic_coding/11-30/tenses/run6")
+  encode_tenses("llama_thematic_coding/12-1/tenses/run1")
+#   files = ['llama_thematic_coding/11-30/tenses/run5/present_tense/present_tense_codes.csv',
+# 'llama_thematic_coding/11-30/tenses/run5/past_use/past_use_codes.csv',]
+#   for file in files:
+#     compare_example_and_post(file)
