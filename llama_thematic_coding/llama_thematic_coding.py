@@ -498,7 +498,7 @@ Consider the addiction state label and the addiction state language in the post 
 
 1. Label '1':
    - Assign label '1' if all the language which refers to the use of opioids is in the past tense, and the state label is 'withdrawal' or 'recovery'.
-   - Provide a verbatim section of the text from the post title that supports the label.
+   - Provide a verbatim section of the text that supports the label.
 
 2. Label '0':
    - Assign label '0' if the above condition is not met.
@@ -541,7 +541,7 @@ def thematically_encode_past_withdrawal(state_label, post, title):
     "messages": [
         {
             "role": "system",
-            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+            "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in the posts and post titles, classifying them based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
         },
         {
             "role": "user",
@@ -552,7 +552,7 @@ Consider the addiction state label and the addiction state language in the post 
 
 1. Label '1':
    - Assign label '1' if all the language which refers to the withdrawal from opioids is in the past tense, and the state label is 'use' or 'recovery'.
-   - Provide a verbatim section of the text from the post title that supports the label.
+   - Provide a verbatim section of the text that supports the label.
 
 2. Label '0':
    - Assign label '0' if the above condition is not met.
@@ -595,7 +595,7 @@ def thematically_encode_past_recovery(state_label, post, title):
     "messages": [
         {
             "role": "system",
-            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+            "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in the posts and post titles, classifying them based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
         },
         {
             "role": "user",
@@ -606,7 +606,7 @@ Consider the addiction state label and the addiction state language in the post 
 
 1. Label '1':
    - Assign label '1' if all the language which refers to recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal'.
-   - Provide a verbatim section of the text from the post title that supports the label.
+   - Provide a verbatim section of the text that supports the label.
 
 2. Label '0':
    - Assign label '0' if the above condition is not met.
@@ -648,8 +648,8 @@ def thematically_encode_future_withdrawal(state_label, post, title):
     },
     "messages": [
         {
-            "role": "system",
-            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in the post titles and classify them according to specific rules based on tense and context. Respond only in the specified JSON format. Do not include reasoning, explanations, or any additional text in your response."
+          "role": "system",
+          "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in the posts and post titles, classifying them based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
         },
         {
             "role": "user",
@@ -659,12 +659,12 @@ Instructions:
 Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
 1. Label '1':
-   - Assign label '1' if all the language which refers to withdrawal from opioids is in the future tense.
-   - Provide a verbatim section of the text from the post title that supports the label.
+  - Assign label '1' if all the language which refers to withdrawal from opioids is in the future tense.
+  - Provide a verbatim section of the text that supports the label.
 
 2. Label '0':
-   - Assign label '0' if the above condition is not met.
-   - Respond 'None' in the section of your response that supports the label.
+  - Assign label '0' if the above condition is not met.
+  - Respond 'None' in the section of your response that supports the label.
 
 - Important Notes:
   - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
@@ -904,7 +904,6 @@ def compare_example_and_post(llm_output):
           writer.writerow(filtered_row)
     return num_diff
 
-
 def process_tense(output, tense_type, parse_function, encode_function):
     # Create folder for the tense type
     directory_path = os.path.join(output, tense_type)
@@ -1076,8 +1075,7 @@ Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': '
   print(label_json)
 
 
-
 if __name__ == "__main__":
   start = time.time()
-  encode_tenses("llama_thematic_coding/12-1/tenses/run3")
+  encode_tenses("llama_thematic_coding/12-1/tenses/run4")
   print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
