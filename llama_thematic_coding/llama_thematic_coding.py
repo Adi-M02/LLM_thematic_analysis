@@ -323,42 +323,6 @@ def write_binary_classification_metrics(output_dir, num_hallucinations, num_diff
     
     print(f"Metrics written to {text_path}")
 
-def encode_incorrect_days(output):
-    if not os.path.exists(output):
-        os.makedirs(output)
-    csv_path = os.path.join(output, "incorrect_days_clean_codes.csv")
-    with open(csv_path, 'w', newline='', encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_incorrect_days_clean", "true_incorrect_days_clean"])
-        writer.writeheader()
-        encodings = parse.parse_csv()
-        true_encodings = []
-        predicted_encodings = []
-        num_hallucinations = 0
-        for encoding in encodings:
-            try:
-                post_id, post, title, state_label, incorrect_days_clean = encoding
-                thematic_code = thematically_encode_days_clean(state_label, title, post)
-                binary_true_incorrect_days_clean = cast_incorrect_days_clean_to_binary(incorrect_days_clean)
-                writer.writerow({
-                    "post_id": post_id,
-                    "predicted_incorrect_days_clean": thematic_code,
-                    "true_incorrect_days_clean": binary_true_incorrect_days_clean
-                })
-                file.flush()
-                true_encodings.append(binary_true_incorrect_days_clean)
-                try:
-                    predicted_encodings.append(int(thematic_code))
-                except:
-                    num_hallucinations += 1
-                    #if the endoding isn't a number, add a wrong entry to the predictions
-                    if binary_true_incorrect_days_clean == 0:
-                        predicted_encodings.append(1)
-                    else:
-                        predicted_encodings.append(0)
-            except Exception as e:
-                print(f"Error processing encoding {encoding}: {e}")
-    write_binary_classification_metrics(output, num_hallucinations, true_encodings, predicted_encodings)
-
 def tense_type_condition(tense_list, tense_type):
     if tense_type == "present_tense":
         if 0 in tense_list:
