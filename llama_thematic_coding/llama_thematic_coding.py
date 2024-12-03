@@ -624,6 +624,41 @@ def write_binary_classification_metrics(output_dir, num_hallucinations, num_diff
     
     print(f"Metrics written to {text_path}")
 
+def write_metrics_and_model(output_dir, logger, encoder, feature, num_hallucinations, num_different_examples, true_encodings, predicted_encodings):
+    os.makedirs(output_dir, exist_ok=True)
+    text_path = os.path.join(output_dir, "metrics_and_model.txt")
+    with open(text_path, 'w') as f:
+        f.write(f"hallucinations/errors: {num_hallucinations}\n")
+        f.write(f"responses with some hallucinated portion: {num_different_examples}\n")
+        f.write(f"Encodings:\n")
+        f.write(f"- True Encodings:\n")
+        f.write(f"    - Class 0: {true_encodings.count(0)}\n")
+        f.write(f"    - Class 1: {true_encodings.count(1)}\n")
+        f.write(f"- Predicted Encodings:\n")
+        f.write(f"    - Class 0: {predicted_encodings.count(0)}\n")
+        f.write(f"    - Class 1: {predicted_encodings.count(1)}\n\n")
+        try:
+            f.write(f"Performance Metrics:\n")
+            f.write(f"- Accuracy: {accuracy_score(true_encodings, predicted_encodings):.4f}\n")
+            f.write(f"- Macro Averages:\n")
+            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"- Weighted Averages:\n")
+            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
+            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
+            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
+            f.write("Confusion Matrix:\n")
+            cm = confusion_matrix(true_encodings, predicted_encodings)
+            tn, fp, fn, tp = cm.ravel()
+            total = tn + fp + fn + tp
+            f.write(f"    [[TP: {tp} ({(tp / total) * 100:.2f}%), FP: {fp} ({(fp / total) * 100:.2f}%)]\n")
+            f.write(f"     [FN: {fn} ({(fn / total) * 100:.2f}%), TN: {tn} ({(tn / total) * 100:.2f}%)]]\n")
+        except Exception as e:
+            f.write(f"Error calculating metrics: {e}\n")
+            logger.error(f"{feature}: Error calculating metrics: {e}")
+        encoder.write_prompt_structure(f, feature)
+
 def tense_type_condition(tense_list, tense_type):
     if tense_type == "present_tense":
         if 0 in tense_list:
@@ -671,12 +706,10 @@ def setup_logging(log_file_path):
     return logger
 
 def create_directory(directory_path):
-    # Create a directory if it does not exist
     if not os.path.exists(directory_path):
         os.makedirs(directory_path)
 
 def tense_type_condition(tense_list, tense_type):
-    # Return True or False based on the given tense type condition
     if tense_type == "present_tense":
         if 0 in tense_list:
             return True
@@ -936,25 +969,19 @@ def encode_tenses(output):
     process_tense(output, "future_withdrawal", parse.parse_tense, thematically_encode_future_withdrawal)
 
 def process_tense(output, tense_type, parse_function, encode_function):
-    # Create folder for the tense type
     directory_path = os.path.join(output, tense_type)
     create_directory(directory_path)
-    # Set up a unique log for each tense type
     log_file_path = os.path.join(directory_path, f"{tense_type}_error_log.txt")
     logger = setup_logging(log_file_path)
-    # Log processing information
     logger.info(f"{tense_type.upper()}: \n")
-    # Set CSV path and create CSV file with headers
     csv_path = os.path.join(directory_path, f"{tense_type}_codes.csv")
     with open(csv_path, 'w', newline='', encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "true_tense", "verbatim_example", "exact_match"])
         writer.writeheader()
-        # Parsing encodings
         encodings = parse_function()
         true_encodings = []
         predicted_encodings = []
         num_errors = 0
-        # Iterate over encodings and process
         for encoding in encodings:
             file.flush()
             post_id, post, title, state_label, tense_list = encoding
@@ -1010,8 +1037,6 @@ def verbatim_example_matches(logger, post_id, verbatim_example):
     elif verbatim_example == "ERROR":
         return True
     return False
-    
-    
 
 def write_response_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings):
     try:
@@ -1036,13 +1061,20 @@ def write_response_update_evaluation_lists(writer, logger, response, post_id, tr
             "true_tense": true_tense
         })
         logger.error(f"JSON error: {e}, post id: {post_id}, response: {response.json()}")
+        return num_errors, predicted_encodings, true_encodings
     try: 
         predicted_encodings.append(int(thematic_code))
         true_encodings.append(true_tense)
-
+        return num_errors, predicted_encodings, true_encodings
+    except:
+        num_errors += 1
+        logger.error(f"Error appending: post id: {post_id}, {thematic_code}")
+        return num_errors, predicted_encodings, true_encodings
 
 def encode_features(output, category_feature_dict = category_feature_dict):
     for category in category_feature_dict:
+        if category != "tense":
+            continue
         directory_path = os.path.join(output, category)
         encoder = ThematicEncoder()
         create_directory(directory_path)
@@ -1056,10 +1088,16 @@ def encode_features(output, category_feature_dict = category_feature_dict):
                 writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "true_tense", "verbatim_example", "exact_match"])
                 writer.writeheader()
                 encodings = parse.parse_feature(category)
+                true_encodings = []
+                predicted_encodings = []
+                num_errors = 0
                 for encoding in encodings:
                     post_id, post, title, state_label, tense_list = encoding
                     true_tense = 1 if feature_encoding_to_binary(category, feature, tense_list) else 0
                     response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
+                    num_errors, predicted_encodings, true_encodings = write_response_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings)
+                num_different_examples = compare_example_and_post(csv_path)
+                write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
                     
 
 
@@ -1067,6 +1105,6 @@ def encode_features(output, category_feature_dict = category_feature_dict):
 
             
 if __name__ == "__main__":
-
-      
-  print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
+    start = time.time()
+    encode_features("llama_thematic_coding/12-3/test_run")
+    print(f"Time taken: {((time.time() - start)/60):.2f} minutes")

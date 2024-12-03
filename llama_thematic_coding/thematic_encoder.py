@@ -35,23 +35,24 @@ Instructions:
         response = requests.post(self.url, headers=self.headers, json=data)
         return response
     
-def write_prompt_structure(self, writer, feature_instruction):
-    prompt = f"""
-data = {{{self.default_data.copy()},
-"messages": [
-    {{"role:"system", "content"{self.system_message}}},
-    {{"role": "user", "content": {{
-Instructions:
+    def write_prompt_structure(self, writer, feature_instruction):
+        prompt = f"""
+    data = {{
+        {self.default_data.copy()},
+    "messages": [
+        {{"role:"system", "content"{self.system_message}}},
+        {{"role": "user", "content": {{
+    Instructions:
 
-{feature_instruction}
+    {feature_instruction}
 
-- Respond based on the following inputs:
-  Post: {{post}}
-  Post Title: {{title}}
-  State Label: {{state_label}}
-    }}}},
-],
- "stream": False
-}}
-"""
-    print(prompt)
+    - Respond based on the following inputs:
+    Post: {{post}}
+    Post Title: {{title}}
+    State Label: {{state_label}}
+        }}}},
+    ],
+    "stream": False
+    }}
+    """
+        writer.write(prompt)
