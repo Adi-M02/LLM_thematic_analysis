@@ -92,7 +92,7 @@ withdrawal_method:
 	24: (sore_throat_symptom) symptom: sore throat
 	25: (cold_flu_fever_symptom) symtom: cold/flu/fever
 
-Recovery:
+recovery:
 	1. (offering_advice) offering advice
 		***The user offers advice on opiate recovery or withdrawal.
 	2. (challenges_through_recovery) reflecting on the challenges/accomplishments through recovery
@@ -101,7 +101,7 @@ Recovery:
 		***The user describes dangers of using opiates.
 		
 
-Co-Use:
+co-use:
 ***The user describes in the post co-use of the drug indicated by the label with opiates.
 	1. xanax (same as 2)
 	2. benzodiazepam
@@ -124,10 +124,10 @@ off-topic:
 		***The user makes a post wherein they seek community with other users.
 	7. (other_persons_opiate_use) referring to someone elses opiate use
 		***The user refers to another persons opiate use.
-	8. (entertainment) statement about entertainment/news
+	8. (other_persons_opiate_use) statement about entertainment/news
 		***The user makes a statement regarding entertainment or news. They make link to an article or video.
 
-question code:
+question:
 ***The user asks a question that can be generally categorized by the cooresponding label. If they ask a question that does not
 coorespond to a label, it is labeled with 7: misc question.
 	1 (opioid_use_lifestyle) Opioid use lifestyle question (any question about opiates that isn't specifically about administration or effects)
@@ -152,8 +152,8 @@ coorespond to a label, it is labeled with 7: misc question.
 		20 (relate_to_withdrawal) experience of withdrawal
 		27 (relate_to_using) experience of using
 
-	29 dealing with relapse
-		33 (deal_with_relapse) question about how to recover again
+	29 (deal_with_relapse) dealing with relapse
+		33 (recover_again) question about how to recover again
 		18 (resetting_withrawal) asking about resetting withdrawal time with a relapse
 
 	13 withdrawal, general
