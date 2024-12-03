@@ -394,7 +394,67 @@ def tense_type_condition(tense_list, tense_type):
     return False
 
 def feature_encoding_to_binary(category, feature, encoded_label_list):
-    pass
+    if category == "tense":
+        if feature == "present_tense":
+            return 0 in encoded_label_list
+        elif feature == "past_use":
+            return 1 if 1 in encoded_label_list:
+        elif feature == "past_withdrawal":
+            return 2 in encoded_label_list
+        elif feature == "past_recovery":
+            return 3 in encoded_label_list
+        elif feature == "future_withdrawal":
+            return 4 in encoded_label_list
+    elif category == "atypical_information":
+        if feature == "want_to_use":
+            return 1 in encoded_label_list
+        elif feature == "talking_about_withdrawal":
+            return 2 in encoded_label_list
+        elif feature == "talking_about_use":
+            return 3 in encoded_label_list
+        elif feature == "mentioning_withdrawal_drugs":
+            return 4 in encoded_label_list
+        elif feature == "not_mentioning_withdrawal":
+            return 5 in encoded_label_list
+    elif category == "special_cases":
+        if feature == "relapse_mention":
+            return 1 in encoded_label_list
+        elif feature == "unintentional_withdrawal":
+            return 2 in encoded_label_list
+        elif feature == "abusing_subs":
+            return 3 in encoded_label_list
+        elif feature == "irregular_use":
+            return 4 in encoded_label_list
+        elif feature == "use_for_pain_relief":
+            return 5 in encoded_label_list
+    elif category == "use":
+        if feature == "personal_regimen":
+            return 1 in encoded_label_list
+        elif feature == "improper_administration":
+            return 2 in encoded_label_list
+        elif feature == "purchase_of_drugs":
+            return 4 in encoded_label_list
+        elif feature == "negative_effects":
+            return 5 in encoded_label_list
+        elif feature == "activity_on_opiates":
+            return 7 in encoded_label_list
+        elif feature == "positive_effects":
+            return 8 in encoded_label_list
+    elif category == "withdrawal_method":
+        if feature == "subs_method":
+            return 1 in encoded_label_list
+        elif feature == "methadone_method":
+            return 2 in encoded_label_list
+        elif feature == "zolpiclone_method":
+            return 3 in encoded_label_list
+        elif feature == "diazepam_method":
+            return 4 in encoded_label_list
+        elif feature == "kratom_method":
+            return 5 in encoded_label_list
+        elif feature == "cold_turkey_method":
+            return 6 in encoded_label_list
+        elif feature == "ibogaine_method":
+            return 6 in encoded_label_list
         
 
 def compare_example_and_post(llm_output):

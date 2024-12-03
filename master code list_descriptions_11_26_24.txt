@@ -25,7 +25,7 @@ atypical_information:
 	5. (not_mentioning_withdrawal) not mentioning withdrawal symptoms (in withdrawal)
 		***The user is classified as withdrawal but does not refer to their personal withdrawal symptoms.
 
-special cases:
+special_cases:
 	1. (relapse_mention) relapse mention
 		***The user mentions having relapsed from opiate recovery or withdrawal.
 	2. (unintentional_withdrawal) unintentional withdrawal
