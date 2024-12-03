@@ -16,7 +16,7 @@ def thematically_encode_days_clean(state_label, title, post=None):
     }
     if post:
         data = {
-            "model": "llama3.1:70b",
+            "model": "llama3.2-vision:11b-instruct-q8_0",
             "messages": [
     {
         "role": "system",
@@ -216,7 +216,7 @@ Respond with exactly one digit: '0' or '1'. Do not include any other text."""
         }
     else:
         data = {
-            "model": "llama3.1:70b",
+            "model": "llama3.2-vision:11b-instruct-q8_0",
             "messages": [
     {
         "role": "system",
@@ -426,7 +426,7 @@ def thematically_encode_present_tense(state_label, post, title):
     }
     if post:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -474,7 +474,7 @@ def thematically_encode_present_tense(state_label, post, title):
   }
     else:
           data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -528,7 +528,7 @@ def thematically_encode_past_use(state_label, post, title):
     }
     if post:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -576,7 +576,7 @@ def thematically_encode_past_use(state_label, post, title):
   }
     else:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -630,7 +630,7 @@ def thematically_encode_past_withdrawal(state_label, post, title):
     }
     if post:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -678,7 +678,7 @@ def thematically_encode_past_withdrawal(state_label, post, title):
   }
     else:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -732,7 +732,7 @@ def thematically_encode_past_recovery(state_label, post, title):
     }
     if post:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -780,7 +780,7 @@ def thematically_encode_past_recovery(state_label, post, title):
   }
     else:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -834,7 +834,7 @@ def thematically_encode_future_withdrawal(state_label, post, title):
     }
     if post:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -882,7 +882,7 @@ def thematically_encode_future_withdrawal(state_label, post, title):
   }
     else:
       data = {
-      "model": "llama3.1:70b",
+      "model": "llama3.2-vision:11b-instruct-q8_0",
       "format": "json",
       "options": {
           "temperature": 0.0
@@ -1262,7 +1262,7 @@ def test_prompt(post, title):
     "Content-Type": "application/json"
   }
   data = {
-    "model": "llama3.1:70b",
+    "model": "llama3.2-vision:11b-instruct-q8_0",
     "format": "json",
       "options": {
         "temperature": 0.0
@@ -1317,5 +1317,5 @@ Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': '
 
 if __name__ == "__main__":
   start = time.time()
-  encode_tenses("llama_thematic_coding/12-1/tenses/run6")
+  encode_tenses("llama_thematic_coding/12-1/tenses/run5")
   print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
