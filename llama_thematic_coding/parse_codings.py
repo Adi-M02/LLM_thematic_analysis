@@ -143,8 +143,8 @@ def parse_tense(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
 
         return tense_list
     
-def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
-    mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co_use": "co-use", "is_imputed": "Is imputed", "imputed": "imputed"}
+def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv', skip_unknown=True):
+    mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co-use": "co-use", "off-topic": "off-topic", "imputed": "imputed"}
     out = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -154,6 +154,9 @@ def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.cs
             state_label = row['State Label']
             feature_list = row[mapping[feature]]
             feature_list = [int(num) for num in feature_list.split(',')]
+            if skip_unknown:
+                if int(row['State Label']) == 4:
+                    continue
             try:
                 title, post = process_post_field(row['Post'])
                 post = html.unescape(post)
@@ -164,7 +167,7 @@ def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.cs
                 out.append((post_id, None, title, state_label_to_string(int(state_label)), feature_list))
         return out
     
-def get_post_title_string(post_id, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
+def get_post_title_string(logger, post_id, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -178,6 +181,8 @@ def get_post_title_string(post_id, coding_file='All_Codes_Manual_Analysis_fixEnc
                     title = process_post_field(row['Post'])
                     title = html.unescape(title)
                     return str(title)
+        logger.error(f"Post ID {post_id} not found in the coding file.")
+        return " "
                 
 
      

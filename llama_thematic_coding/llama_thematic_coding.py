@@ -7,8 +7,309 @@ import os
 import random
 import time
 import logging
+from thematic_encoder import ThematicEncoder
 
 url = "http://localhost:11434/api/chat"
+
+category_feature_dict = {
+  "tense": [
+      "present_tense",
+      "past_use",
+      "past_withdrawal",
+      "past_recovery",
+      "future_withdrawal"
+  ],
+  "atypical_information": [
+      "want_to_use",
+      "talking_about_withdrawal",
+      "talking_about_use",
+      "mentioning_withdrawal_drugs",
+      "not_mentioning_withdrawal"
+  ],
+  "special_cases": [
+      "relapse_mention",
+      "unintentional_withdrawal",
+      "abusing_subs",
+      "irregular_use",
+      "use_for_pain_relief"
+  ],
+  "use": [
+      "personal_regimen",
+      "improper_administration",
+      "purchase_of_drugs",
+      "negative_effects",
+      "activity_on_opiates",
+      "positive_effects"
+  ],
+  "withdrawal": [
+      "subs_method",
+      "methadone_method",
+      "zolpiclone_method",
+      "diazepam_method",
+      "kratom_method",
+      "unmentioned_method",
+      "xanax_method",
+      "sleeping_pills_method",
+      "loperamide_method",
+      "marijuana_method",
+      "gabapentin_method",
+      "klonopin_method",
+      "rhodiola_method",
+      "vivitrol_method",
+      "cigarette_methods",
+      "caffine_method",
+      "cold_turkey_method",
+      "ibogaine_method",
+      "restless_legs_symptom",
+      "sleep_disorder_symptom",
+      "GI_symptom",
+      "sweats_symptom",
+      "cold_sensitivity_symptom",
+      "nausea_vomiting_symptom",
+      "memory_loss_symptom",
+      "heartburn_symptom",
+      "headache_symptom",
+      "sore_throat_symptom",
+      "cold_flu_fever_symptom"
+  ],
+  "recovery": [
+      "offering_advice",
+      "challenges_through_recovery",
+      "danger_of_opiates"
+  ],
+  "co-use": [
+      "xanax",
+      "benzodiazepam",
+      "ambien",
+      "aderall",
+      "marijuana",
+      "cigarettes",
+      "cocaine",
+      "ketorolac",
+      "vinegar",
+      "alcohol",
+      "amphetamine",
+      "imodium"
+  ],
+  "off-topic": [
+      "public_health_awareness",
+      "seeking_community",
+      "other_persons_opiate_use", 
+      "entertainment"
+  ],
+  "question": [
+      "opioid_use_lifestyle",
+      "technical_drug_use",
+      "effects",
+      "methadone",
+      "suboxone",
+      "improper_use",
+      "subutex",
+      "tramadol",
+      "weed",
+      "kratom",
+      "darvocet",
+      "vivitrol",
+      "relate_to_defeated",
+      "relate_to_recovery",
+      "relate_to_withdrawal",
+      "relate_to_using",
+      "deal_with_relapse",
+      "recover_again",
+      "resetting_withrawal",
+      "withdrawal",
+      "withdrawal_symptoms",
+      "effects_of_withdrawal",
+      "withdrawal_pain",
+      "recovery_question",
+      "life_without_drugs",
+      "non-opiate_medication_question",
+      "NA_meeting_question"
+  ]
+}
+feature_prompt_dict = {
+        "present_tense": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+  1. Label '1':
+    - Assign label '1' if the language referring to the user's addiction state is in the present tense or has no tense.
+    - Provide a verbatim section of the text that supports the label.
+
+  2. Label '0':
+    - Assign label '0' if any language referring to the user's addiction state is in the past tense or future tense.
+    - Provide a verbatim section of the text that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "past_use": """Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if all the language which refers to the use of opioids is in the past tense, and the state label is 'withdrawal' or 'recovery'.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the above condition is not met.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "past_withdrawal": """Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if all the language which refers to the withdrawal from opioids is in the past tense, and the state label is 'use' or 'recovery'.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the above condition is not met.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "past_recovery": """Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if all the language which refers to recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal'.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the above condition is not met.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "future_withdrawal": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if all the language which refers to withdrawal from opioids is in the future tense.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the above condition is not met.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "want_to_use": """""",
+  "talking_about_withdrawal": """""",
+  "talking_about_use": """""",
+  "mentioning_withdrawal_drugs": """""",
+  "not_mentioning_withdrawal": """""",
+  "relapse_mention": """""",
+  "unintentional_withdrawal": """""",
+  "abusing_subs": """""",
+  "irregular_use": """""",
+  "use_for_pain_relief": """""",
+  "personal_regimen": """""",
+  "improper_administration": """""",
+  "purchase_of_drugs": """""",
+  "negative_effects": """""",
+  "activity_on_opiates": """""",
+  "positive_effects": """""",
+  "subs_method": """""",
+  "methadone_method": """""",
+  "zolpiclone_method": """""",
+  "diazepam_method": """""",
+  "kratom_method": """""",
+  "unmentioned_method": """""",
+  "xanax_method": """""",
+  "sleeping_pills_method": """""",
+  "loperamide_method": """""",
+  "marijuana_method": """""",
+  "gabapentin_method": """""",
+  "klonopin_method": """""",
+  "rhodiola_method": """""",
+  "vivitrol_method": """""",
+  "cigarette_methods": """""",
+  "caffine_method": """""",
+  "cold_turkey_method": """""",
+  "ibogaine_method": """""",
+  "restless_legs_symptom": """""",
+  "sleep_disorder_symptom": """""",
+  "GI_symptom": """""",
+  "sweats_symptom": """""",
+  "cold_sensitivity_symptom": """""",
+  "nausea_vomiting_symptom": """""",
+  "memory_loss_symptom": """""",
+  "heartburn_symptom": """""",
+  "headache_symptom": """""",
+  "sore_throat_symptom": """""",
+  "cold_flu_fever_symptom": """""",
+  "offering_advice": """""",
+  "challenges_through_recovery": """""",
+  "danger_of_opiates": """""",
+  "xanax": """""",
+  "benzodiazepam": """""",
+  "ambien": """""",
+  "aderall": """""",
+  "marijuana": """""",
+  "cigarettes": """""",
+  "cocaine": """""",
+  "ketorolac": """""",
+  "vinegar": """""",
+  "alcohol": """""",
+  "amphetamine": """""",
+  "imodium": """""",
+  "public_health_awareness": """""",
+  "seeking_community": """""",
+  "other_persons_opiate_use": """""",
+  "entertainment": """""",
+  "opioid_use_lifestyle": """""",
+  "technical_drug_use": """""",
+  "effects": """""",
+  "methadone": """""",
+  "suboxone": """""",
+  "improper_use": """""",
+  "subutex": """""",
+  "tramadol": """""",
+  "weed": """""",
+  "kratom": """""",
+  "darvocet": """""",
+  "relate_to_defeated": """""",
+  "relate_to_recovery": """""",
+  "relate_to_withdrawal": """""",
+  "relate_to_using": """""",
+  "deal_with_relapse": """""",
+  "recover_again": """""",
+  "resetting_withrawal": """""",
+  "withdrawal": """""",
+  "withdrawal_symptoms": """""",
+  "effects_of_withdrawal": """""",
+  "withdrawal_pain": """""",
+  "recovery_question": """""",
+  "life_without_drugs": """""",
+  "non-opiate_medication_question": """""",
+  "NA_meeting_question": """"""
+}
+  
 
 def thematically_encode_present_tense(state_label, post, title):
     headers = {
@@ -440,7 +741,7 @@ def feature_encoding_to_binary(category, feature, encoded_label_list):
             return 7 in encoded_label_list
         elif feature == "positive_effects":
             return 8 in encoded_label_list
-    elif category == "withdrawal_method":
+    elif category == "withdrawal":
         if feature == "subs_method":
             return 1 in encoded_label_list
         elif feature == "methadone_method":
@@ -538,7 +839,7 @@ def feature_encoding_to_binary(category, feature, encoded_label_list):
             return 5 in encoded_label_list
         elif feature == "other_persons_opiate_use":
             return 7 in encoded_label_list
-        elif feature == "other_persons_opiate_use":
+        elif feature == "entertainment":
             return 8 in encoded_label_list
     elif category == "question":
         if feature == "opioid_use_lifestyle":
@@ -627,6 +928,13 @@ def compare_example_and_post(llm_output):
           writer.writerow(filtered_row)
     return num_diff
 
+def encode_tenses(output):
+    process_tense(output, "present_tense", parse.parse_tense, thematically_encode_present_tense)
+    process_tense(output, "past_use", parse.parse_tense, thematically_encode_past_use)
+    process_tense(output, "past_withdrawal", parse.parse_tense, thematically_encode_past_withdrawal)
+    process_tense(output, "past_recovery", parse.parse_tense, thematically_encode_past_recovery)
+    process_tense(output, "future_withdrawal", parse.parse_tense, thematically_encode_future_withdrawal)
+
 def process_tense(output, tense_type, parse_function, encode_function):
     # Create folder for the tense type
     directory_path = os.path.join(output, tense_type)
@@ -691,56 +999,74 @@ def process_tense(output, tense_type, parse_function, encode_function):
         num_different_examples = compare_example_and_post(csv_path)
         write_binary_classification_metrics(directory_path, num_errors, num_different_examples, true_encodings, predicted_encodings)
 
-def encode_tenses(output):
-    process_tense(output, "present_tense", parse.parse_tense, thematically_encode_present_tense)
-    process_tense(output, "past_use", parse.parse_tense, thematically_encode_past_use)
-    process_tense(output, "past_withdrawal", parse.parse_tense, thematically_encode_past_withdrawal)
-    process_tense(output, "past_recovery", parse.parse_tense, thematically_encode_past_recovery)
-    process_tense(output, "future_withdrawal", parse.parse_tense, thematically_encode_future_withdrawal)
+def verbatim_example_matches(logger, post_id, verbatim_example):
+    post = parse.get_post_title_string(logger, post_id)
+    if not post:
+        return False
+    if verbatim_example.lower() in post.lower():
+        return True
+    elif verbatim_example.strip() == "None":
+        return True
+    elif verbatim_example == "ERROR":
+        return True
+    return False
+    
+    
 
-def encode_feature(output, encoding_type, thematic_encoding_function):
-    if not os.path.exists(output):
-        os.makedirs(output)
-    csv_path = os.path.join(output, f"{encoding_type}_codes.csv")
-    with open(csv_path, 'w', newline='', encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["post_id", f"predicted_{encoding_type}", f"true_{encoding_type}"])
-        writer.writeheader()
-        encodings = parse.parse_feature(encoding_type)
-        true_encodings = []
-        predicted_encodings = []
-        num_hallucinations = 0
-        valid_encodings = set()
-        for encoding in encodings:
-            post_id, post, title, state_label, feature = encoding
-            if encoding_type == "incorrect_days_clean":
-                feature = cast_incorrect_days_clean_to_binary(feature)
-            valid_encodings.update(set(feature))
-            try:
-                thematic_code = thematic_encoding_function(state_label, post, title)
-                writer.writerow({
-                    "post_id": post_id,
-                    f"predicted_{encoding_type}": thematic_code,
-                    f"true_{encoding_type}": ','.join(map(str, feature))
-                })
-                file.flush()
-                true_encodings.append(feature)
-                try:
-                    predicted_encodings.append(int(thematic_code))
-                except:
-                    num_hallucinations += 1
-                    #if the endoding is a hallucination, add a wrong entry to the predictions
-                    predicted_encodings.append(
-                        random.choice(
-                            [
-                                i for i in range(min(valid_encodings), max(valid_encodings)+1) 
-                                if i not in feature]
-                        )
-                    )
-            except Exception as e:
-                print(f"Error processing encoding {encoding}: {e}")
-    write_binary_classification_metrics(output, num_hallucinations, true_encodings, predicted_encodings)
+def write_response_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings):
+    try:
+        thematic_code_json = json.loads(response.json()['message']['content'])
+        thematic_code = thematic_code_json['label']
+        try:
+            verbatim_example = thematic_code_json['language']
+        except:
+            verbatim_example = "None"
+        writer.writerow({
+            "post_id": post_id,
+            "predicted_tense": thematic_code,
+            "verbatim_example": verbatim_example,
+            "true_tense": true_tense, 
+        })
+    except Exception as e:
+        num_errors += 1
+        writer.writerow({
+            "post_id": post_id,
+            "predicted_tense": "ERROR",
+            "verbatim_example": "ERROR",
+            "true_tense": true_tense
+        })
+        logger.error(f"JSON error: {e}, post id: {post_id}, response: {response.json()}")
+    try: 
+        predicted_encodings.append(int(thematic_code))
+        true_encodings.append(true_tense)
 
+
+def encode_features(output, category_feature_dict = category_feature_dict):
+    for category in category_feature_dict:
+        directory_path = os.path.join(output, category)
+        encoder = ThematicEncoder()
+        create_directory(directory_path)
+        log_file_path = os.path.join(directory_path, "error_log.txt")
+        logger = setup_logging(log_file_path)
+        for feature in category_feature_dict[category]:
+            feature_directory = os.path.join(directory_path, feature)
+            create_directory(feature_directory)
+            csv_path = os.path.join(feature_directory, f"{feature}_codes.csv")
+            with open(csv_path, 'w', newline='', encoding="utf-8") as file:
+                writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "true_tense", "verbatim_example", "exact_match"])
+                writer.writeheader()
+                encodings = parse.parse_feature(category)
+                for encoding in encodings:
+                    post_id, post, title, state_label, tense_list = encoding
+                    true_tense = 1 if feature_encoding_to_binary(category, feature, tense_list) else 0
+                    response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
+                    
+
+
+
+
+            
 if __name__ == "__main__":
-  start = time.time()
-  encode_tenses("llama_thematic_coding/12-1/tenses/run5")
+
+      
   print(f"Time taken: {((time.time() - start)/60):.2f} minutes")

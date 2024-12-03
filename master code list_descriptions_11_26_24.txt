@@ -58,7 +58,7 @@ use:
 	8. (positive_effects) positive effects of use (spefically effects framed in a positive way "I got a great high" "It made me feel so good")
 		***The user refers to the effects of opiate use with a positive connotation.
 
-withdrawal_method:
+withdrawal:
 ***The user describes in the post that they are using the method indicated by the label in the post for the purpose of aiding in opiate withdrawal.
 	1. (subs_method) method: subutex/suboxone
 	2. (methadone_method) method: methadone
@@ -124,7 +124,7 @@ off-topic:
 		***The user makes a post wherein they seek community with other users.
 	7. (other_persons_opiate_use) referring to someone elses opiate use
 		***The user refers to another persons opiate use.
-	8. (other_persons_opiate_use) statement about entertainment/news
+	8. (entertainment) statement about entertainment/news
 		***The user makes a statement regarding entertainment or news. They make link to an article or video.
 
 question:

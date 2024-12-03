@@ -14,7 +14,7 @@ class ThematicEncoder:
             "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
         )
 
-    def encode(self, instructions, state_label, post, title):
+    def encode(self, instructions, post, title, state_label):
         user_message = f"""
 Instructions:
 
@@ -34,9 +34,24 @@ Instructions:
 
         response = requests.post(self.url, headers=self.headers, json=data)
         return response
+    
+def write_prompt_structure(self, writer, feature_instruction):
+    prompt = f"""
+data = {{{self.default_data.copy()},
+"messages": [
+    {{"role:"system", "content"{self.system_message}}},
+    {{"role": "user", "content": {{
+Instructions:
 
-# Example usage:
-encoder = ThematicEncoder()
+{feature_instruction}
 
-instructions_present_tense = ""
-response = encoder.encode(instructions_present_tense, "use", "I am currently using opioids.", "Ongoing struggle with addiction.")
+- Respond based on the following inputs:
+  Post: {{post}}
+  Post Title: {{title}}
+  State Label: {{state_label}}
+    }}}},
+],
+ "stream": False
+}}
+"""
+    print(prompt)
