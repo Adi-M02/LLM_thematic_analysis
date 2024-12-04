@@ -1,0 +1,61 @@
+hallucinations/errors: 5
+responses with some hallucinated portion: 23
+Encodings:
+- True Encodings:
+    - Class 0: 937
+    - Class 1: 3
+- Predicted Encodings:
+    - Class 0: 802
+    - Class 1: 138
+
+Performance Metrics:
+- Accuracy: 0.8521
+- Macro Averages:
+    - F1 Score: 0.4671
+    - Precision: 0.5024
+    - Recall: 0.5936
+- Weighted Averages:
+    - F1 Score: 0.9172
+    - Precision: 0.9943
+    - Recall: 0.8521
+Confusion Matrix:
+    [[TP: 1 (0.11%), FP: 137 (14.57%)]
+     [FN: 2 (0.21%), TN: 800 (85.11%)]]
+
+    data = {
+        {'model': 'llama3.2-vision:11b-instruct-q8_0', 'format': 'json', 'options': {'temperature': 0.0}, 'stream': False},
+    "messages": [
+        {"role:"system", "content"You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response.},
+        {"role": "user", "content": {
+    Instructions:
+
+    Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+  1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug vivitrol.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug vivitrol.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+  
+
+    - Response Format:
+     {"label": 0 or 1, "language": "verbatim section of the text that supports the label"}
+
+    - Respond based on the following inputs:
+    Post: {post}
+    Post Title: {title}
+    State Label: {state_label}
+        }},
+    ]
+    }
+    

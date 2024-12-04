@@ -406,7 +406,23 @@ Analyze the addiction state language in the post and post title, and classify it
 - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
 unmentioned_method
-Pass
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method other than subutex/suboxon, methadone, zolpiclone, diazepam, kratom, xanax, sleeping pills, loperamide, marijuana, gabapentin, klonopin, rhodiola, vivitrol, cigarettes, cafeeine, going cold turkey, or ibogaine to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
 xanax_method
 Analyze the addiction state language in the post and post title, and classify it according to the following rules:
@@ -1326,6 +1342,25 @@ Analyze the addiction state language in the post and post title, and classify it
 - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
 - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
 
+misc_question
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a general question unrelated to opiate use.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
 subutex
 Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
@@ -1411,6 +1446,25 @@ Analyze the addiction state language in the post and post title, and classify it
 
 2. Label '0':
   - Assign label '0' if the user does not ask a question about the withdrawal drug darvocet.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+vivitrol
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug vivitrol.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug vivitrol.
   - Respond 'None' in the section of your response that supports the label.
 
 - Important Notes:

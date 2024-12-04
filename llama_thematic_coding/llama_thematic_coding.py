@@ -9,8 +9,6 @@ import time
 import logging
 from thematic_encoder import ThematicEncoder
 
-url = "http://localhost:11434/api/chat"
-
 category_feature_dict = {
   "tense": [
       "present_tense",
@@ -104,6 +102,7 @@ category_feature_dict = {
       "methadone",
       "suboxone",
       "improper_use",
+      "misc_question",
       "subutex",
       "tramadol",
       "weed",
@@ -575,7 +574,23 @@ feature_prompt_dict = {
 - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
 - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
 - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
-  "unmentioned_method": """pass""",
+  "unmentioned_method": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method other than subutex/suboxon, methadone, zolpiclone, diazepam, kratom, xanax, sleeping pills, loperamide, marijuana, gabapentin, klonopin, rhodiola, vivitrol, cigarettes, cafeeine, going cold turkey, or ibogaine to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
   "xanax_method": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
 1. Label '1':
@@ -1392,6 +1407,23 @@ feature_prompt_dict = {
 - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
 - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
 - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "misc_question": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a general question unrelated to opiate use.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
   "subutex": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
 1. Label '1':
@@ -1477,6 +1509,24 @@ feature_prompt_dict = {
 - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
 - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
 - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.""",
+  "vivitrol": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+  1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug vivitrol.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug vivitrol.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+  """,
   "relate_to_defeated": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
 1. Label '1':
@@ -1734,285 +1784,6 @@ feature_prompt_dict = {
 - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term"""
 }
   
-
-def thematically_encode_present_tense(state_label, post, title):
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = {
-    "model": "llama3.2-vision:11b-instruct-q8_0",
-    "format": "json",
-    "options": {
-        "temperature": 0.0
-    },
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
-        },
-        {
-            "role": "user",
-            "content": f"""
-Instructions:
-
-Analyze the addiction state language in the post and post title, and classify it according to the following rules:
-
-  1. Label '1':
-    - Assign label '1' if the language referring to the user's addiction state is in the present tense or has no tense.
-    - Provide a verbatim section of the text that supports the label.
-
-  2. Label '0':
-    - Assign label '0' if any language referring to the user's addiction state is in the past tense or future tense.
-    - Provide a verbatim section of the text that supports the label.
-
-- Important Notes:
-  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
-
-- Definitions of Addiction States:
-  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
-  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
-  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
-
-- Response Format:
-  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
-
-- Respond based on the following inputs:
-  Post: {post}
-  Post Title: {title}
-  State Label: {state_label}
-  """
-        }
-    ],
-    "stream": False
-}
-    response = requests.post(url, headers=headers, json=data)
-    return response
-
-def thematically_encode_past_use(state_label, post, title):
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = {
-    "model": "llama3.2-vision:11b-instruct-q8_0",
-    "format": "json",
-    "options": {
-        "temperature": 0.0
-    },
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are a researcher in an academic study focused on posts about opiate use on Reddit. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
-        },
-        {
-            "role": "user",
-            "content": f"""
-Instructions:
-
-Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
-
-1. Label '1':
-  - Assign label '1' if all the language which refers to the use of opioids is in the past tense, and the state label is 'withdrawal' or 'recovery'.
-  - Provide a verbatim section of the text that supports the label.
-
-2. Label '0':
-  - Assign label '0' if the above condition is not met.
-  - Respond 'None' in the section of your response that supports the label.
-
-- Important Notes:
-  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
-
-- Definitions of Addiction States:
-  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
-  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
-  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
-
-- Response Format:
-  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
-
-- Respond based on the following inputs:
-  Post: {post}
-  Post Title: {title}
-  State Label: {state_label}
-  """
-        }
-    ],
-    "stream": False
-}
-    response = requests.post(url, headers=headers, json=data)
-    return response
-
-def thematically_encode_past_withdrawal(state_label, post, title):
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = {
-    "model": "llama3.2-vision:11b-instruct-q8_0",
-    "format": "json",
-    "options": {
-        "temperature": 0.0
-    },
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
-        },
-        {
-            "role": "user",
-            "content": f"""
-Instructions:
-
-Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
-
-1. Label '1':
-  - Assign label '1' if all the language which refers to the withdrawal from opioids is in the past tense, and the state label is 'use' or 'recovery'.
-  - Provide a verbatim section of the text that supports the label.
-
-2. Label '0':
-  - Assign label '0' if the above condition is not met.
-  - Respond 'None' in the section of your response that supports the label.
-
-- Important Notes:
-  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
-
-- Definitions of Addiction States:
-  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
-  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
-  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
-
-- Response Format:
-  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
-
-- Respond based on the following inputs:
-  Post: {post}
-  Post Title: {title}
-  State Label: {state_label}
-  """
-        }
-    ],
-      "stream": False
-  }     
-    response = requests.post(url, headers=headers, json=data)
-    return response
-
-def thematically_encode_past_recovery(state_label, post, title):
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = {
-    "model": "llama3.2-vision:11b-instruct-q8_0",
-    "format": "json",
-    "options": {
-        "temperature": 0.0
-    },
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
-        },
-        {
-            "role": "user",
-            "content": f"""
-Instructions:
-
-Consider the addiction state label and the addiction state language in the post and post title and classify it according to the following rules:
-
-1. Label '1':
-  - Assign label '1' if all the language which refers to recovery from opioids is in the past tense, and the state label is 'use' or 'withdrawal'.
-  - Provide a verbatim section of the text that supports the label.
-
-2. Label '0':
-  - Assign label '0' if the above condition is not met.
-  - Respond 'None' in the section of your response that supports the label.
-
-- Important Notes:
-  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
-
-- Definitions of Addiction States:
-  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
-  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
-  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
-
-- Response Format:
-  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
-
-- Respond based on the following inputs:
-  Post: {post}
-  Post Title: {title}
-  State Label: {state_label}
-  """
-        }
-    ],
-    "stream": False
-}
-    response = requests.post(url, headers=headers, json=data)
-    return response
-
-def thematically_encode_future_withdrawal(state_label, post, title):
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = {
-    "model": "llama3.2-vision:11b-instruct-q8_0",
-    "format": "json",
-    "options": {
-        "temperature": 0.0
-    },
-    "messages": [
-        {
-          "role": "system",
-          "content": "You are an academic researcher studying social media posts about opiate use. Your task is to analyze the addiction state language in posts and post titles, and classify the language based on specific rules related to tense and context. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."
-        },
-        {
-            "role": "user",
-            "content": f"""
-Instructions:
-
-Analyze the addiction state language in the post and post title, and classify it according to the following rules:
-
-1. Label '1':
-  - Assign label '1' if all the language which refers to withdrawal from opioids is in the future tense.
-  - Provide a verbatim section of the text that supports the label.
-
-2. Label '0':
-  - Assign label '0' if the above condition is not met.
-  - Respond 'None' in the section of your response that supports the label.
-
-- Important Notes:
-  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
-  - Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
-
-- Definitions of Addiction States:
-  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
-  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
-  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
-
-- Response Format:
-  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
-
-- Respond based on the following inputs:
-  Post: {post}
-  Post Title: {title}
-  State Label: {state_label}
-  """
-        }
-    ],
-    "stream": False
-}
-    response = requests.post(url, headers=headers, json=data)
-    return response
-
-def cast_incorrect_days_clean_to_binary(incorrect_days_clean):
-    if incorrect_days_clean == [0]:
-        return [0]
-    elif incorrect_days_clean == [1]:
-        return[1]
-    elif incorrect_days_clean == [2]:
-        return [1]
-
 def write_binary_classification_metrics(output_dir, num_hallucinations, num_different_examples, true_encodings, predicted_encodings):
     os.makedirs(output_dir, exist_ok=True)
     text_path = os.path.join(output_dir, "metrics_and_model.txt")
@@ -2311,6 +2082,8 @@ def feature_encoding_to_binary(category, feature, encoded_label_list):
             return 5 in encoded_label_list
         elif feature == "improper_use":
             return 6 in encoded_label_list
+        elif feature == "misc_question":
+            return 7 in encoded_label_list
         elif feature == "subutex":
             return 32 in encoded_label_list
         elif feature == "tramadol":
@@ -2385,84 +2158,7 @@ def compare_example_and_post(logger, llm_output):
           writer.writerow(filtered_row)
     return num_diff
 
-def encode_tenses(output):
-    process_tense(output, "present_tense", parse.parse_tense, thematically_encode_present_tense)
-    process_tense(output, "past_use", parse.parse_tense, thematically_encode_past_use)
-    process_tense(output, "past_withdrawal", parse.parse_tense, thematically_encode_past_withdrawal)
-    process_tense(output, "past_recovery", parse.parse_tense, thematically_encode_past_recovery)
-    process_tense(output, "future_withdrawal", parse.parse_tense, thematically_encode_future_withdrawal)
-
-def process_tense(output, tense_type, parse_function, encode_function):
-    directory_path = os.path.join(output, tense_type)
-    create_directory(directory_path)
-    log_file_path = os.path.join(directory_path, f"{tense_type}_error_log.txt")
-    logger = setup_logging(log_file_path)
-    logger.info(f"{tense_type.upper()}: \n")
-    csv_path = os.path.join(directory_path, f"{tense_type}_codes.csv")
-    with open(csv_path, 'w', newline='', encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "true_tense", "verbatim_example", "exact_match"])
-        writer.writeheader()
-        encodings = parse_function()
-        true_encodings = []
-        predicted_encodings = []
-        num_errors = 0
-        for encoding in encodings:
-            file.flush()
-            post_id, post, title, state_label, tense_list = encoding
-            try:
-                if tense_type_condition(tense_list, tense_type):
-                    true_tense = 1
-                else:
-                    true_tense = 0
-                response = encode_function(state_label, post, title)
-                try:
-                    thematic_code_json = json.loads(response.json()['message']['content'])
-                    thematic_code = thematic_code_json['label']
-                    try:
-                      verbatim_example = thematic_code_json['language']
-                    except:
-                      verbatim_example = "None"
-                    writer.writerow({
-                        "post_id": post_id,
-                        "predicted_tense": thematic_code,
-                        "verbatim_example": verbatim_example,
-                        "true_tense": true_tense
-                    })
-                except Exception as e:
-                    num_errors += 1
-                    writer.writerow({
-                        "post_id": post_id,
-                        "predicted_tense": "ERROR",
-                        "verbatim_example": "ERROR",
-                        "true_tense": true_tense
-                    })
-                    logger.error(f"JSON error: {e}, post id: {post_id}, response: {response.json()}")
-                    continue
-                try:
-                    predicted_encodings.append(int(thematic_code))
-                    true_encodings.append(true_tense)
-                except Exception as e:
-                    num_errors += 1
-                    logger.error(f"Error appending: post id: {post_id}, {thematic_code}")
-            except Exception as e:
-                num_errors += 1
-                logger.error(f"Error processing encoding {encoding}: {e}")
-        num_different_examples = compare_example_and_post(csv_path)
-        write_binary_classification_metrics(directory_path, num_errors, num_different_examples, true_encodings, predicted_encodings)
-
-# def verbatim_example_matches(logger, post_id, verbatim_example):
-#     post = parse.get_post_title_string(logger, post_id)
-#     if not post:
-#         return False
-#     if verbatim_example.lower() in post.lower():
-#         return True
-#     elif verbatim_example.strip() == "None":
-#         return True
-#     elif verbatim_example == "ERROR":
-#         return True
-#     return False
-
-def write_response_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings):
+def write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings):
     try:
         thematic_code_json = json.loads(response.json()['message']['content'])
         thematic_code = thematic_code_json['label']
@@ -2497,8 +2193,6 @@ def write_response_update_evaluation_lists(writer, logger, response, post_id, tr
 
 def encode_features(output, category_feature_dict = category_feature_dict):
     for category in category_feature_dict:
-        if category not in  ["withdrawal", "recovery"]:
-            continue
         directory_path = os.path.join(output, category)
         encoder = ThematicEncoder()
         create_directory(directory_path)
@@ -2519,7 +2213,7 @@ def encode_features(output, category_feature_dict = category_feature_dict):
                     post_id, post, title, state_label, tense_list = encoding
                     true_tense = 1 if feature_encoding_to_binary(category, feature, tense_list) else 0
                     response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
-                    num_errors, predicted_encodings, true_encodings = write_response_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings)
+                    num_errors, predicted_encodings, true_encodings = write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings)
                 num_different_examples = compare_example_and_post(logger, csv_path)
                 write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
                     
@@ -2530,5 +2224,5 @@ def encode_features(output, category_feature_dict = category_feature_dict):
             
 if __name__ == "__main__":
     start = time.time()
-    encode_features("llama_thematic_coding/12-3/test_run2")
+    encode_features("llama_thematic_coding/12-3/test_run3")
     print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
