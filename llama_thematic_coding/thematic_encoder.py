@@ -20,6 +20,9 @@ Instructions:
 
 {instructions}
 
+- Response Format:
+  {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
+
 - Respond based on the following inputs:
   Post: {post}
   Post Title: {title}
@@ -46,13 +49,15 @@ Instructions:
 
     {feature_instruction}
 
+    - Response Format:
+     {{"label": 0 or 1, "language": "verbatim section of the text that supports the label"}}
+
     - Respond based on the following inputs:
     Post: {{post}}
     Post Title: {{title}}
     State Label: {{state_label}}
         }}}},
-    ],
-    "stream": False
+    ]
     }}
     """
         writer.write(prompt)

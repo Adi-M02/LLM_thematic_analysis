@@ -128,7 +128,7 @@ category_feature_dict = {
   ]
 }
 feature_prompt_dict = {
-        "present_tense": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+    "present_tense": """Analyze the addiction state language in the post and post title, and classify it according to the following rules:
 
   1. Label '1':
     - Assign label '1' if the language referring to the user's addiction state is in the present tense or has no tense.
@@ -657,7 +657,7 @@ def write_metrics_and_model(output_dir, logger, encoder, feature, num_hallucinat
         except Exception as e:
             f.write(f"Error calculating metrics: {e}\n")
             logger.error(f"{feature}: Error calculating metrics: {e}")
-        encoder.write_prompt_structure(f, feature)
+        encoder.write_prompt_structure(f, feature_prompt_dict[feature])
 
 def tense_type_condition(tense_list, tense_type):
     if tense_type == "present_tense":
@@ -930,14 +930,14 @@ def feature_encoding_to_binary(category, feature, encoded_label_list):
         elif feature == "NA_meeting_question":
             return 21 in encoded_label_list
 
-def compare_example_and_post(llm_output):
+def compare_example_and_post(logger, llm_output):
     modified_llm_output = []
     num_diff = 0
     with open(llm_output, 'r') as file:
         reader = csv.DictReader(file)
         fieldnames = reader.fieldnames
         for row in reader:
-            post = parse.get_post_title_string(row['post_id'])
+            post = parse.get_post_title_string(logger, row['post_id'])
             if not post:
                 continue
             if row['verbatim_example']:
@@ -1081,6 +1081,8 @@ def encode_features(output, category_feature_dict = category_feature_dict):
         log_file_path = os.path.join(directory_path, "error_log.txt")
         logger = setup_logging(log_file_path)
         for feature in category_feature_dict[category]:
+            if feature != "present_tense":
+                continue
             feature_directory = os.path.join(directory_path, feature)
             create_directory(feature_directory)
             csv_path = os.path.join(feature_directory, f"{feature}_codes.csv")
@@ -1096,7 +1098,7 @@ def encode_features(output, category_feature_dict = category_feature_dict):
                     true_tense = 1 if feature_encoding_to_binary(category, feature, tense_list) else 0
                     response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
                     num_errors, predicted_encodings, true_encodings = write_response_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings)
-                num_different_examples = compare_example_and_post(csv_path)
+                num_different_examples = compare_example_and_post(logger, csv_path)
                 write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
                     
 
