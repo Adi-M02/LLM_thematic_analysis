@@ -2224,5 +2224,5 @@ def encode_features(output, category_feature_dict = category_feature_dict):
             
 if __name__ == "__main__":
     start = time.time()
-    encode_features("llama_thematic_coding/12-3/test_run3")
+    encode_features("llama_thematic_coding/12-6/run1")
     print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
