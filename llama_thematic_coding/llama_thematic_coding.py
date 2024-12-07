@@ -1836,15 +1836,16 @@ def write_metrics_and_model(output_dir, logger, encoder, feature, num_hallucinat
             f.write(f"Performance Metrics:\n")
             f.write(f"- Accuracy: {accuracy_score(true_encodings, predicted_encodings):.4f}\n")
             f.write(f"- Macro Averages:\n")
-            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
-            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
-            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='macro'):.4f}\n")
+            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='macro', zero_division=0):.4f}\n")
+            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='macro', zero_division=0):.4f}\n")
+            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='macro', zero_division=0):.4f}\n")
             f.write(f"- Weighted Averages:\n")
-            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
-            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
-            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='weighted'):.4f}\n")
-            f.write("Confusion Matrix:\n")
+            f.write(f"    - F1 Score: {f1_score(true_encodings, predicted_encodings, average='weighted', zero_division=0):.4f}\n")
+            f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='weighted', zero_division=0):.4f}\n")
+            f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='weighted', zero_division=0):.4f}\n")
+            # Create Confusion Matrix
             cm = confusion_matrix(true_encodings, predicted_encodings)
+            f.write("Confusion Matrix:\n")
             tn, fp, fn, tp = cm.ravel()
             total = tn + fp + fn + tp
             f.write(f"    [[TP: {tp} ({(tp / total) * 100:.2f}%), FP: {fp} ({(fp / total) * 100:.2f}%)]\n")
@@ -2182,7 +2183,12 @@ def write_response_and_update_evaluation_lists(writer, logger, response, post_id
         logger.error(f"JSON error: {e}, post id: {post_id}, response: {response.json()}")
         return num_errors, predicted_encodings, true_encodings
     try: 
-        predicted_encodings.append(int(thematic_code))
+        code = int(thematic_code)
+        if code not in [0, 1]:
+            num_errors += 1
+            logger.error(f"Error appending: post id: {post_id}, {thematic_code}")
+            return num_errors, predicted_encodings, true_encodings
+        predicted_encodings.append(code)
         true_encodings.append(true_tense)
         return num_errors, predicted_encodings, true_encodings
     except:
@@ -2224,5 +2230,5 @@ def encode_features(output, category_feature_dict = category_feature_dict):
             
 if __name__ == "__main__":
     start = time.time()
-    encode_features("llama_thematic_coding/12-7/test1")
+    encode_features("llama_thematic_coding/12-7/test4")
     print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
