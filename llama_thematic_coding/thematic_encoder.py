@@ -5,7 +5,7 @@ class ThematicEncoder:
         self.url = "http://localhost:11434/api/chat"
         self.headers = {"Content-Type": "application/json"}
         self.default_data = {
-            "model": "llama3.2-vision:11b-instruct-q8_0",
+            "model": "llama3.3:70b",
             "format": "json",
             "options": {"temperature": 0.0},
             "stream": False,
