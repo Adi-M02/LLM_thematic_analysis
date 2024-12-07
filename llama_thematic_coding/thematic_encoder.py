@@ -9,6 +9,13 @@ class ThematicEncoder:
             "format": "json",
             "options": {"temperature": 0.0},
             "stream": False,
+            "format": {
+                "type": "object", 
+                "properties": {
+                    "label": {"type": "integer"},
+                    "language": {"type": "string"}
+                },
+            },
         }
         self.system_message = (
             "You are an academic researcher analyzing opiate use related social media posts. Your task is to examine the language in posts and post titles, identify semantic themes, and classify the language based on specific rules related to context and thematic content. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response."

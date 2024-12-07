@@ -1876,19 +1876,18 @@ def tense_log_identifier(log_file_path):
     return os.path.basename(log_file_path).replace(".txt", "")
 
 def setup_logging(log_file_path):
-    # Configure logging for each tense with a unique log file
-    if not os.path.exists(log_file_path):
-        with open(log_file_path, 'w') as file:
-            pass  # Create an empty file if it does not exist
-    logger = logging.getLogger(tense_log_identifier(log_file_path))
+    # Get a unique logger name based on the log file path
+    logger_name = tense_log_identifier(log_file_path)
+    logger = logging.getLogger(logger_name)
+    
+    # If the logger is already set up, return it
+    if logger.hasHandlers():
+        return logger
+    
     logger.setLevel(logging.INFO)
 
-    # Remove previous handlers if they exist to avoid duplicates
-    if logger.hasHandlers():
-        logger.handlers.clear()
-
     # Set up file handler with the given log file path
-    handler = logging.FileHandler(log_file_path)
+    handler = logging.FileHandler(log_file_path, mode='a')  # Use 'a' to append logs
     handler.setLevel(logging.INFO)
 
     # Set log format
@@ -2210,6 +2209,7 @@ def encode_features(output, category_feature_dict = category_feature_dict):
                 predicted_encodings = []
                 num_errors = 0
                 for encoding in encodings:
+                    file.flush()
                     post_id, post, title, state_label, tense_list = encoding
                     true_tense = 1 if feature_encoding_to_binary(category, feature, tense_list) else 0
                     response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
@@ -2224,5 +2224,5 @@ def encode_features(output, category_feature_dict = category_feature_dict):
             
 if __name__ == "__main__":
     start = time.time()
-    encode_features("llama_thematic_coding/12-6/run1")
+    encode_features("llama_thematic_coding/12-7/test1")
     print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
