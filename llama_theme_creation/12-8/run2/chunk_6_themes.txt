@@ -1,0 +1,115 @@
+Post ID: 5t6muw
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Day 27
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Day 27
+
+
+theme creator 3 
+Theme: Recovery  Description: Recovery, as indicated by the user's mention of 'another day down' suggesting progress in their recovery journey. Example: Another day down and looking forward to the weekend.
+Theme: Use  Description: Use, as implied by the user's casual tone and lack of concern about their opiate use, indicating they are currently using opiates without considering quitting. Example: TGI fucking F. Yesterday sucked but it's all good.
+
+
+theme creator 4 
+Theme: Recovery  Description: Recovery, as indicated by the user's mention of 'another day down' suggesting progress in their recovery journey. Example: Another day down and looking forward to the weekend.
+Theme: Use  Description: Use, as implied by the user's casual tone and lack of concern about their opiate use, indicating they are currently using opiates without considering quitting. Example: TGI fucking F. Yesterday sucked but it's all good.
+
+
+Post ID: 431q6i
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, experiencing physical and emotional symptoms Example: knee deep in fucking withdrawals
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, experiencing physical and emotional symptoms Example: knee deep in fucking withdrawals
+
+
+theme creator 3 
+Theme: Withdrawal  Description: Opiate withdrawal symptoms are being experienced. Example: I am knee deep in fucking withdrawals.
+Theme: Desperation/Hopelessness  Description: The user is experiencing a sense of desperation or hopelessness about their situation. Example: When did it come to this.
+
+
+theme creator 4 
+Theme: Withdrawal  Description: Opiate withdrawal symptoms are being experienced by the user. Example: I am knee deep in fucking withdrawals.
+Theme: Desperation/Frustration  Description: The user is experiencing a sense of desperation and frustration with their current situation. Example: When did it come to this.
+
+
+Post ID: 1ua06b
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: This week I've shot somewhere around ~100 bags and a little bit of coke since last Friday.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms. Example: I was on vivatrol and it was about 23 days since my last shot that day.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I really want to kick this addiction. I've really fucked my life up these past two years with the dope and id really like to put shit behind me.
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: This week I've shot somewhere around ~100 bags and a little bit of coke since last Friday.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I really want to kick this addiction. I've really fucked my life up these past two years with the dope and id really like to put shit behind me.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms, although not explicitly mentioned, it can be inferred from the context of seeking help and rehab. Example: Tomorrow I'm flying out to Florida from Chicago to do a 1-3 month inpatient program.
+
+
+theme creator 3 
+Theme: Use  Description: The user is currently engaged in opiate use without consideration of quitting or expressing desire to stop using opiates. Example: This week I've shot somewhere around ~100 bags and a little bit of coke since last Friday. I really just started banging it last week.
+Theme: Withdrawal  Description: The user has experienced opiate withdrawal symptoms, indicating they have ceased or lowered their opiate intake. Example: I'm on vivatrol and it was about 23 days since my last shot that day.
+Theme: Recovery  Description: The user is attempting to seek help for their addiction through inpatient treatment, indicating a desire to recover from opiate addiction. Example: Tomorrow I'm flying out to Florida from Chicago to do a 1-3 month inpatient program.
+
+
+theme creator 4 
+Theme: Use  Description: The user is currently engaged in opiate use without consideration of quitting or expressing desire to stop using opiates. Example: This week I've shot somewhere around ~100 bags and a little bit of coke since last Friday. I really just started banging it last week.
+Theme: Withdrawal  Description: The user has experienced opiate withdrawal symptoms, indicating they have ceased or lowered their opiate intake. Example: I'm on vivatrol and it was about 23 days since my last shot that day.
+Theme: Recovery  Description: The user is attempting to seek help for their addiction through inpatient treatment, indicating a desire to recover from opiate addiction. Example: Tomorrow I'm flying out to Florida from Chicago to do a 1-3 month inpatient program.
+
+
+Post ID: 3rva6k
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I've been clean for two years
+Theme: Use  Description: The user is expressing a desire to use or obtain substances related to opiate addiction, indicating potential relapse into use state. Example: all I want is a bottle of fucking Valium. All I want is some good ol' blue v-cuts.
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I've been clean for two years
+Theme: Use  Description: The user is expressing a desire to use or obtain substances related to opiate addiction, indicating potential relapse into use state. Example: all I want is a bottle of fucking Valium. All I want is some good ol' blue v-cuts.
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Recovery from opiate addiction, specifically heroin use Example: I've been clean for two years, and my drug of choice is and always will be heroin.
+Theme: Opiate Withdrawal  Description: Struggle with cravings and desire to relapse into opiate use Example: All I want is a bottle of fucking Valium. Unfortunately, being legitimately clean and sober for two years only works if you cut off everyone from your past.
+Theme: Recovery from opiate addiction, specifically heroin use  Description: Use of alternative substances to manage withdrawal symptoms or cravings Example: I do take kratom every day, and I know it helps,
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Recovery from opiate addiction, specifically heroin use Example: I've been clean for two years, and my drug of choice is and always will be heroin.
+Theme: Cravings for Opiates  Description: Struggle with cravings and desire to relapse into opiate use Example: All I want is a bottle of fucking Valium. What would you do if you were in my shoes?
+Theme: Anxiety Management in Recovery  Description: Difficulty managing anxiety without using opiates or other substances Example: I take kratom every day, and I know it helps, but my anxiety has been through the roof lately
+
+
+Post ID: 3li7sr
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: So earlier today I mixed about half a g of tar with some baking soda so it can be snortable.
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: So earlier today I mixed about half a g of tar with some baking soda so it can be snortable.
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates. Example: So earlier today I mixed about half a g of tar with some baking soda so it can be snortable.
+Theme: Experimentation with Opiate Consumption Methods  Description: Experimentation and exploration of different methods for consuming opiates, indicating ongoing use. Example: I kinda want to smoke it so is there a way to get back to the huf or tar form?
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting Example: I don't really like how it works and feels weird snorting, it's all fluffy.
+Theme: Experimentation with Opiate Consumption Methods  Description: Experimentation with different methods of opiate consumption Example: is there a way to get back to the huf or tar form?
+
+

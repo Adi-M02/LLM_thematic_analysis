@@ -1,0 +1,120 @@
+Post ID: adf5eo
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is considering or inquiring about the potential for opiate use, specifically the interaction between buprenorphine (bupe) and naltrexone (Vivitrol), to achieve a high Example: maybe taking bupe while on vivitrol could get you high
+
+
+theme creator 2 
+Theme: Use  Description: The user is considering or inquiring about the potential for opiate use, specifically the interaction between buprenorphine (bupe) and naltrexone (Vivitrol), to achieve a high Example: maybe taking bupe while on vivitrol could get you high
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Use of opiates, specifically considering the potential for getting high Example: taking bupe while on vivitrol could get you high?
+Theme: Opiate Medication Interaction  Description: Interaction between different opiate medications and their effects Example: naloxone in subs has a lower binding affinity than the bupe which allows for the bupe to work, and since naltrexone is chemically very similar and is also an opiate antagonist
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Use of opiates, specifically considering the potential for getting high Example: taking bupe while on vivitrol could get you high?
+Theme: Opiate Medication Interaction  Description: Interaction between different opiate medications and their effects Example: naloxone in subs has a lower binding affinity than the bupe which allows for the bupe to work, and since naltrexone is chemically very similar and is also an opiate antagonist
+
+
+Post ID: 6fg1j6
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is attempting to avoid detection of use. Example: Since it's been a while from the last time they tested me, I'm not going to try to use because the probability that they'll do it soon is so likely.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term, or at least for the duration of their stay in sober living. Example: I'm in sober living(not exactly my choice)
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is attempting to avoid detection of use. Example: Since it's been a while from the last time they tested me, I'm not going to try to use because the probability that they'll do it soon is so likely.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term, or at least for the duration of their stay in sober living. Example: I'm in sober living(not exactly my choice)
+
+
+theme creator 3 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I'm in sober living (not exactly my choice) and they do a couple types of drug screenings.
+Theme: Use  Description: The user's primary substance of concern is heroin, indicating their history with opiate use. Example: My DOC is heroin so that's really all I'm curious about.
+
+
+theme creator 4 
+Theme: Withdrawal  Description: User has ceased or lowered their opiate intake due to being in a sober living program. Example: I'm in sober living (not exactly my choice) and they do a couple types of drug screenings.
+Theme: Recovery  Description: User is attempting to sustain abstinence from opiates long term as part of their recovery process. Example: My DOC is heroin so that's really all I'm curious about.
+
+
+Post ID: 8o62i0
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Jokes about sourcing/ giving away pills
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Jokes about sourcing/ giving away pills
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: Jokes about sourcing/ giving away pills
+Theme: Negative Emotional State  Description: Language indicating a negative emotional state, possibly related to opiate use or withdrawal Example: So fucking old and not funny
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: Jokes about sourcing/ giving away pills
+Theme: Negative Emotional State  Description: Language indicating a negative emotional state, possibly related to opiate use or withdrawal Example: So fucking old and not funny
+
+
+Post ID: 2522nd
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms, including depression. Example: so today is day 1...again. The depression has left me crippled
+Theme: Use  Description: The user is acknowledging their addiction and expressing a desire to stop using opiates, indicating a potential transition towards recovery. Example: Man, its crazy to think how addiction has control of me. I feel so helpless.
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms, including depression. Example: so today is day 1...again. The depression has left me crippled
+Theme: Use  Description: The user is acknowledging their addiction and expressing a desire to stop using opiates, indicating a potential transition towards recovery. Example: Man, its crazy to think how addiction has control of me. I feel so helpless.
+
+
+theme creator 3 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I have some sub's I can take so that should help
+Theme: Opiate Withdrawal  Description: The user has ceased or lowered their opiate intake, but is experiencing withdrawal symptoms and struggling with depression. Example: so today is day 1...again. The depression has left me crippled, I don't know what to do about it
+Theme: Addiction Awareness and Powerlessness  Description: The user acknowledges the control of addiction and feels helpless, indicating a sense of powerlessness over their opiate use. Example: Man, its crazy to think how addiction has control of me. I feel so helpless
+
+
+theme creator 4 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I have some sub's I can take so that should help
+Theme: Opiate Withdrawal  Description: The user has ceased or lowered their opiate intake, but is experiencing withdrawal symptoms and struggling with depression. Example: so today is day 1...again. The depression has left me crippled, I don't know what to do about it
+Theme: Addiction Awareness and Powerlessness  Description: The user acknowledges the control of addiction and feels helpless, indicating a sense of powerlessness over their opiate use. Example: Man, its crazy to think how addiction has control of me. I feel so helpless
+
+
+Post ID: 6b9xty
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing emotional symptoms, but is struggling with the desire to use again. Example: I'm three weeks clean and have found no happiness or clarity in sobriety. All I want is a bump.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term, but is finding it difficult due to cravings and emotional struggles. Example: I've been desperately trying anything and everything that I think might give me a rush. ... I need dope. I can't be happy without it.
+Theme: Use  Description: The user is engaged in thinking about opiate use and expressing desire to stop using opiates, but is struggling with the idea of quitting due to emotional dependence. Example: All I want is to be numb. ... I'd rather have artificial happiness that genuine depression.
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing emotional symptoms, indicating withdrawal. Example: I'm three weeks clean and have found no happiness or clarity in sobriety. All I want is a bump. All I want is to be numb.
+Theme: Use  Description: The user is expressing a desire to use opiates again, indicating a state of use or craving. Example: I need dope. I can't be happy without it. I'd rather have artificial happiness that genuine depression.
+
+
+theme creator 3 
+Theme: Cravings and Desire for Opiate Use  Description: The user is experiencing cravings and desires to use opiates despite being clean for three weeks, indicating ongoing opiate use. Example: All I want is a bump. All I want is to be numb.
+Theme: Opiate Withdrawal Symptoms  Description: The user is experiencing withdrawal symptoms such as boredom, depression, and desperation, indicating opiate withdrawal. Example: The boredom is killing me. I've been desperately trying anything and everything that I think might give me a rush.
+Theme: Struggles with Recovery  Description: The user has attempted to quit using opiates but has not found happiness or clarity in sobriety, indicating ongoing recovery struggles. Example: I'm three weeks clean and have found no happiness or clarity in sobriety.
+Theme: Alternative Substance Use  Description: The user is using alternative substances such as weed and gabapentin to cope with cravings, indicating ongoing opiate use. Example: Masturbating. Weed. Listening to music. Popping insane amounts of gabapentin.
+Theme: Suicidal Ideation  Description: The user is experiencing suicidal ideation and feelings of hopelessness, indicating a severe mental health crisis. Example: I'd rather have artificial happiness that genuine depression. I can't stand being alive, I just want to fall asleep and never wake up.
+
+
+theme creator 4 
+Theme: Cravings and Desire to Use  Description: The user is experiencing cravings and desires to use opiates despite being clean for three weeks, indicating ongoing opiate addiction. Example: All I want is a bump. All I want is to be numb.
+Theme: Withdrawal Symptoms  Description: The user is experiencing withdrawal symptoms such as boredom, depression, and desperation for a rush, indicating ongoing opiate withdrawal. Example: The boredom is killing me. I've been desperately trying anything and everything that I think might give me a rush.
+Theme: Relapse and Ongoing Use  Description: The user has relapsed into using opiates despite being clean for three weeks, indicating ongoing opiate use. Example: I need dope. I'd rather have artificial happiness that genuine depression.
+Theme: Mental Health Crisis  Description: The user is struggling with feelings of hopelessness, despair, and suicidal ideation, indicating a severe mental health crisis. Example: I can't stand being alive, I just want to fall asleep and never wake up.
+Theme: Lack of Intrinsic Motivation  Description: The user is motivated by fear of harming loved ones rather than personal recovery goals, indicating a lack of intrinsic motivation for sobriety. Example: I got clean for my family. They don't know I use but they know something is wrong...
+
+

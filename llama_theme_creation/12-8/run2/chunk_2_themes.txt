@@ -1,0 +1,115 @@
+Post ID: 4t96r7
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+
+
+theme creator 2 
+
+
+theme creator 3 
+Theme: Requesting Help  Description: The user is expressing a desire for help or support related to opiate addiction. Example: I don't like to beg, but...
+Theme: Opiate Withdrawal  Description: The user is experiencing withdrawal symptoms from opiates. Example: I'm going through withdrawals and I need help ASAP
+
+
+theme creator 4 
+Theme: Requesting Help  Description: The user is expressing a desire for help or support in their opiate addiction. Example: I don't like to beg, but...
+Theme: Experiencing Withdrawal Symptoms  Description: The user is experiencing withdrawal symptoms and is likely going through the detoxification process. Example: I'm shaking so bad I can barely type
+
+
+Post ID: 4wz1zk
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, experiencing physical and emotional symptoms Example: What is the best medicine for withdrawaling to ease the symptoms?
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms Example: What is the best medicine for withdrawaling to ease the symptoms?
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I have a few Xanax bars
+Theme: Opiate Withdrawal  Description: Experiencing symptoms associated with opiate withdrawal Example: what is the best medicine for withdrawaling to ease the symptoms
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I have a few Xanax bars
+Theme: Opiate Withdrawal  Description: Experiencing symptoms associated with opiate withdrawal Example: what is the best medicine for withdrawaling to ease the symptoms
+
+
+Post ID: 2lnb5k
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I got a bundle for myself, and my friend owed me seven bags so needless to say I had a pretty chill afternoon.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms. Example: I wasn't wrecked, but I did nod a little when I was laying down in bed.
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I got a bundle for myself, and my friend owed me seven bags so needless to say I had a pretty chill afternoon.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms. Example: I wasn't wrecked, but I did nod a little when I was laying down in bed.
+
+
+theme creator 3 
+Theme: Use  Description: Opiate use without consideration of quitting or expressing desire to stop using opiates. Example: I got a bundle for myself, and my friend owed me seven bags so needless to say I had a pretty chill afternoon.
+Theme: Intense Opiate Effects  Description: Experiencing intense effects from opiate use, often described as overwhelming or unexpected. Example: I tell ya what, I got a metric shit-ton more than some fucking 'glow.' It was all I could do to not nod off behind the wheel.
+Theme: Physical Symptoms of Opiate Use  Description: Experiencing physical symptoms of opiate use, such as drowsiness or difficulty staying awake. Example: I wasn't wrecked, but I did nod a little when I was laying down in bed.
+
+
+theme creator 4 
+Theme: Use  Description: Opiate use without consideration of quitting or expressing desire to stop using opiates. Example: I got a bundle for myself, and my friend owed me seven bags so needless to say I had a pretty chill afternoon.
+Theme: Intense Effects of Use  Description: Experiencing intense effects from opiate use, often described as overwhelming or unexpected. Example: I tell ya what, I got a metric shit-ton more than some fucking 'glow.' It was all I could do to not nod off behind the wheel.
+Theme: Physical Symptoms of Use  Description: Experiencing physical symptoms associated with opiate use, such as drowsiness or difficulty staying awake. Example: I wasn't wrecked, but I did nod a little when I was laying down in bed.
+
+
+Post ID: 7dnif5
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Got injured in some way, got prescribed Vicodin, Percocet, Oxys, even fucking Fentanyl in some cases- and then, after unknowingly becoming physically dependent on the medication
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms. Example: the doc suddenly ends the script. And as I’m sure you all know how the story continues, I’ll just skip to the part where you are in desperate need of help and recovery.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Myself as well as the large majority of opiate users I have met along my journey through recovery
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Got injured in some way, got prescribed Vicodin, Percocet, Oxys, even fucking Fentanyl in some cases- and then, after unknowingly becoming physically dependent on the medication
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms. Example: the doc suddenly ends the script. And as I’m sure you all know how the story continues, I’ll just skip to the part where you are in desperate need of help and recovery.
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Myself as well as the large majority of opiate users I have met along my journey through recovery
+
+
+theme creator 3 
+Theme: Exploitation through Maintenance Drugs  Description: The theme of exploitation by pharmaceutical companies through opiate use and recovery. Example: These BILLION dollar pharmaceutical companies like Reckitt-Benckiser (producer of Suboxone) and Actavis (largest producer of Fentanyl), along with all the other companies who make the things that led us here in the first place (prescription opioids) are the same companies making the maintenance drugs for IF we can have the clarity to realize that something needs to change and decide to try to get clean.
+Theme: Profiteering from Both Sides  Description: The theme of pharmaceutical companies profiting from both opiate use and recovery. Example: They put you on Suboxone, or methadone, or any other maintenance drug. And those drugs are made by... the same companies that make the Percocet and the Oxy, etc.
+Theme: Cycle of Dependency  Description: The theme of a cycle of dependency created by pharmaceutical companies. Example: It’s almost as if they knew that they could create this cycle...
+
+
+theme creator 4 
+Theme: Exploitation through Maintenance Drugs  Description: The theme of exploitation by pharmaceutical companies through opiate use and recovery. Example: These BILLION dollar pharmaceutical companies like Reckitt-Benckiser (producer of Suboxone) and Actavis (largest producer of Fentanyl), along with all the other companies who make the things that led us here in the first place (prescription opioids) are the same companies making the maintenance drugs for IF we can have the clarity to realize that something needs to change and decide to try to get clean.
+Theme: Profiteering from Both Sides  Description: The theme of pharmaceutical companies profiting from both opiate use and recovery. Example: They put you on Suboxone, or methadone, or any other maintenance drug. And those drugs are made by... the same companies that make the Percocet and the Oxy, etc.
+Theme: Cycle of Dependency  Description: The theme of a cycle of dependency created by pharmaceutical companies. Example: It’s almost as if they knew that they could create this cycle...
+
+
+Post ID: 5hievf
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: one only uses for pain and has OP oxys and 5mg ir, other guy is a total addict with 30mg ir and BOTH of them do 1$ a mg
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: one only uses for pain and has OP oxys and 5mg ir, other guy is a total addict with 30mg ir and BOTH of them do 1$ a mg
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Opiate use without consideration of quitting or expressing desire to stop using opiates. Example: Both of my pill connects have personal scripts, one only uses for pain and has OP oxys and 5mg ir, other guy is a total addict with 30mg ir
+Theme: Financial Motivation for Opiate Use  Description: The user is aware of the high cost of opiates but continues to purchase them. Example: I'm definitely glad that i have legit & consistent connects so i dont have to worry about fakes or going without other than the couple of days before refills, BUT it pisses me off knowing how bad I'm getting gouged
+Theme: Perceived Exploitation by Script Sellers  Description: The user is aware of the high cost of opiates and feels taken advantage of by script sellers. Example: I guess they know that people will buy them tho, and it doesn't help that i live in a city with the worst opiate problem in the state.
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Opiate use without consideration of quitting or expressing desire to stop using opiates. Example: Both of my pill connects have personal scripts, one only uses for pain and has OP oxys and 5mg ir, other guy is a total addict with 30mg ir
+Theme: Financial Motivation for Opiate Use  Description: The user is aware of the high cost of opiates but continues to purchase them. Example: I'm definitely glad that i have legit & consistent connects so i dont have to worry about fakes or going without other than the couple of days before refills, BUT it pisses me off knowing how bad I'm getting gouged
+Theme: Perceived Exploitation by Script Sellers  Description: The user is aware of the high cost of opiates and feels taken advantage of by script sellers. Example: I guess they know that people will buy them tho, and it doesn't help that i live in a city with the worst opiate problem in the state.
+
+

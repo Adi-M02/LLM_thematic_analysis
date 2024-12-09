@@ -24,13 +24,13 @@ class ThemeCreatorFeedForward:
             }
         }
         self.system_message = (
-            "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. You will be given a post, post title and a list of existing themes you previously found among related posts. Your task is to analyze the post and identify major themes related to opiate addiction state characterization in it. If a theme you identify is not in the list of existing themes add it to the list of themes. If a new theme is similar to a previous theme combine them into a new more general theme. Only create new themes if you are sure the posts can't be classified with an existing theme. Respond only in the specified format with the major themes related to opiate addiction state characterization. Do not include any additional descriptions, reasoning, or text in your response."
+            "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. You will be given a post, post title and a list of existing themes you previously found among related posts. Your task is to analyze the post and identify major themes related to opiate addiction state characterization in it. If a theme you identify is not in the list of existing themes add it to the list of themes. Only create new themes if you are sure the posts can't be classified with an existing theme. Respond only in the specified format with the major themes related to opiate addiction state characterization. Do not include any additional descriptions, reasoning, or text in your response."
         )
-    def create_themes(self, post, title):
+    def create_themes(self, post, title, themes):
         user_message = f"""
 Instructions:
 
-Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
+Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. Never delete an existing theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
 
 - Important Notes:
   - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.
@@ -49,6 +49,7 @@ Analyze the opiate addiction state information in the post and post title and id
 - Respond based on the following inputs:
   Post: {post}
   Post Title: {title}
+  Existing Themes: {themes}
 """
         
         data = self.default_data.copy()
@@ -68,8 +69,6 @@ Analyze the opiate addiction state information in the post and post title and id
             {{"role:"system", "content"{self.system_message}}},
             {{"role": "user", "content": 
               Instructions:
-
-              Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
 
               - Important Notes:
                 - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.
