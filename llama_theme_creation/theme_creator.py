@@ -36,7 +36,7 @@ class ThemeCreator:
             }
         }
         self.system_message = (
-            "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. Your task is to analyze a post and and understand its thematic content. Respond only in the specified format with the major themes related to opiate addiction state characterization, description of the theme, and verbatim example showing support of the theme. Do not include any additional descriptions, reasoning, or text in your response."
+            "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. Your task is to analyze a post and understand its thematic content. Respond only in the specified format with the major themes related to opiate addiction state characterization, description of the theme, and verbatim example showing support of the theme. Do not include any additional descriptions, reasoning, or text in your response."
         )
     def create_themes(self, post, title):
         user_message = f"""

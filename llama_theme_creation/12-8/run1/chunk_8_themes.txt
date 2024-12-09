@@ -1,0 +1,72 @@
+Post ID: 8h9u39
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Overcoming suicidal thoughts during recovery  Description: Recovery from opiate addiction, specifically heroin and fentanyl, after a period of struggle. Example: I finally got off of dope using a sub taper. Coming up on 6 months clean from heroin/fent.
+Theme: Importance of support systems during recovery  Description: The role of faith and spirituality in overcoming addiction and achieving recovery. Example: God got me through it, along with my church family. That's when I really started making progress and seen future for my life.
+Theme: Offering hope and assistance to those still struggling with addiction  Description: Sharing personal experience to help others struggling with addiction. Example: if you need any help feel free to message me or post on here. Have a good day!
+
+
+theme creator 2 
+Theme: Overcoming suicidal thoughts during recovery  Description: Recovery from opiate addiction, specifically heroin and fentanyl, after a period of struggle. Example: I finally got off of dope using a sub taper. Coming up on 6 months clean from heroin/fent.
+Theme: Importance of support systems during recovery  Description: The role of faith and spirituality in overcoming addiction and achieving recovery. Example: God got me through it, along with my church family. That's when I really started making progress and seen future for my life.
+Theme: Offering hope and assistance to those struggling with addiction  Description: Sharing personal experience to help others struggling with addiction. Example: if you need any help feel free to message me or post on here. Have a good day!
+
+
+Post ID: tvcan
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+
+
+theme creator 2 
+
+
+Post ID: 88suop
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate-related crisis  Description: Opiate use is not explicitly mentioned, but there is a mention of an overdose which can be related to opiate addiction. Example: Anybody knowledgeable about this that would be willing to explain it in simple terms? Both for the person who calls and the person who OD’s.
+Theme: Information-seeking behavior  Description: The post is seeking information on a specific topic, which may be related to opiate addiction or its consequences. Example: Having trouble finding good information on this. Anybody knowledgeable about this that would be willing to explain it in simple terms?
+
+
+theme creator 2 
+Theme: Opiate-related crisis  Description: Opiate use is not explicitly mentioned, but there is a mention of an overdose which can be related to opiate addiction. Example: Anybody knowledgeable about this that would be willing to explain it in simple terms? Both for the person who calls and the person who OD’s.
+Theme: Information-seeking behavior  Description: The post is seeking information on a specific topic, which may be related to opiate addiction or its consequences. Example: Having trouble finding good information on this. Anybody knowledgeable about this that would be willing to explain it in simple terms?
+
+
+Post ID: 9sdokj
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Long-term recovery  Description: Recovery from opiate addiction, characterized by sustained abstinence from opiates long term. Example: Yesterday was my 4 years sober.
+Theme: Honesty and self-accountability in recovery  Description: The process of overcoming opiate addiction involves honesty and self-accountability. Example: It started one day at a time and being honest and telling on myself.
+Theme: Independence from formal support groups in recovery  Description: Recovery can be maintained without formal support groups, but may require effort to stay connected with the community. Example: I don't go to meetings currently... I feel disconnected with recovery as a whole.
+Theme: Ongoing maintenance required for recovery  Description: Recovery can be fragile and requires ongoing effort to maintain, even after long periods of sobriety. Example: I've been on the fence with going to meetings again (haven't in about 3 years)...
+
+
+theme creator 2 
+Theme: Long-term recovery  Description: Recovery from opiate addiction, characterized by sustained abstinence from opiates long term. Example: Yesterday was my 4 years sober.
+Theme: Honesty and self-accountability in recovery  Description: The process of overcoming opiate addiction involves honesty and self-accountability. Example: It started one day at a time and being honest and telling on myself.
+Theme: Independence from formal recovery support structures  Description: Recovery can be maintained without formal meetings, but may require effort to stay connected with the community. Example: I don't go to meetings currently and have just recently moved across the country.
+Theme: Forgetting the past in recovery  Description: Recovery can be a process of forgetting one's past addiction, but it is still important to acknowledge and appreciate progress. Example: I feel like I forget what it was even like to be an addict.
+Theme: Maintaining recovery through life changes  Description: Recovery can be maintained despite life changes and challenges, such as moving to a new area. Example: things are going well.
+
+
+Post ID: 7pej2i
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: addiction  Description: The author's journey with addiction and recovery Example: I was broken as a person, I ruined the best thing in my life over pills.
+Theme: help-seeking  Description: The importance of seeking help and support Example: don't be afraid to get help. Also, listen to the people around you and the professionals trying to help you get better.
+Theme: recovery  Description: The challenges and benefits of recovery Example: Sure withdrawing is fucking hell, rehab is a nightmare at first. But what I learned and what I did that changed my life, is I just accepted where I am and I listen to the advice I'm given It's so freeing.
+Theme: 12-step-program  Description: The author's skepticism about the 12-step program Example: I'm not so sold on the 12 steps, I guess it looks so daunting. Do any of you have any advice?
+
+
+theme creator 2 
+Theme: addiction  Description: The author's journey with addiction and recovery Example: I was broken as a person, I ruined the best thing in my life over pills.
+Theme: help-seeking behavior  Description: The importance of seeking help and support Example: don't be afraid to get help. Also, listen to the people around you and the professionals trying to help you get better.
+Theme: recovery  Description: The challenges and benefits of recovery Example: Sure withdrawing is fucking hell, rehab is a nightmare at first. But what I learned and what I did that changed my life, is I just accepted where I am and I listen to the advice I'm given It's so freeing.
+Theme: 12-step program  Description: The author's skepticism about the 12-step program Example: I'm not so sold on the 12 steps, I guess it looks so daunting. Do any of you have any advice?
+
+
