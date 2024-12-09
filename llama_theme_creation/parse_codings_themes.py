@@ -217,11 +217,40 @@ def get_post_theme_presence(post_id, coding_file='All_Codes_Manual_Analysis_fixE
         reader = csv.DictReader(file)
         for row in reader:
             if row['Post ID'] == post_id:
-                themes = []
-                columns = ['question', 'tense', 'atypical information', 'special cases', 'use', 'withdrawal', 'recovery', 'co-use', 'off-topic']
-                for column in columns:
-                    themes.append((column, row[column]))
+                themes = {"Opiate Use Discussion": 0, "Withdrawal Methods": 0, "Withdrawal Symptoms": 0, "Tangentially Related Discussion": 0, "Addiciton Self-Reflection and Advice": 0}
+                # columns = ['question', 'tense', 'atypical information', 'special cases', 'use', 'withdrawal', 'recovery', 'co-use', 'off-topic']
+                if row["use"] != 0:
+                    themes["Opiate Use Discussion"] = 1
+                if row["atypical information"] == 3:
+                    themes["Opiate Use Discussion"] = 1
+                if row["co-use"] != 0:
+                    themes["Opiate Use Discussion"] = 1
+                if row["question"] in [1, 2, 3]:
+                    themes["Opiate Use Discussion"] = 1
+                if row["tense"] == 4:
+                    themes["Withdrawal Methods"] = 1
+                if row["withdrawal"] in [1,2,3,4,5,6,7,8,9,12,13,14,15,26,27,28,29,20]:
+                    themes["Withdrawal Methods"] = 1
+                if row["question"] in [4,5,6,32,8,25,26,28,29]:
+                    themes["Withdrawal Methods"] = 1
+                if row["withdrawal"] in [10,11,16,17,18,19,21,22,23,24,25]:
+                    themes["Withdrawal Symptoms"] = 1
+                if row["question"] in [13,14,15,16]:
+                    themes["Withdrawal Symptoms"] = 1
+                if row["off-topic"] == 1:
+                    themes["Tangentially Related Discussion"] = 1
+                if row['off-topic'] == 7:
+                    themes["Tangentially Related Discussion"] = 1
+                if row['off-topic'] == 8:
+                    themes["Tangentially Related Discussion"] = 1
+                if row['recovery'] != 0:
+                    themes["Addiciton Self-Reflection and Advice"] = 1
+                if row["tense"] in [1,2,3]:
+                    themes["Addiciton Self-Reflection and Advice"] = 1
+                    
     return themes
+
+
 
 if __name__ == "__main__":
     word_count()

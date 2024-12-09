@@ -6,7 +6,6 @@ class ThematicEncoder:
         self.headers = {"Content-Type": "application/json"}
         self.default_data = {
             "model": "llama3.3:70b",
-            "format": "json",
             "options": {"temperature": 0.0},
             "stream": False,
             "format": {

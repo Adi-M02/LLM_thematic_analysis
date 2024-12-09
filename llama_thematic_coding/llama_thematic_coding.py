@@ -2196,7 +2196,7 @@ def write_response_and_update_evaluation_lists(writer, logger, response, post_id
         logger.error(f"Error appending: post id: {post_id}, {thematic_code}")
         return num_errors, predicted_encodings, true_encodings
 
-def encode_features(output, category_feature_dict = category_feature_dict):
+def encode_features(output, category_feature_dict = category_feature_dict, sample_size = 5):
     for category in category_feature_dict:
         directory_path = os.path.join(output, category)
         encoder = ThematicEncoder()
@@ -2222,12 +2222,7 @@ def encode_features(output, category_feature_dict = category_feature_dict):
                     num_errors, predicted_encodings, true_encodings = write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings)
                 num_different_examples = compare_example_and_post(logger, csv_path)
                 write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
-                    
-
-
-
-
-            
+                
 if __name__ == "__main__":
     start = time.time()
     encode_features("llama_thematic_coding/12-7/test4")
