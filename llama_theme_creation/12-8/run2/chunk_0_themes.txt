@@ -1,0 +1,221 @@
+Post ID: 30g3oc
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Twenty days clean
+Theme: Recovery  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms, but in this context, the focus is on the challenges of daily life while being in recovery. Example: I hurt but I'm sober
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Twenty days clean
+Theme: Recovery  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms, but in this context, the focus is on the challenges of daily life while being in recovery. Example: I hurt but I'm sober
+
+
+theme creator 3 
+Theme: Recovery  Description: Recovery from opiate addiction Example: I'm out of here, Egghead U is behind me, soon I will be off this bus (my fucking back!) And in a hot bath. I hurt but I'm sober.
+Theme: Use avoidance  Description: Chronic pain management without opiate use Example: I didn't even think to bring a damn Advil in my bag.
+
+
+theme creator 4 
+Theme: Recovery  Description: Recovery from opiate addiction Example: I'm out of here, Egghead U is behind me, soon I will be off this bus (my fucking back!) And in a hot bath. I hurt but I'm sober.
+Theme: Use avoidance  Description: Chronic pain management without opiate use Example: I didn't even think to bring a damn Advil in my bag.
+
+
+Post ID: 5r0lya
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms, such as GI issues and restlessness, indicating withdrawal Example: GI is still a little weird but subsides after 2 morning trips. Restless in the evening, or whenever I lay down in general, but I'm sleeping 5-6.5 hours with a melatonin and unisom
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term, indicated by sticking to a daily regimen and looking forward to milestones in their recovery Example: Just sticking to my daily regiment/diet etc and waiting for a wave of reprieve from this next phase. Lookin forward to 3 weeks this weekend
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms, indicating withdrawal Example: GI is still a little weird but subsides after 2 morning trips. Restless in the evening, or whenever I lay down in general, but I'm sleeping 5-6.5 hours with a melatonin and unisom
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term, focusing on daily routines and waiting for improvement Example: Just sticking to my daily regiment/diet etc and waiting for a wave of reprieve from this next phase. Lookin forward to 3 weeks this weekend
+
+
+theme creator 3 
+Theme: Withdrawal  Description: Opiate withdrawal symptoms are being experienced, including gastrointestinal issues and restlessness. Example: GI is still a little weird but subsides after 2 morning trips. Restless in the evening, or whenever I lay down in general,
+Theme: Recovery  Description: The user is experiencing some improvement in their symptoms and overall functioning. Example: things are steadily improving... things were better than the last weekend.
+
+
+theme creator 4 
+Theme: Withdrawal  Description: Opiate withdrawal symptoms are being experienced, including gastrointestinal issues and restlessness. Example: GI is still a little weird but subsides after 2 morning trips. Restless in the evening, or whenever I lay down in general,
+Theme: Recovery  Description: The user is experiencing some improvement in their symptoms and overall functioning. Example: things are steadily improving... things were better than the last weekend.
+
+
+Post ID: 7tzxdn
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: kicked my h habit about 3 weeks ago and haven’t had the urge to use more than every now and then since
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms. Example: not on the nod
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: kicked my h habit about 3 weeks ago and haven’t had the urge to use more than every now and then since
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by a combination of physical and emotional symptoms. Example: not on the nod
+
+
+theme creator 4 
+Theme: Improved Mental State  Description: Recovery from opiate addiction, characterized by sustained abstinence and reduced urge to use. Example: I kicked my h habit about 3 weeks ago and haven’t had the urge to use more than every now and then since,
+Theme: Newfound Hope and Positivity  Description: Improved mental state, characterized by feeling life for the first time in a long period. Example: I’m really feeling life for the first time in forever!
+Theme: Overcoming Adversity  Description: Newfound hope and positivity, characterized by optimism about the future and appreciation of small victories. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Relationships  Description: Overcoming adversity, characterized by resilience in the face of difficult circumstances and a sense of accomplishment. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Gratitude  Description: Improved relationships, characterized by reconnecting with friends and leaving toxic relationships. Example: left a toxic relationship and reconnected with friends that I thought I’d lost.
+Theme: Improved Self-Esteem  Description: Newfound gratitude, characterized by appreciation for small victories and the ability to feel alright without using opiates. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Stability and Security  Description: Improved self-esteem, characterized by feeling good about oneself and one’s accomplishments. Example: I got a sweet job with great pay yesterday,
+Theme: Reduced Stigma  Description: Stability and security, characterized by having a stable job and financial stability. Example: got a sweet job with great pay yesterday,
+Theme: Addiction State Language  Description: Reduced stigma, characterized by openly discussing one’s addiction and recovery without shame or apology. Example: I hope all of you going through hard times have your day soon! Keep your heads up when you’re not on the nod ;)
+Theme: Self-Care  Description: Addiction state language, characterized by mentions of opiate use and recovery. Example: kicked my h habit about 3 weeks ago
+Theme: Personal Growth  Description: Self-care, characterized by prioritizing one’s physical and emotional well-being. Example: roll sober and feel alright
+Theme: Resilience  Description: Personal growth, characterized by learning from past experiences and becoming a better version of oneself. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Support System  Description: Resilience, characterized by bouncing back from difficult circumstances and maintaining hope in the face of adversity. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Mental Health Awareness  Description: Support system, characterized by connecting with others who understand one’s struggles and offering support to those in need. Example: I love you guys,
+Theme: Hope for the Future  Description: Mental health awareness, characterized by openly discussing mental health issues and promoting understanding and support. Example: going through hard times have your day soon!
+Theme: Self-Reflection  Description: Hope for the future, characterized by optimism about one’s circumstances and a sense of possibility. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Addiction as a Part of Life  Description: Self-reflection, characterized by examining one’s thoughts, feelings, and experiences to gain insight and personal growth. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Staying Positive  Description: Addiction as a part of life, characterized by acknowledging that addiction is a common experience and offering support to those struggling. Example: I hope all of you going through hard times have your day soon! Keep your heads up when you’re not on the nod ;)
+Theme: Newfound Confidence  Description: Staying positive, characterized by maintaining a optimistic outlook despite challenges and difficulties. Example: Things are turning around!
+Theme: Reducing Shame and Guilt  Description: Newfound confidence, characterized by feeling good about oneself and one’s abilities. Example: I got a sweet job with great pay yesterday,
+Theme: Improved Physical Health  Description: Reducing shame and guilt, characterized by openly discussing past mistakes and working towards personal growth. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Appreciation for Life  Description: Improved physical health, characterized by prioritizing one’s physical well-being and feeling good about oneself. Example: roll sober and feel alright
+Theme: Reducing Stress  Description: Newfound appreciation for life, characterized by valuing the present moment and finding joy in everyday experiences. Example: I’m really feeling life for the first time in forever!
+Theme: Improved Emotional Regulation  Description: Reducing stress, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Purpose  Description: Improved emotional regulation, characterized by managing one’s emotions and responding to challenging situations in a healthy way. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Anxiety  Description: Newfound sense of purpose, characterized by finding meaning and direction in life. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Relationships  Description: Reducing anxiety, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Freedom  Description: Improved relationships, characterized by nurturing positive connections with others and building strong support networks. Example: I love you guys,
+Theme: Reducing Fear  Description: Newfound sense of freedom, characterized by feeling unencumbered by past struggles and able to pursue one’s goals and desires. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing fear, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Joy  Description: Improved self-awareness, characterized by gaining insight into one’s thoughts, feelings, and behaviors. Example: I’m really feeling life for the first time in forever!
+Theme: Reducing Anger  Description: Newfound sense of joy, characterized by finding happiness and fulfillment in everyday experiences. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Communication Skills  Description: Reducing anger, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Gratitude  Description: Improved communication skills, characterized by expressing oneself effectively and building strong relationships with others. Example: I love you guys,
+Theme: Reducing Sadness  Description: Newfound sense of gratitude, characterized by appreciating the good things in life and finding joy in everyday experiences. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Problem-Solving Skills  Description: Reducing sadness, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purposefulness  Description: Improved problem-solving skills, characterized by approaching challenges in a logical and effective way. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Confusion  Description: Newfound sense of purposefulness, characterized by finding meaning and direction in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Emotional Intelligence  Description: Reducing confusion, characterized by clarifying one’s thoughts and feelings to gain insight and personal growth. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Calmness  Description: Improved emotional intelligence, characterized by understanding and managing one’s emotions and those of others. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Overwhelm  Description: Newfound sense of calmness, characterized by feeling peaceful and centered in the face of challenges. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Resilience  Description: Reducing overwhelm, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Confidence  Description: Improved resilience, characterized by bouncing back from adversity and maintaining a positive outlook. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Self-Doubt  Description: Newfound sense of confidence, characterized by feeling self-assured and capable in one’s abilities. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Trust  Description: Reducing self-doubt, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Forgiveness  Description: Improved self-trust, characterized by having faith in one’s abilities and judgment. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Regret  Description: Newfound sense of forgiveness, characterized by letting go of grudges and finding peace in difficult situations. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Compassion  Description: Reducing regret, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Self-Acceptance  Description: Improved self-compassion, characterized by treating oneself with kindness and understanding. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Shame  Description: Newfound sense of self-acceptance, characterized by embracing one’s strengths and weaknesses. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Expression  Description: Reducing shame, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Authenticity  Description: Improved self-expression, characterized by communicating one’s thoughts and feelings effectively. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Embarrassment  Description: Newfound sense of authenticity, characterized by being true to oneself and living in alignment with one’s values. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Regulation  Description: Reducing embarrassment, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Responsibility  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Guilt  Description: Newfound sense of responsibility, characterized by taking ownership of one’s actions and decisions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Motivation  Description: Reducing guilt, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Purpose  Description: Improved self-motivation, characterized by setting and achieving goals. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Apathy  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing apathy, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Empathy  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Indifference  Description: Newfound sense of empathy, characterized by being able to understand and connect with others. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing indifference, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Irritability  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Expression  Description: Reducing irritability, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Assertiveness  Description: Improved self-expression, characterized by communicating one’s thoughts and feelings effectively. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Anxiety  Description: Newfound sense of assertiveness, characterized by being able to express one’s needs and wants in a clear and respectful manner. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Confidence  Description: Reducing anxiety, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Resilience  Description: Improved self-confidence, characterized by feeling capable and competent in one’s abilities. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Fear  Description: Newfound sense of resilience, characterized by being able to bounce back from adversity and maintain a positive outlook. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing fear, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Anger  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing anger, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Stress  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing stress, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Frustration  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing frustration, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Disappointment  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing disappointment, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Sadness  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing sadness, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Guilt  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing guilt, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Shame  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing shame, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Anxiety  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing anxiety, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Fear  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing fear, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Disgust  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing disgust, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Boredom  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing boredom, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Reducing Anger  Description: Newfound sense of emotional intelligence, characterized by being able to understand and manage one’s own emotions and the emotions of others. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Improved Self-Awareness  Description: Reducing anger, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Purpose  Description: Improved self-awareness, characterized by having a clear understanding of one’s thoughts, feelings, and behaviors. Example: Things are turning around! I hope all of you going through hard times have your day soon!
+Theme: Reducing Sadness  Description: Newfound sense of purpose, characterized by having a clear direction and meaning in life. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Improved Self-Regulation  Description: Reducing sadness, characterized by managing one’s emotions and finding ways to cope with difficult circumstances. Example: I never thought I’d see the day where I could roll sober and feel alright.
+Theme: Newfound Sense of Emotional Intelligence  Description: Improved self-regulation, characterized by controlling one’s impulses and emotions. Example: I never thought I’d see the day where I could roll sober and feel alright.
+
+
+Post ID: 7d4os4
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing or anticipating physical and emotional symptoms, but in this context, it's related to nicotine and caffeine withdrawal Example: going through the withdrawals
+Theme: Recovery  Description: The user has finished detoxing from opiates and is attempting to sustain abstinence from substances long term Example: live a completely drug free life
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing or anticipating physical and emotional symptoms, but in this context, it's related to nicotine and caffeine withdrawal Example: going through the withdrawals
+Theme: Recovery  Description: The user has finished detoxing from opiates and is attempting to sustain abstinence from substances long term Example: live a completely drug free life
+
+
+theme creator 3 
+Theme: Use  Description: Use of substances as a means to manage or cope with opiate addiction withdrawal symptoms. Example: I feel that nicotine and caffeine have helped to keep me off of drugs,
+Theme: Recovery  Description: Desire to quit using substances in order to achieve long-term recovery from opiate addiction. Example: I want to quit both to live a completely drug free life.
+Theme: Relapse  Description: Fear of relapse as a concern for individuals attempting to recover from opiate addiction. Example: Any advice on how to do this without fear of relapsing?
+
+
+theme creator 4 
+Theme: Use of Substances for Withdrawal Management  Description: Use of substances as a means to manage or avoid withdrawal symptoms Example: I feel that nicotine and caffeine have helped to keep me off of drugs
+Theme: Desire for Complete Abstinence  Description: Desire to quit using substances, including nicotine and caffeine, in order to achieve a state of complete abstinence Example: I want to quit both to live a completely drug free life
+Theme: Fear of Relapse  Description: Fear of relapse into substance use after quitting Example: Any advice on how to do this without fear of relapsing?
+Theme: Cold Turkey Quitting  Description: Intention to quit substances abruptly, without gradual tapering or medical supervision Example: I want to quit both cold turkey
+
+
+Post ID: 6jtam9
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user is expressing a sense of financial stability and freedom, which may be related to their recovery from opiate addiction as they are able to earn and keep money. Example: but this time its fucking MINE
+
+
+theme creator 2 
+Theme: Recovery  Description: The user is expressing a sense of freedom and control over their finances, which may indicate a state of recovery as they are able to manage their money without spending it on opiates. Example: but this time its fucking MINE
+
+
+theme creator 3 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Shit man i just made 150 dollars, which i do every tuesday night...but this time its fucking MINE. hahaaha. that feeling. i have money. i can buy food. taxis. cigs. whatever. its fucking my money
+Theme: Financial Stability  Description: The user is in a state of financial stability, which may be related to their opiate use. Example: Shit man i just made 150 dollars, which i do every tuesday night...but this time its fucking MINE. hahaaha. that feeling. i have money. i can buy food. taxis. cigs. whatever. its fucking my money
+
+
+theme creator 4 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Shit man i just made 150 dollars, which i do every tuesday night...but this time its fucking MINE. hahaaha. that feeling. i have money. i can buy food. taxis. cigs. whatever. its fucking my money
+Theme: Financial Stability  Description: The user is in a state of financial stability, which may be related to their opiate use. Example: Shit man i just made 150 dollars, which i do every tuesday night...but this time its fucking MINE. hahaaha. that feeling. i have money. i can buy food. taxis. cigs. whatever. its fucking my money
+
+

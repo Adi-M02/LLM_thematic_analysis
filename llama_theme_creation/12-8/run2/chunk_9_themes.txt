@@ -1,0 +1,110 @@
+Post ID: a3ri4d
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms, and is using kratom to help manage withdrawal Example: I have been taking kratom since Tuesday to help withdrawal
+Theme: Recovery  Description: The user has finished detoxing or is attempting to sustain abstinence from opiates long term and is seeking medical help to achieve this goal Example: I am going to see an addiction specialist today to try to get on Suboxone
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing physical and emotional symptoms, and is using kratom to help manage withdrawal Example: I have been taking kratom since Tuesday to help withdrawal
+Theme: Recovery  Description: The user has finished detoxing or is attempting to sustain abstinence from opiates long term and is seeking medical help to achieve this goal Example: I am going to see an addiction specialist today to try to get on Suboxone
+
+
+theme creator 3 
+Theme: Withdrawal  Description: The user is currently experiencing withdrawal symptoms and seeking medical assistance. Example: I have been taking kratom since Tuesday to help withdrawal.
+Theme: Use of Medication-Assisted Treatment (MAT)  Description: The user is considering Suboxone as a treatment option for their opiate addiction. Example: I am going to see an addiction specialist today to try to get on Suboxone.
+Theme: Seeking Support and Advice  Description: The user is seeking advice and guidance from others who have experienced similar situations with their opiate addiction treatment. Example: Looking for other's experience.
+
+
+theme creator 4 
+Theme: Withdrawal  Description: The user is currently experiencing withdrawal symptoms and seeking medical assistance. Example: I have been taking kratom since Tuesday to help withdrawal.
+Theme: Use of Medication-Assisted Treatment (MAT)  Description: The user is considering Suboxone as a treatment option for their opiate addiction. Example: I am going to see an addiction specialist today to try to get on Suboxone.
+Theme: Seeking Support and Advice  Description: The user is seeking advice and guidance from others who have experienced similar situations with their opiate addiction treatment. Example: Looking for other's experience.
+
+
+Post ID: 4v188e
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I'd usually take 2 and snort a half of one for a fast, hard come up and a pretty long high.
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I'd usually take 2 and snort a half of one for a fast, hard come up and a pretty long high.
+
+
+theme creator 3 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I'd usually take 2 and snort a half of one for a fast, hard come up and a pretty long high.
+Theme: Opiate Dosage and Tolerance  Description: Mention of dosage and tolerance level related to opiate use Example: I have 5 15 mg oxys and medium (pill) tolerance .
+
+
+theme creator 4 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I'd usually take 2 and snort a half of one for a fast, hard come up and a pretty long high.
+Theme: Opiate Dosage and Tolerance  Description: Mention of dosage and tolerance level related to opiate use Example: I have 5 15 mg oxys and medium (pill) tolerance .
+
+
+Post ID: 7stchx
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+
+
+theme creator 2 
+
+
+theme creator 3 
+Theme: Use/Withdrawal Transition  Description: The user is expressing a desire to quit or reduce opiate use. Example: I'm trying to get off this stuff
+Theme: Opiate Withdrawal  Description: The user is experiencing physical symptoms associated with opiate withdrawal. Example: my body hurts so bad
+
+
+theme creator 4 
+Theme: Use/Withdrawal Transition  Description: The user is expressing a desire to quit or reduce opiate use. Example: I'm trying to get off this stuff
+Theme: Opiate Withdrawal  Description: The user is experiencing physical symptoms associated with opiate withdrawal. Example: my body hurts so bad
+
+
+Post ID: 3igjpx
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: 10 months sober
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, but in this context it refers to the past state of addiction before recovery. Example: a decade long stint in heroin
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: 10 months sober
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit, but in this context it refers to past use. Example: a decade long stint in heroin
+
+
+theme creator 3 
+Theme: Recovery narrative as inspiration for others  Description: Recovery is associated with positive life outcomes and personal growth. Example: This got me happy about my future and I could see how listening to this may help those earlier in recovery.
+Theme: Sobriety milestone announcement  Description: The user has completed a significant period of sobriety, indicating progress in their recovery. Example: 10 months sober from a decade long stint in heroin.
+
+
+theme creator 4 
+Theme: Recovery narrative as inspiration for others  Description: Recovery is associated with positive life outcomes and personal growth. Example: This got me happy about my future and I could see how listening to this may help those earlier in recovery.
+Theme: Sobriety milestone announcement  Description: The user has completed a significant period of sobriety, indicating progress in their recovery. Example: 10 months sober from a decade long stint in heroin.
+
+
+Post ID: 4whcxi
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I only pay 30 a bundle for 10 stamp bags of fire!
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I only pay 30 a bundle for 10 stamp bags of fire!
+
+
+theme creator 3 
+Theme: Use  Description: Opiate use is discussed in terms of availability and accessibility. Example: All have fire and I only pay 30 a bundle for 10 stamp bags of fire!
+Theme: Use  Description: The post highlights the user's positive experience with opiate use, implying satisfaction or pleasure. Example: I guess I'm lucky! All have fire and I only pay 30 a bundle for 10 stamp bags of fire!
+Theme: Use  Description: The post expresses concern or empathy towards others who may not be having the same positive experience with opiate use. Example: Sorry you guys don't have the same luck, or if you do share your good experiences.
+
+
+theme creator 4 
+Theme: Availability and Quality of Opiates  Description: Opiate use is discussed in terms of availability and quality, with users mentioning having access to 'stuff' and 'fire' without issues. Example: All have fire and I only pay 30 a bundle for 10 stamp bags of fire!
+Theme: Awareness of Risks Associated with Opiate Use  Description: The post implies that the user is aware of potential risks associated with opiate use, such as fentanyl contamination. Example: Rarely ever get bags that have fent mixed in either.
+
+
