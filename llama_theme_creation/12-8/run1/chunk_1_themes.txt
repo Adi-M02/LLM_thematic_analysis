@@ -1,0 +1,62 @@
+Post ID: 36d0kl
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery Progression  Description: Recovery from opiate addiction, characterized by sustained abstinence from opiates. Example: I have been clean for ten weeks and three days
+Theme: Challenges in Recovery  Description: Reflection on the difficulties of recovery, including physical and emotional challenges. Example: Getting off the shit was hell. Now I do have to deal with everyday shit that I used to just block out,
+Theme: Small Victories in Recovery  Description: Celebration of small victories and accomplishments in recovery, such as managing pain without opiates. Example: Handling a bad headache with something other than an opiate makes me feel stronger.
+
+
+theme creator 2 
+Theme: Recovery Progression  Description: Recovery from opiate addiction, characterized by sustained abstinence from opiates. Example: I have been clean for ten weeks and three days
+Theme: Recovery Reflections  Description: Reflection on the recovery journey, including past struggles and current challenges. Example: Getting off the shit was hell. Now I do have to deal with everyday shit that I used to just block out,
+Theme: Recovery Celebrations  Description: Celebration of small victories in recovery, such as managing daily tasks without opiates. Example: the days I sleep or go to the bathroom normally are awesome. Handling a bad headache with something other than an opiate makes me feel stronger.
+Theme: Recovery Gratitude  Description: Emotional expression of gratitude and pride in recovery progress. Example: I'm here and I'm so. fucking. glad.
+
+
+Post ID: 1wsf9j
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+Post ID: 6e1wbk
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Near-Fatal Opiate Overdose  Description: Use of opiates or other substances leading to a near-fatal overdose Example: I took many meant Xanax..... Even more klonopin. Half a bottle of Jamey and a snorted a fat bag.
+Theme: Emotional Distress Following Substance Use  Description: Emotional state characterized by feelings of guilt, shame, and loss Example: I'm guilty ashamed and lost.
+
+
+theme creator 2 
+Theme: Opiate Use  Description: Use of opiates or other substances without consideration of quitting, often accompanied by negative consequences. Example: I took many meant Xanax..... Even more klonopin. Half a bottle of Jamey and a snorted a fat bag.
+Theme: Withdrawal Symptoms  Description: Experiencing severe physical or emotional symptoms as a result of ceasing or lowering opiate intake. Example: I woke up hours later on the balcony covered in puke.
+
+
+Post ID: 8jsh11
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Desire for Opiate Use  Description: The user is expressing a desire to switch from alcohol use to opiate use, indicating a consideration of changing their substance of choice. Example: Fuck how great are opiate wds when alcohol wds can kill you
+Theme: Alcohol Withdrawal Symptoms  Description: The user is currently experiencing withdrawal symptoms from alcohol use, indicating a state of withdrawal. Example: I get sick every couple hours when I sober up so I have been drinking constantly.
+
+
+theme creator 2 
+Theme: Withdrawal Comparison  Description: Comparison between opiate and alcohol withdrawal symptoms, highlighting the perceived severity of alcohol withdrawal Example: alcohol wds can kill you
+Theme: Regret Over Switching Substances  Description: Regret over switching from heroin to alcohol due to its perceived deadlier withdrawal symptoms Example: God do I miss the days of wding from something that wont fucking kill me
+Theme: Physical Dependence and Withdrawal Symptoms  Description: Expression of physical dependence on substances, with a focus on the need for constant consumption to avoid withdrawal symptoms Example: I get sick every couple hours when I sober up so I have been drinking constantly
+Theme: Desire for Opiate Use  Description: Expression of desire to return to using heroin, citing its perceived safety compared to alcohol Example: Fuck how great are opiate wds when alcohol wds can kill you
+
+
+Post ID: 4xolj8
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user is experiencing opiate withdrawal symptoms, indicating a state of cessation or reduction in opiate intake. Example: mild cramping in my ribs, haven't puked once yet, still fiending for that sweet release heroin gives
+Theme: Use  Description: The user has recently engaged in a period of heavy opiate use, characterized by a 2.5 week binge. Example: on a 3 day binge where i benzo'd myself to sleep during the entire day 2.
+Theme: Recovery  Description: The user is expressing hope for recovery and relief from withdrawal symptoms, indicating an attempt to sustain abstinence. Example: the contin is hell. the fact that heroin is IR is giving me hope that once my weed guy wakes up and i get a good walk and a couple of dabs in, i shouldn't feel as shitty as i have been.
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user is experiencing opiate withdrawal symptoms, indicating a state of cessation or reduction in opiate intake. Example: mild cramping in my ribs, haven't puked once yet, still fiending for that sweet release heroin gives
+Theme: Use  Description: The user has recently engaged in a period of heavy opiate use, characterized by a 2.5 week binge. Example: on a 3 day binge where i benzo'd myself to sleep during the entire day 2.
+Theme: Recovery  Description: The user is expressing hope for recovery and relief from withdrawal symptoms, indicating an attempt to sustain abstinence. Example: the contin is hell. the fact that heroin is IR is giving me hope that once my weed guy wakes up and i get a good walk and a couple of dabs in, i shouldn't feel as shitty as i have been.
+
+

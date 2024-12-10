@@ -1,0 +1,73 @@
+Post ID: pox7q
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I've heard white grapefruit juice, a small dose of DXM, and a shot of rum can work well.
+
+
+theme creator 2 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I've heard white grapefruit juice, a small dose of DXM, and a shot of rum can work well.
+
+
+Post ID: 2eu61b
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I'm sitting in my GP's office now. It will be my first time seeing him since I red flagged myself,
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by physical and emotional symptoms. Example: So this sore throat is a bit triggering right now. I'm sure my immune system is shot.
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I'm sitting in my GP's office now. It will be my first time seeing him since I red flagged myself,
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by physical and emotional symptoms. Example: So this sore throat is a bit triggering right now. I'm sure my immune system is shot.
+
+
+Post ID: 7tj2l7
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: Opiate use is being considered as a means to alleviate withdrawal symptoms. Example: So I am on my way to see my dude, just 1 bag to split with my girl (we inn this together) just to get some sleep and get some time off this hell.
+Theme: Withdrawal  Description: The user is experiencing withdrawal symptoms such as lack of sleep and frequent urination. Example: I am fighting like hell, but 3 nights with no sleep? Shiiiit, I feel like a zombie that needs to run to the toilet every five.
+Theme: Recovery  Description: The user is in the early stages of recovery and is trying to manage cravings. Example: Edit: we used to split 12 or even 14 bags, so I’m thinking that 1/2a bag would not put me back to where we were
+
+
+theme creator 2 
+Theme: Withdrawal  Description: Opiate use is being considered as a means to alleviate withdrawal symptoms. Example: So I am on my way to see my dude, just 1 bag to split with my girl (we inn this together) just to get some sleep and get some time off this hell.
+Theme: Withdrawal  Description: The user is experiencing withdrawal symptoms such as insomnia and gastrointestinal issues. Example: I am fighting like hell, but 3 nights with no sleep? Shiiiit, I feel like a zombie that needs to run to the toilet every five.
+Theme: Recovery  Description: The user is in the early stages of recovery and is considering relapse. Example: Day 3 considering 1/2a bag .
+
+
+Post ID: 2o8onl
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Emotional Turmoil in Recovery  Description: Struggle with emotional regulation and mental health during recovery Example: Panic attacks and the emotional rollercoaster are taking their toll on me.
+Theme: Struggle with Letting Go of Past Relationships  Description: Difficulty letting go of past relationships and experiences, particularly romantic relationships Example: I start to remember the great times, the quality time we spent together, the LOVE that we both had for each other.
+Theme: Resentment and Fear of Abandonment  Description: Resentment and fear of abandonment in relationships Example: The main problem that I see is my resentment towards her, that fear that since I'm not around she will move on.
+Theme: Self-Reliance and Trust Issues in Recovery  Description: Struggle with self-reliance and trust issues in recovery Example: Trust issues, losing that which we put some much time and effort into.
+Theme: Recognizing Powerlessness of Past Experiences  Description: Realization of the powerlessness of past experiences over current emotions Example: My past is only a story and once I realize this, it has no power over me.
+Theme: Struggle with Seeking Help and Feeling Alone  Description: Struggle with seeking help and feeling alone in recovery Example: The hardest thing for me to do is ask for help. I'm hitting that wall we recovering addicts speak of.
+
+
+theme creator 2 
+Theme: Emotional Turmoil in Recovery  Description: Struggle with emotional regulation and mental health during recovery Example: Panic attacks and the emotional rollercoaster are taking their toll on me.
+Theme: Struggle with Letting Go of Past Relationships  Description: Difficulty letting go of past relationships and experiences, particularly romantic relationships Example: I start to remember the great times, the quality time we spent together, the LOVE that we both had for each other.
+Theme: Resentment and Fear of Abandonment  Description: Resentment and fear of abandonment in relationships Example: The main problem that I see is my resentment towards her, that fear that since I'm not around she will move on.
+Theme: Self-Reliance and Trust Issues in Recovery  Description: Struggle with self-reliance and trust issues in recovery Example: Trust issues, losing that which we put some much time and effort into.
+Theme: Recognizing Powerlessness of Past Experiences  Description: Realization of the powerlessness of past experiences over current emotions Example: My past is only a story and once I realize this, it has no power over me.
+Theme: Struggle with Seeking Help and Feeling Alone  Description: Struggle with seeking help and feeling alone in recovery Example: The hardest thing for me to do is ask for help. I'm hitting that wall we recovering addicts speak of.
+
+
+Post ID: 8k1ipv
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Recovery and Medication Management  Description: Recovery, with mention of a specific medication (gabapentin) prescribed by an addiction doctor. Example: I'm 26 days clean
+Theme: Gabapentin Withdrawal Symptoms and Opiate PAWS  Description: Withdrawal symptoms experienced after ceasing or reducing gabapentin intake, potentially related to opiate PAWS (post-acute withdrawal syndrome). Example: today I've been having a ton of anxiety and have been spacey as fuck
+
+
+theme creator 2 
+Theme: Opiate Recovery and Medication Management  Description: Recovery, with mention of a specific medication (gabapentin) prescribed by an addiction doctor. Example: I'm 26 days clean
+Theme: Gabapentin Withdrawal Symptoms and Opiate PAWS  Description: Withdrawal symptoms experienced after ceasing or reducing gabapentin intake, potentially related to opiate PAWS (post-acute withdrawal syndrome). Example: today I've been having a ton of anxiety and have been spacey as fuck
+
+
