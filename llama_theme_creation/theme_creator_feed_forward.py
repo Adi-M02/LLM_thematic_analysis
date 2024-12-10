@@ -30,7 +30,7 @@ class ThemeCreatorFeedForward:
         user_message = f"""
 Instructions:
 
-Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
+Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified or the identified themes fit into the provided list of themes return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
 
 - Important Notes:
   - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.

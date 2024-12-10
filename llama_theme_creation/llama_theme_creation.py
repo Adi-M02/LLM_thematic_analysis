@@ -100,15 +100,18 @@ def theme_creation_feedforward_themes(output):
     # create_directory(output)
     posts_and_titles = parse.get_posts_and_titles_only()
     creator = ThemeCreatorFeedForward()
-    themes = set()
+    themes = []
     # create all themes
+    i = 0
     for post_id, post, title in posts_and_titles:
+        i += 1
+        print(i)
         try:
-            print(len(themes))
+            print(f"num themes: {len(themes)}")
             response = creator.create_themes(post, title, list(themes))
             themes_json = json.loads(response.json()['message']['content'])
-            themes.update(themes_json['themes'])
-            print(themes_json["themes"])
+            themes = themes_json["themes"]
+            print(themes)
         except:
             continue
     cur_length = len(themes)
@@ -116,5 +119,5 @@ def theme_creation_feedforward_themes(output):
     
 if __name__ == "__main__":
     start = time.time()
-    create_themes("llama_theme_creation/12-8/run2")
+    theme_creation_feedforward_themes("output")
     print(f"Time taken: {((time.time() - start) / 60):.2f} minutes")
