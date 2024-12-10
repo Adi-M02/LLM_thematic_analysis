@@ -27,4 +27,4 @@ class ThemeCreatorGeneralizer:
             "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. You will be given a post, post title and a list of existing themes you previously found among related posts. Your task is to analyze the post and identify major themes related to opiate addiction state characterization in it. "
         )
     def create_themes(self, post, title, themes):
-        user_message = f"""
+        user_message = f""""""
