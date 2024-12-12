@@ -7,6 +7,9 @@ import random
 import parse_codings_themes as parse
 from theme_creator import ThemeCreator
 from theme_creator_feed_forward import ThemeCreatorFeedForward
+from theme_creator_feed_forward_with_desc import ThemeCreatorFeedForwardDesc
+from theme_creator_generalizer import ThemeCreatorGeneralizer
+from theme_creator_no_feedforward import ThemeCreatorNoFeedForward
 
 def tense_log_identifier(log_file_path):
     return os.path.basename(log_file_path).replace(".txt", "")
@@ -38,7 +41,97 @@ def create_themes(output, sample_size=5):
     posts_and_titles = parse.get_posts_and_titles_only()
     total_required = 50
     sampled_elements = random.sample(posts_and_titles, total_required)  # Initial random sample
-    completed_posts = set()  # Track completed post IDs
+    completed_posts = set()  # Tructure(self, writer):
+    #   prompt = f"""
+    #     data = {{
+    #         {self.default_data.copy()},
+    #     "messages": [
+    #         {{"role:"system", "content"{self.system_message}}},
+    #         {{"role": "user", "content": 
+    #           Instructions:
+
+    #           Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
+
+    #           - Important Notes:
+    #             - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.
+    #           - Definitions of Addiction States:
+    #             - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+    #             - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+    #             - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+    #           - Response Format:
+    #           {{
+    #             "themes": [ructure(self, writer):
+    #   prompt = f"""
+    #     data = {{
+    #         {self.default_data.copy()},
+    #     "messages": [
+    #         {{"role:"system", "content"{self.system_message}}},
+    #         {{"role": "user", "content": 
+    #           Instructions:
+
+    #           Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
+
+    #           - Important Notes:
+    #             - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.
+    #           - Definitions oructure(self, writer):
+    #   prompt = f"""
+    #     data = {{
+    #         {self.default_data.copy()},
+    #     "messages": [
+    #         {{"role:"system", "content"{self.system_message}}},
+    #         {{"role": "user", "content": 
+    #           Instructions:
+
+    #           Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
+
+    #           - Important Notes:
+    #             - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.
+    #           - Definitions of Addiction States:
+    #             - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+    #             - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+    #             - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+    #           - Response Format:
+    #           {{
+    #             "themes": [
+    #               "Title of theme","Title of another theme", ...
+    #             ]
+    #           }}
+                
+    #           - Respond based on the following inputs:
+    #             Post: {{post}}
+    #             Post Title: {{title}}
+    #           }}
+    #         }}
+    # """f Addiction States:
+    #             - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+    #             - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+    #             - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+    #           - Response Format:
+    #           {{
+    #             "themes": [
+    #               "Title of theme","Title of another theme", ...
+    #             ]
+    #           }}
+                
+    #           - Respond based on the following inputs:
+    #             Post: {{post}}
+    #             Post Title: {{title}}
+    #           }}
+    #         }}
+    # """
+    #               "Title of theme","Title of another theme", ...
+    #             ]
+    #           }}
+                
+    #           - Respond based on the following inputs:
+    #             Post: {{post}}
+    #             Post Title: {{title}}
+    #           }}
+    #         }}
+    # """rack completed post IDs
     chunks = [sampled_elements[i:i + sample_size] for i in range(0, len(sampled_elements), sample_size)]
     output_file = os.path.join(output, "themes.txt")
     theme_creator1 = ThemeCreator("llama3.3:70b")
@@ -97,10 +190,10 @@ def write_theme_and_human_themes(file, post_id, responses):
         file.write("\n\n")
 
 def theme_creation_feedforward_themes(output):
-    # create_directory(output)
+    create_directory(output)
     posts_and_titles = parse.get_posts_and_titles_only()
     creator = ThemeCreatorFeedForward()
-    themes = []
+    themes = set()
     # create all themes
     i = 0
     for post_id, post, title in posts_and_titles:
@@ -110,14 +203,89 @@ def theme_creation_feedforward_themes(output):
             print(f"num themes: {len(themes)}")
             response = creator.create_themes(post, title, list(themes))
             themes_json = json.loads(response.json()['message']['content'])
-            themes = themes_json["themes"]
-            print(themes)
+            themes.update(themes_json['themes'])
+            print(len(themes))
         except:
             continue
     cur_length = len(themes)
+    output_file = os.path.join(output, "feedforward_themes.txt")
+    with open(output_file, "w") as file:
+        for theme in themes:
+            file.write(f"{theme}\n")
+
     # while 
+def theme_creation_feedforward_desc(output):
+    create_directory(output)
+    posts_and_titles = parse.get_posts_and_titles_only()
+    creator = ThemeCreatorFeedForwardDesc()
+    themes = []
+    i = 0
+    for post_id, post, title in posts_and_titles:
+        i += 1
+        print(i)
+        try:
+            print(f"num themes: {len(themes)}")
+            response = creator.create_themes(post, title, list(themes))
+            themes_json = json.loads(response.json()['message']['content'])
+            themes.append(themes_json['themes'])
+            
+        except:
+            continue
+
+    output_file = os.path.join(output, "feedforward_desc_themes.txt")
+    with open(output_file, "w") as file:
+        for theme in themes:
+            file.write(f"{theme}\n")
+
+def generalize_themes(themes_file, output):
+    create_directory(output)
+    with open(themes_file, "r") as file:
+        themes = [line.strip() for line in file.readlines()]
+    generalizer = ThemeCreatorGeneralizer()
+    posts_and_titles = parse.get_posts_and_titles_only()
+    major_themes = []
+    out_file = os.path.join(output, "generalized_themes.txt")
+    with open(out_file, "w") as file:
+        i = 0
+        for post_id, post, title in posts_and_titles:
+            i += 1
+            print(i)
+            file.flush()
+            try:
+                response = generalizer.generalize_themes(post, title, themes, major_themes)
+                themes_json = json.loads(response.json()['message']['content'])
+                file.write(f"Post ID: {post_id}\n")
+                for theme in themes_json['themes']:
+                    file.write(f"    Theme: {theme['theme']}")
+                    file.write(f"    Description: {theme['description']}\n")
+            except Exception as e:
+                file.write(f"Post ID: {post_id} error {e}\n")
+
+def theme_creation_no_ff(url, output):
+    create_directory(output)
+    posts_and_titles = parse.get_posts_and_titles_only()
+    creator = ThemeCreatorNoFeedForward(url)
+    themes = []
+    i = 0
+    for post_id, post, title in posts_and_titles:
+        i += 1
+        print(i)
+        try:
+            response = creator.create_themes(post, title, list(themes))
+            themes_json = json.loads(response.json()['message']['content'])
+            themes.append(themes_json['themes'])
+            
+        except:
+            continue
+
+    output_file = os.path.join(output, "feedforward_desc_themes.txt")
+    with open(output_file, "w") as file:
+        for theme in themes:
+            file.write(f"{theme}\n")
     
 if __name__ == "__main__":
     start = time.time()
-    theme_creation_feedforward_themes("output")
+    generalize_themes('llama_theme_creation/12-10/feedforward_themes.txt', 'llama_theme_creation/12-11/generalized_themes/run3')
+    # theme_creation_feedforward_desc("llama_theme_creation/12-10")
+    # theme_creation_feedforward_themes("llama_theme_creation/12-10")
     print(f"Time taken: {((time.time() - start) / 60):.2f} minutes")

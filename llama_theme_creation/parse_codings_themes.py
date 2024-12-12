@@ -209,6 +209,8 @@ def get_posts_and_titles_only(coding_file='All_Codes_Manual_Analysis_fixEncoding
                 post = post_content[title_end + len("post:"):].strip()
                 title = html.unescape(title)
                 post = html.unescape(post)
+                if len(post) > 1500:
+                    continue
                 posts_and_titles.append((row["Post ID"], post, title))
     return posts_and_titles
 

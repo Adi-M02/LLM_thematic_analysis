@@ -1,6 +1,6 @@
 import requests
 
-class ThemeCreatorFeedForward:
+class ThemeCreatorNoFeedForward:
     def __init__(self, model="llama3.2-vision:11b-instruct-q4_K_M"):
         self.url = "http://localhost:11434/api/chat"
         self.headers = {"Content-Type": "application/json"}
@@ -24,13 +24,13 @@ class ThemeCreatorFeedForward:
             }
         }
         self.system_message = (
-            "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. You will be given a post, post title and a list of existing themes you previously found among related posts. Your task is to analyze the post and identify major themes related to opiate addiction state characterization in it. If a theme you identify is not in the list of existing themes add it to the list of themes. If a new theme is similar to a previous theme combine them into a new more general theme. Only create new themes if you are sure the posts can't be classified with an existing theme. Respond only in the specified format with the major themes related to opiate addiction state characterization. Do not include any additional descriptions, reasoning, or text in your response."
+            "You are an academic researcher analyzing the themes related to opiate addiction state characterization on social media. You will be given a post and post title. Your task is to analyze the post and identify major themes related to opiate addiction state characterization in it. Only include themes which you know from your understanding of opiate addiction can be used to characterize the post author's opiate addiction state.  Respond only in the specified format with the major themes related to opiate addiction state characterization. Do not include any additional descriptions, reasoning, or text in your response."
         )
     def create_themes(self, post, title, themes):
         user_message = f"""
 Instructions:
 
-Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only by appending new major themes related to opiate addiction state classification to the input list. Only append if the new theme is not similar to an existing theme. If a new theme is similar to an existing theme combine the themes into a new more general theme. If no new themes are identified or the identified themes fit into the provided list of themes return the input list of themes unmodified. Do not include any additional descriptions, reasoning, or text in your response.
+Analyze the opiate addiction state information in the post and post title and identify the major theme or themes related to opiate addiction state characterization in the text. Respond only with the themes related to the author's opiate addiction state characterization. Do not include any additional descriptions, reasoning, or text in your response.
 
 - Important Notes:
   - Addiction state language refers to any mentions of use, withdrawal, or recovery related to opiate addiction.
