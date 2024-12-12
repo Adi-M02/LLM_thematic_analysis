@@ -5,12 +5,10 @@ import csv
 import os
 import random
 import parse_codings_themes as parse
-from theme_creator import ThemeCreator
 from theme_creator_feed_forward import ThemeCreatorFeedForward
 from theme_creator_feed_forward_with_desc import ThemeCreatorFeedForwardDesc
-from theme_creator_generalizer import ThemeCreatorGeneralizer
-from theme_creator_no_feedforward import ThemeCreatorNoFeedForward
-
+from theme_creator_generalizer import ThemeCreatorGeneralizer, ThemeCreatorGeneralizerWDesc
+from theme_creator_no_feedforward import ThemeCreatorNoFeedForward, ThemeCreatorNoFeedForwardWDesc
 def tense_log_identifier(log_file_path):
     return os.path.basename(log_file_path).replace(".txt", "")
 
@@ -261,31 +259,58 @@ def generalize_themes(themes_file, output):
             except Exception as e:
                 file.write(f"Post ID: {post_id} error {e}\n")
 
-def theme_creation_no_ff(url, output):
+def generalize_themes_w_desc(output):
     create_directory(output)
     posts_and_titles = parse.get_posts_and_titles_only()
-    creator = ThemeCreatorNoFeedForward(url)
+    themes_file = os.path.join(output, "themes_w_desc.txt")
+    themes = []
+    creator = ThemeCreatorNoFeedForwardWDesc()
+    i = 0
+    with open(themes_file, "w") as file:
+        for post_id, post, title in posts_and_titles:
+            i += 1
+            print(i)
+            try:
+                response = creator.create_themes(post, title)
+                themes_json = json.loads(response.json()['message']['content'])
+                for pair in themes_json['themes']:
+                    themes.append([pair['theme'], pair['description']])
+                file.write(themes_json['themes'])
+            except:
+                continue
+    text = []
+    for pair in themes:
+        text += pair[0] + " " + pair[1] + " "
+    print(len(text))
+    generalizer = ThemeCreatorGeneralizer()
+
+def theme_creation_no_ff(output):
+    create_directory(output)
+    posts_and_titles = parse.get_posts_and_titles_only()
+    creator = ThemeCreatorNoFeedForward()
     themes = []
     i = 0
-    for post_id, post, title in posts_and_titles:
-        i += 1
-        print(i)
-        try:
-            response = creator.create_themes(post, title, list(themes))
-            themes_json = json.loads(response.json()['message']['content'])
-            themes.append(themes_json['themes'])
-            
-        except:
-            continue
-
-    output_file = os.path.join(output, "feedforward_desc_themes.txt")
+    output_file = os.path.join(output, "themes.txt")
+    with open(output_file, "w") as file:
+        for post_id, post, title in posts_and_titles:
+            i += 1
+            print(i)
+            try:
+                response = creator.create_themes(post, title)
+                themes_json = json.loads(response.json()['message']['content'])
+                themes.append(themes_json['themes'])
+            except Exception as e:
+                print(e)
+                continue
     with open(output_file, "w") as file:
         for theme in themes:
             file.write(f"{theme}\n")
     
 if __name__ == "__main__":
     start = time.time()
-    generalize_themes('llama_theme_creation/12-10/feedforward_themes.txt', 'llama_theme_creation/12-11/generalized_themes/run3')
+    # generalize_themes('llama_theme_creation/12-10/feedforward_themes.txt', 'llama_theme_creation/12-11/generalized_themes/run4')
+    generalize_themes_w_desc('llama_theme_creation/12-11/themes_and_general_themes/run1')
+    # theme_creation_no_ff("llama_theme_creation/12-11/theme_creation_no_ff/run1")
     # theme_creation_feedforward_desc("llama_theme_creation/12-10")
     # theme_creation_feedforward_themes("llama_theme_creation/12-10")
     print(f"Time taken: {((time.time() - start) / 60):.2f} minutes")
