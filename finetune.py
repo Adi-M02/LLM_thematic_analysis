@@ -13,7 +13,6 @@ from trl import SFTTrainer
 import subprocess
 
 os.environ['HF_TOKEN'] = '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'
-os.environ['HF_HOME'] = "hf_models"
 
 # Paths to training and validation data
 train_file = "finetuning_data/withdrawal/subs_method/train.jsonl"
@@ -77,7 +76,7 @@ tokenizer.padding_side = "right"
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     quantization_config=bnb_config,
-    device_map={"": 0},
+    device_map="auto",
 )
 model.config.use_cache = False
 
