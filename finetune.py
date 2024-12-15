@@ -14,8 +14,8 @@ import subprocess
 
 os.environ['HF_TOKEN'] = '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'
 # Paths to training and validation data
-train_file = "./train.jsonl"
-validation_file = "./validation.jsonl"
+train_file = "finetuning_data/withdrawal/subs_method/train.jsonl"
+validation_file = "finetuning_data/withdrawal/subs_method/validation.jsonl"
 
 # Model and output paths
 model_name = "meta-llama/Llama-3.2-11B-Vision-Instruct"
@@ -85,6 +85,7 @@ peft_config = LoraConfig(
     lora_dropout=lora_dropout,
     r=lora_r,
     bias="none",
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
     task_type="CAUSAL_LM",
 )
 
