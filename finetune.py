@@ -6,12 +6,13 @@ from transformers import (
     AutoModelForCausalLM,
     BitsAndBytesConfig,
     TrainingArguments,
-    pipeline,
 )
-from peft import LoraConfig, PeftModel
+from peft import LoraConfig
 from trl import SFTTrainer
 import subprocess
 
+# Restrict to a single GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ['HF_TOKEN'] = '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'
 
 # Paths to training and validation data
@@ -28,26 +29,26 @@ lora_r = 64
 lora_alpha = 16
 lora_dropout = 0.1
 
-# BitsAndBytes Configuration
+# BitsAndBytes Configuration for 4-bit precision
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.float16,
+    bnb_4bit_compute_dtype=torch.bfloat16,  # Use BF16 for computations
     bnb_4bit_use_double_quant=False,
 )
 
-# Training arguments
+# Training arguments optimized for RTX A6000
 training_arguments = TrainingArguments(
     output_dir="finetuned_models",
     num_train_epochs=5,
-    per_device_train_batch_size=4,
-    gradient_accumulation_steps=1,
+    per_device_train_batch_size=8,  # Start with 8, adjust if needed
+    gradient_accumulation_steps=2,  # Effective batch size = 8 × 2 = 16
     optim="paged_adamw_32bit",
     save_steps=0,
     logging_steps=50,
     learning_rate=2e-4,
-    fp16=False,
-    bf16=False,
+    bf16=True,  # Use BF16 for better performance
+    fp16=False,  # Disable FP16
     max_grad_norm=0.3,
     weight_decay=0.001,
     lr_scheduler_type="cosine",
@@ -72,13 +73,17 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-# Load model with QLoRA configuration
+# Load model on a single GPU with QLoRA configuration
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     quantization_config=bnb_config,
-    device_map="auto",
+    device_map={"": 0},  # Place all components on GPU 0
+    cache_dir="hf_cache"  # Optional: Specify cache directory
 )
 model.config.use_cache = False
+
+# Enable gradient checkpointing to save memory
+model.gradient_checkpointing_enable()
 
 # LoRA configuration
 peft_config = LoraConfig(
