@@ -12,14 +12,15 @@ from peft import LoraConfig, PeftModel
 from trl import SFTTrainer
 import subprocess
 
+os.environ['HF_TOKEN'] = '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'
 # Paths to training and validation data
 train_file = "./train.jsonl"
 validation_file = "./validation.jsonl"
 
 # Model and output paths
-model_name = "llama3.2-vision:11b-instruct-q8_0"
-new_model = "./finetuned_model"
-gguf_model_path = "./finetuned_model.gguf"
+model_name = "meta-llama/Llama-3.2-11B-Vision-Instruct"
+new_model = "finetuned_models/hf_models"
+gguf_model_path = "finetuned_models/gguf_models/llama-3.2-11B-Vision-Instruct-q4km.gguf"
 
 # QLoRA parameters
 lora_r = 64
@@ -36,7 +37,7 @@ bnb_config = BitsAndBytesConfig(
 
 # Training arguments
 training_arguments = TrainingArguments(
-    output_dir="./results",
+    output_dir="finetuned_models",
     num_train_epochs=5,
     per_device_train_batch_size=4,
     gradient_accumulation_steps=1,
@@ -143,5 +144,5 @@ def quantize_gguf(gguf_model_path, quantized_model_path, quantization_type="q4_0
     )
     print(f"Model successfully quantized: {quantized_model_path}")
 
-quantized_model_path = gguf_model_path.replace(".gguf", f"-{quantization_type}.gguf")
+quantized_model_path = gguf_model_path.replace(".gguf", "-q4_0.gguf")
 quantize_gguf(gguf_model_path, quantized_model_path, quantization_type="q4_0")
