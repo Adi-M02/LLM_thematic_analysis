@@ -2216,10 +2216,10 @@ def encode_features(output, category_feature_dict = category_feature_dict, sampl
                 num_errors = 0
                 for encoding in encodings:
                     file.flush()
-                    post_id, post, title, state_label, tense_list = encoding
-                    true_tense = 1 if feature_encoding_to_binary(category, feature, tense_list) else 0
+                    post_id, post, title, state_label, feature_list = encoding
+                    true_label = 1 if feature_encoding_to_binary(category, feature, feature_list) else 0
                     response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
-                    num_errors, predicted_encodings, true_encodings = write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_tense, num_errors, predicted_encodings, true_encodings)
+                    num_errors, predicted_encodings, true_encodings = write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_label, num_errors, predicted_encodings, true_encodings)
                 num_different_examples = compare_example_and_post(logger, csv_path)
                 write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
                 
