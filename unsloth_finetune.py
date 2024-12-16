@@ -6,14 +6,17 @@ from transformers import (
     AutoModelForCausalLM,
     BitsAndBytesConfig,
     TrainingArguments,
-    pipeline,
 )
 from peft import LoraConfig, PeftModel
 from trl import SFTTrainer
 import subprocess
 
+torch.cuda.empty_cache()
+
+# Set environment variables
 os.environ['HF_TOKEN'] = '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'
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
 # Function to ensure a directory exists
 def ensure_directory_exists(dir_path):
@@ -26,12 +29,14 @@ validation_file = "finetuning_data/withdrawal/subs_method/validation.jsonl"
 
 # Model and output paths
 model_name = "meta-llama/Llama-3.2-11B-Vision-Instruct"
-new_model = "unsloth_finetuned/hf_models"
+adapter_model_path = "unsloth_finetuned/hf_models"  # LoRA adapter output
+full_model_path = "unsloth_finetuned/full_model"    # Merged full model
 gguf_model_path = "unsloth_finetuned/gguf_models/llama-3.2-11B-Vision-Instruct-q4km.gguf"
 
 # Ensure output directories exist
-ensure_directory_exists(os.path.dirname(new_model))
+ensure_directory_exists(os.path.dirname(adapter_model_path))
 ensure_directory_exists(os.path.dirname(gguf_model_path))
+ensure_directory_exists(full_model_path)
 
 # QLoRA parameters
 lora_r = 64
@@ -40,18 +45,17 @@ lora_dropout = 0.1
 
 # BitsAndBytes Configuration
 bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
+    load_in_4bit=True,  # Ensure weights are loaded in 4-bit
     bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.float16,
-    bnb_4bit_use_double_quant=False,
 )
 
 # Training arguments
 training_arguments = TrainingArguments(
     output_dir="finetuned_models",
     num_train_epochs=5,
-    per_device_train_batch_size=4,
-    gradient_accumulation_steps=1,
+    per_device_train_batch_size=1,
+    gradient_accumulation_steps=4,
     optim="paged_adamw_32bit",
     save_steps=0,
     logging_steps=50,
@@ -85,15 +89,15 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-# Load model with QLoRA configuration
-model = AutoModelForCausalLM.from_pretrained(
+# Load base model (disable quantization for merging)
+base_model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    quantization_config=bnb_config,
-    device_map={"": 0},
+    trust_remote_code=True,
+    device_map=None,  # Load entirely on CPU to avoid meta tensors
 )
-model.config.use_cache = False
+base_model.gradient_checkpointing_enable()
 
-# LoRA configuration
+# Initialize the LoRA adapter
 peft_config = LoraConfig(
     lora_alpha=lora_alpha,
     lora_dropout=lora_dropout,
@@ -105,7 +109,7 @@ peft_config = LoraConfig(
 
 # Initialize the trainer
 trainer = SFTTrainer(
-    model=model,
+    model=base_model,  # Use the base model
     train_dataset=dataset["train"],
     eval_dataset=dataset["validation"],
     peft_config=peft_config,
@@ -117,11 +121,34 @@ trainer = SFTTrainer(
 )
 
 # Start training
-trainer.train()
+# trainer.train()
 
-# Save the fine-tuned Hugging Face model
-trainer.model.save_pretrained(new_model)
-tokenizer.save_pretrained(new_model)
+# # Save the LoRA adapter
+# trainer.model.save_pretrained(adapter_model_path)
+# tokenizer.save_pretrained(adapter_model_path)
+
+print("Merging LoRA adapter with the base model...")
+
+# Load the LoRA adapter into the base model
+lora_model = PeftModel.from_pretrained(base_model, adapter_model_path)
+
+# Resolve meta tensor issues by initializing and moving to the correct device
+for param in lora_model.parameters():
+    if param.device == torch.device("meta"):
+        print(f"Initializing {param.name} on CPU...")
+        param.data = torch.zeros_like(param, device="cpu")
+
+# Move the fully initialized model to GPU
+lora_model = lora_model.to("cuda")
+
+# Force initialization
+dummy_input = tokenizer("Hello", return_tensors="pt").input_ids.to("cuda")
+_ = lora_model.generate(dummy_input)
+
+# Save the merged model
+lora_model.save_pretrained(full_model_path)
+tokenizer.save_pretrained(full_model_path)
+print(f"Full model saved to: {full_model_path}")
 
 # Convert the fine-tuned model to GGUF format
 def convert_to_gguf(hf_model_path, output_gguf_path):
@@ -143,7 +170,7 @@ def convert_to_gguf(hf_model_path, output_gguf_path):
     print(f"Model successfully converted to GGUF format: {output_gguf_path}")
 
 # Run the GGUF conversion
-convert_to_gguf(new_model, gguf_model_path)
+convert_to_gguf(full_model_path, gguf_model_path)
 
 # Quantize the GGUF model (optional)
 def quantize_gguf(gguf_model_path, quantized_model_path, quantization_type="q4_0"):
