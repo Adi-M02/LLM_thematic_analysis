@@ -214,7 +214,6 @@ def feature_encoding_to_binary(category, feature, encoded_label_list):
         elif feature == "NA_meeting_question":
             return 21 in encoded_label_list
         
-
 def get_training_data(category, feature):
     encodings = parse.parse_feature_post_title_threshold(category)
     post_titles = []
@@ -225,26 +224,32 @@ def get_training_data(category, feature):
         post_titles.append(title)
         post_contents.append(post)
         labels.append(label)
+
     train_titles, val_titles, train_contents, val_contents, train_labels, val_labels = train_test_split(
-    post_titles, post_contents, labels, test_size=0.2, stratify=labels, random_state=42
+        post_titles, post_contents, labels, test_size=0.2, stratify=labels, random_state=42
     )
 
     train_data = [
-    {"post_title": title, "post_content": content, "label": label}
-    for title, content, label in zip(train_titles, train_contents, train_labels)]
+        {"text": title + " " + content, "label": label}
+        for title, content, label in zip(train_titles, train_contents, train_labels)
+    ]
     val_data = [
-    {"post_title": title, "post_content": content, "label": label}
-    for title, content, label in zip(val_titles, val_contents, val_labels)]
+        {"text": title + " " + content, "label": label}
+        for title, content, label in zip(val_titles, val_contents, val_labels)
+    ]
 
     data_path = os.path.join("finetuning_data", category, feature)
     create_directory(data_path)
     with open(os.path.join(data_path, "train.jsonl"), "w") as f:
         for entry in train_data:
             f.write(json.dumps(entry) + "\n")
+
     with open(os.path.join(data_path, "validation.jsonl"), "w") as f:
         for entry in val_data:
             f.write(json.dumps(entry) + "\n")
 
+def make_verbatim_example_from_post(post, title, label):
+    pass
     
 if __name__ == "__main__":
     get_training_data("withdrawal", "subs_method")
