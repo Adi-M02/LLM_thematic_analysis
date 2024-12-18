@@ -168,6 +168,36 @@ def parse_feature_post_title_threshold(feature, coding_file='All_Codes_Manual_An
                 continue
         return out
     
+def parse_all_features(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv', skip_unknown=True, max_posts_length=1500):
+    features = ["atypical_information", "co-use", "off-topic", "question", "recovery", "special_cases", "tense", "use", "withdrawal"]
+    mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co-use": "co-use", "off-topic": "off-topic", "imputed": "imputed"}
+    out = []
+    with open(coding_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        i = 0
+        for row in reader:
+            post_id = row['Post ID']
+            state_label = row['State Label']
+            if skip_unknown:
+                if int(row['State Label']) == 4:
+                    continue
+                try:
+                    title, post = process_post_field(row['Post'])
+                    post = html.unescape(post)
+                    title = html.unescape(title)
+                    if len(post) > max_posts_length:
+                        continue
+                    feature_dict = {}
+                    for feature in features:
+                        feature_list = row[mapping[feature]]
+                        feature_list = [int(num) for num in feature_list.split(',')]
+                        feature_dict[feature] = feature_list
+                    text = post + " " + title
+                    out.append((text, feature_dict))
+                except:
+                    continue
+        return out
+    
 def get_post_title_string(logger, post_id, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -225,4 +255,5 @@ def get_post_theme_presence(post_id, coding_file='All_Codes_Manual_Analysis_fixE
     return themes
 
 if __name__ == "__main__":
-    word_count()
+    # word_count()
+    parse_all_features()

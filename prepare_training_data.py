@@ -248,8 +248,23 @@ def get_training_data(category, feature):
         for entry in val_data:
             f.write(json.dumps(entry) + "\n")
 
+def get_general_training_data():
+    encodings = parse.parse_all_features()
+    post_content, features = zip(*encodings)
+    train_post_content, val_post_content, train_features, val_features = train_test_split(
+        post_content, features, test_size=0.2, random_state=42
+    )
+    create_directory("general_finetuning_data")
+    with open("general_finetuning_data/train.jsonl", "w") as f:
+        for content, feature in zip(train_post_content, train_features):
+            f.write(json.dumps({"text": content, "label": feature}) + "\n")
+    with open("general_finetuning_data/validation.jsonl", "w") as f:
+        for content, feature in zip(val_post_content, val_features):
+            f.write(json.dumps({"text": content, "label": feature}) + "\n")
+    
 def make_verbatim_example_from_post(post, title, label):
     pass
     
 if __name__ == "__main__":
-    get_training_data("withdrawal", "subs_method")
+    # get_training_data("withdrawal", "subs_method")
+    get_general_training_data()
