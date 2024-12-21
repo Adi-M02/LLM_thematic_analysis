@@ -261,10 +261,67 @@ def get_general_training_data():
     with open("general_finetuning_data/validation.jsonl", "w") as f:
         for content, feature in zip(val_post_content, val_features):
             f.write(json.dumps({"text": content, "label": feature}) + "\n")
+
+def training_data_with_post_id(category, feature):
+    encodings = parse.parse_feature_post_title_threshold(category)
+    post_ids = []
+    post_contents = []
+    labels = []
+    for post_id, post, title, state_label, feature_list in encodings:
+        label = 1 if feature_encoding_to_binary(category, feature, feature_list) else 0
+        post_ids.append(post_id)
+        post_contents.append(title + " " + post)
+        labels.append(label)
+    train_ids, val_ids, train_contents, val_contents, train_labels, val_labels = train_test_split(
+        post_ids, post_contents, labels, test_size=0.2, stratify=labels, random_state=42
+    )
+    train_data = [
+        {"text": title + " " + content, "label": label}
+        for title, content, label in zip(train_ids, train_contents, train_labels)
+    ]
+    val_data = [
+        {"text": title + " " + content, "label": label}
+        for title, content, label in zip(val_ids, val_contents, val_labels)
+    ]
+    data_path = os.path.join("finetuning_data_with_post_id", category, feature)
+    create_directory(data_path)
+    with open(os.path.join(data_path, "train.jsonl"), "w") as f:
+        for entry in train_data:
+            f.write(json.dumps(entry) + "\n")
+    with open(os.path.join(data_path, "validation.jsonl"), "w") as f:
+        for entry in val_data:
+            f.write(json.dumps(entry) + "\n")
+    
+def general_training_data_with_post_id():
+    encodings = parse.parse_all_features_with_post_id()
+    post_ids, post_content, features = zip(*encodings)
+    train_post_ids, val_post_ids, train_post_content, val_post_content, train_features, val_features = train_test_split(
+        post_ids, post_content, features, test_size=0.2, random_state=42
+    )
+    create_directory("general_finetuning_data_with_post_id")
+    with open("general_finetuning_data_with_post_id/train.jsonl", "w") as f:
+        for post_id, content, feature in zip(train_post_ids, train_post_content, train_features):
+            f.write(json.dumps({"text": content, "label": feature}) + "\n")
+    with open("general_finetuning_data_with_post_id/validation.jsonl", "w") as f:
+        for post_id, content, feature in zip(val_post_ids, val_post_content, val_features):
+            f.write(json.dumps({"text": content, "label": feature}) + "\n")
+
+def write_validation_post_ids():
+    encodings = parse.parse_all_features_with_post_id()
+    post_ids, post_content, features = zip(*encodings)
+    train_post_ids, val_post_ids, train_post_content, val_post_content, train_features, val_features = train_test_split(
+        post_ids, post_content, features, test_size=0.2, random_state=42
+    )
+    with open("general_finetuning_data_with_post_id/validation_post_ids.csv", "w") as f:
+        writer = csv.writer(f)
+        writer.writerow(["post_id"])
+        for post_id in val_post_ids:
+            writer.writerow([post_id])
     
 def make_verbatim_example_from_post(post, title, label):
     pass
     
 if __name__ == "__main__":
-    # get_training_data("withdrawal", "subs_method")
-    get_general_training_data()
+    # training_data_with_post_id("withdrawal", "subs_method")
+    # general_training_data_with_post_id()
+    write_validation_post_ids()

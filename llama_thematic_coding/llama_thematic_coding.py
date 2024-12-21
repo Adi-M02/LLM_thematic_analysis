@@ -1853,7 +1853,10 @@ def write_metrics_and_model(output_dir, logger, encoder, feature, num_hallucinat
         except Exception as e:
             f.write(f"Error calculating metrics: {e}\n")
             logger.error(f"{feature}: Error calculating metrics: {e}")
-        encoder.write_prompt_structure(f, feature_prompt_dict[feature])
+        try:
+          encoder.write_prompt_structure(f, feature_prompt_dict[feature])
+        except:
+            pass
 
 def tense_type_condition(tense_list, tense_type):
     if tense_type == "present_tense":
@@ -2222,8 +2225,39 @@ def encode_features(output, category_feature_dict = category_feature_dict, sampl
                     num_errors, predicted_encodings, true_encodings = write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_label, num_errors, predicted_encodings, true_encodings)
                 num_different_examples = compare_example_and_post(logger, csv_path)
                 write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
+
+def encode_and_evaluate_specific_feature(output, val_post_ids, category, feature):
+    feature_directory = os.path.join(output, category, feature)
+    encoder = ThematicEncoder()
+    create_directory(feature_directory)
+    log_file_path = os.path.join(feature_directory, "error_log.txt")
+    logger = setup_logging(log_file_path)
+    csv_path = os.path.join(feature_directory, f"{feature}_codes.csv")
+    with open(csv_path, 'w', newline='', encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=["post_id", "predicted_tense", "true_tense", "verbatim_example", "exact_match"])
+        writer.writeheader()
+        encodings = parse.parse_feature(category)
+        true_encodings = []
+        predicted_encodings = []
+        num_errors = 0
+        for encoding in encodings:
+            file.flush()
+            post_id, post, title, state_label, feature_list = encoding
+            if post_id not in val_post_ids:
+                continue
+            true_label = 1 if feature_encoding_to_binary(category, feature, feature_list) else 0
+            response = encoder.encode(feature_prompt_dict[feature], post, title, state_label)
+            num_errors, predicted_encodings, true_encodings = write_response_and_update_evaluation_lists(writer, logger, response, post_id, true_label, num_errors, predicted_encodings, true_encodings)
+        num_different_examples = compare_example_and_post(logger, csv_path)
+        write_metrics_and_model(feature_directory, logger, encoder, feature, num_errors, num_different_examples, true_encodings, predicted_encodings)
                 
 if __name__ == "__main__":
     start = time.time()
-    encode_features("llama_thematic_coding/12-7/test4")
+    val_post_ids = set()
+    with open("general_finetuning_data_with_post_id/validation_post_ids.csv", "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            val_post_ids.add(row[0])
+    # encode_features("llama_thematic_coding/12-7/test4")
+    encode_and_evaluate_specific_feature("llama_thematic_coding/12-20", val_post_ids, "withdrawal", "subs_method")
     print(f"Time taken: {((time.time() - start)/60):.2f} minutes")
