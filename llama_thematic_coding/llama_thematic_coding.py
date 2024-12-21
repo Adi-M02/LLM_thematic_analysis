@@ -1844,7 +1844,7 @@ def write_metrics_and_model(output_dir, logger, encoder, feature, num_hallucinat
             f.write(f"    - Precision: {precision_score(true_encodings, predicted_encodings, average='weighted', zero_division=0):.4f}\n")
             f.write(f"    - Recall: {recall_score(true_encodings, predicted_encodings, average='weighted', zero_division=0):.4f}\n")
             # Create Confusion Matrix
-            cm = confusion_matrix(true_encodings, predicted_encodings)
+            cm = confusion_matrix(true_encodings, predicted_encodings, labels=[0, 1])
             f.write("Confusion Matrix:\n")
             tn, fp, fn, tp = cm.ravel()
             total = tn + fp + fn + tp
@@ -1852,7 +1852,7 @@ def write_metrics_and_model(output_dir, logger, encoder, feature, num_hallucinat
             f.write(f"     [FN: {fn} ({(fn / total) * 100:.2f}%), TN: {tn} ({(tn / total) * 100:.2f}%)]]\n")
         except Exception as e:
             f.write(f"Error calculating metrics: {e}\n")
-            logger.error(f"{feature}: Error calculating metrics: {e}")
+            # logger.error(f"{feature}: Error calculating metrics: {e}")
         try:
           encoder.write_prompt_structure(f, feature_prompt_dict[feature])
         except:
