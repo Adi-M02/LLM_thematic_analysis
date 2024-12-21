@@ -1,0 +1,23 @@
+hallucinations/errors: 0
+responses with some hallucinated portion: 0
+Encodings:
+- True Encodings:
+    - Class 0: 31
+    - Class 1: 96
+- Predicted Encodings:
+    - Class 0: 120
+    - Class 1: 7
+
+Performance Metrics:
+- Accuracy: 0.2992
+- Macro Averages:
+    - F1 Score: 0.2733
+    - Precision: 0.6292
+    - Recall: 0.5365
+- Weighted Averages:
+    - F1 Score: 0.2030
+    - Precision: 0.8190
+    - Recall: 0.2992
+Confusion Matrix:
+    [[TP: 7 (5.51%), FP: 0 (0.00%)]
+     [FN: 89 (70.08%), TN: 31 (24.41%)]]
