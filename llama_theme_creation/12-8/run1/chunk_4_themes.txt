@@ -1,0 +1,79 @@
+Post ID: 8vel4c
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user is in a state of recovery from opiate addiction, having stopped using heroin and seeking medical attention. Example: I am day 8 off heroin.
+Theme: Withdrawal  Description: The user has experienced withdrawal symptoms due to cessation of heroin use, leading to a hospitalization for overdose. Example: I am currentally in hospital have been here for 8 days. Im in hospital due to a heroin overdose which i did intentionally as means to hopefully commit suicide.
+Theme: Mental Health Struggles  Description: The user is struggling with depression and suicidal thoughts, indicating ongoing mental health challenges. Example: still am very depressed but doctors r keeping an eye on me. I am doing ok i guess
+
+
+theme creator 2 
+Theme: Recovery  Description: The user is in a state of recovery from opiate addiction, having stopped using heroin and seeking medical attention. Example: I am day 8 off heroin.
+Theme: Withdrawal  Description: The user has experienced withdrawal symptoms due to cessation of heroin use, leading to a hospitalization for overdose. Example: I am currentally in hospital have been here for 8 days. Im in hospital due to a heroin overdose which i did intentionally as means to hopefully commit suicide.
+Theme: Mental Health Struggles  Description: The user is experiencing depression and suicidal ideation, indicating ongoing mental health struggles. Example: still am very depressed but doctors r keeping an eye on me. I am doing ok i guess
+
+
+Post ID: 4g4vh6
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: Description of the theme Example: When I first started smoking black I would be up all nigh Tossing and turning with this insanely ridiculous feeling in my legs.
+Theme: Use  Description: Description of the theme Example: Those kicks were so easy. I wish I could go back.
+Theme: Withdrawal  Description: Description of the theme Example: Now I turn into a crazy ass fiend bitch when I'm kicking.
+
+
+theme creator 2 
+Theme: Withdrawal  Description: Description of the theme Example: When I first started smoking black I would be up all nigh Tossing and turning with this insanely ridiculous feeling in my legs.
+Theme: Use  Description: Description of the theme Example: Those kicks were so easy. I wish I could go back.
+Theme: Withdrawal  Description: Description of the theme Example: Now I turn into a crazy ass fiend bitch when I'm kicking.
+
+
+Post ID: 4q4v1a
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal symptoms after overdose reversal with Narcan  Description: Opiate use leading to overdose and near-death experience Example: He was standing up but swaying in our bathroom, chin down and eyes half-closed. I got closer and saw that his eyes were bouncing around in his head and the color was quickly draining from his face.
+Theme: Use of Narcan to reverse opioid overdose  Description: Opiate withdrawal symptoms Example: He was still pale and sweating but now crying from the pain of precipitated w/d.
+Theme: Importance of carrying Narcan for emergency situations  Description: Consequences of opiate use, including missed appointments and surprise UA results Example: Ended up missing the meeting and getting a surprise UA when I finally did make it into the clinic.
+Theme: Support for others who may be struggling with opiate addiction  Description: Personal experience with opiate addiction and recovery efforts Example: I would not want to be stuck in a similar situation without it. Going to start carrying it on me everywhere I go again.
+
+
+theme creator 2 
+Theme: Withdrawal symptoms after overdose reversal with Narcan  Description: Opiate use leading to overdose and near-death experience Example: He was standing up but swaying in our bathroom, chin down and eyes half-closed. I got closer and saw that his eyes were bouncing around in his head and the color was quickly draining from his face.
+Theme: Use of Narcan to reverse opioid overdose  Description: Opiate withdrawal symptoms Example: He was still pale and sweating but now crying from the pain of precipitated w/d.
+Theme: Recovery efforts, including Subutex dose and IOP group meeting  Description: Consequences of opiate use, including missed appointments and surprise urine analysis (UA) Example: Ended up missing the meeting and getting a surprise UA when I finally did make it into the clinic.
+Theme: Personal experience with opiate addiction and overdose  Description: Importance of carrying Narcan for emergency situations Example: Going to start carrying it on me everywhere I go again. If you have access to Narcan, jump on that shit.
+
+
+Post ID: 13hkwt
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I did some oxy a day ago before I knew about the test
+Theme: Concerns about Opiate Detection  Description: Concerns and uncertainty about opiate use detection in urine tests Example: I've been told the standard 5-Panel tests only look for morphine metabolites which only covers smack, morphine and codine which would put me in the clear with my oxy use
+Theme: Disclosure of Opiate Use  Description: Disclosure of opiate use to others as a means of seeking information or reassurance Example: I'm wondering because I did some oxy a day ago before I knew about the test and I wanna know if I'm gonna be tested for it
+Theme: Opiate Testing Protocols  Description: Awareness of opiate testing protocols and terminology Example: The paper I got says the test done on me is '35190N SAP 10-50/2000 W/NIT' does anyone know what this tests for?
+Theme: Opiate Pharmacology  Description: Understanding of opiate pharmacology and metabolism Example: Oxy won't trip the opiate test because its not a morphine derivative but will it trip that last one??
+
+
+theme creator 2 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting or expressing desire to stop using opiates Example: I did some oxy a day ago before I knew about the test
+Theme: Concerns about Opiate Detection  Description: Concerns and uncertainty about opiate use detection in urine tests Example: I've been told the standard 5-Panel tests only look for morphine metabolites which only covers smack, morphine and codine which would put me in the clear with my oxy use
+Theme: Disclosure of Opiate Use  Description: Disclosure of opiate use to others as a means of seeking information or reassurance Example: I'm wondering because I did some oxy a day ago before I knew about the test and I wanna know if I'm gonna be tested for it
+Theme: Opiate Testing Procedures  Description: Awareness of opiate testing procedures and terminology Example: The paper I got says the test done on me is '35190N SAP 10-50/2000 W/NIT' does anyone know what this tests for?
+Theme: Opiate Classification and Detection  Description: Understanding of opiate classification and detection Example: Oxy won't trip the opiate test because its not a morphine derivative but will it trip that last one??
+
+
+Post ID: 57t3eo
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Supportive Community  Description: Expression of support for individuals struggling with opiate addiction Example: I guess I just wanted to say that I feel for each and everyone of you
+Theme: Personal Recovery Experience  Description: Mention of overcoming opiate addiction as a source of motivation Example: If I can do it, you can do it.
+
+
+theme creator 2 
+Theme: Supportive Community  Description: Expression of support for individuals struggling with opiate addiction Example: I guess I just wanted to say that I feel for each and everyone of you
+Theme: Personal Recovery Experience  Description: Mention of overcoming opiate addiction as a source of motivation Example: If I can do it, you can do it.
+
+

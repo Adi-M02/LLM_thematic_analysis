@@ -1,0 +1,69 @@
+Post ID: 6h5m7b
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I managed to kick a 8 ball a day habit on 9 suboxin.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by physical and emotional symptoms. Example: Detox 7 times,
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I managed to kick a 8 ball a day habit on 9 suboxin.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, accompanied by physical and emotional symptoms. Example: Detox 7 times,
+
+
+Post ID: 6svd9w
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Now I have ran out of road and am now in the midst of finding a new path, one without all the obstacles.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake. Example: I feel like a have finally visualized a real life and what that is suppose to be composed of. I can now honestly say that I am ready to have a actual life and not this puppet show I have been putting on for everyone.
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: Now I have ran out of road and am now in the midst of finding a new path, one without all the obstacles.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake. Example: I feel like a have finally visualized a real life and what that is suppose to be composed of. I can now honestly say that I am ready to have a actual life and not this puppet show I have been putting on for everyone.
+
+
+Post ID: 71trdu
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Withdrawal Symptoms  Description: Withdrawal symptoms experienced during opiate detoxification, including physical and emotional symptoms. Example: The first two weeks were absolutely brutal, I could barely function, I didn't sleep for a 4 day span, I was extremely paranoid, it truly was hell.
+Theme: Kratom Use for Opiate Withdrawal Management  Description: Use of kratom as a substitute to manage opiate withdrawal symptoms and facilitate detoxification. Example: I will use as much Kratom as needed to get through jumping off DHC.
+Theme: Recovery Challenges  Description: Challenges and difficulties experienced during the recovery process, including anxiety, insomnia, and depression. Example: It's mainly been extreme insomnia, anxiety, currently low grade depression that I know will increase in PAWs.
+Theme: Fear of Relapse and Desire for Sobriety  Description: Fear of relapse and desire for stability and sobriety, including the use of kratom as a potential obstacle to recovery. Example: A part of you tries to tell you just to stabilize on Kratom, get back into society, and once you start to get things on track then work on getting off Kratom.
+Theme: Kratom vs Suboxone for Opiate Withdrawal Management  Description: Comparison between kratom use and suboxone use as a means of managing opiate withdrawal symptoms. Example: Kratom is very similar. Anyways, I took the last 5g dose of Bali on Wednesday morning at 4-5am.
+
+
+theme creator 2 
+Theme: Opiate Withdrawal Symptoms  Description: Withdrawal symptoms experienced during opiate detoxification, including physical and emotional symptoms. Example: The first two weeks were absolutely brutal, I could barely function, I didn't sleep for a 4 day span, I was extremely paranoid, it truly was hell.
+Theme: Kratom Use for Opiate Withdrawal Management  Description: Use of kratom as a substitute to manage opiate withdrawal symptoms and facilitate detoxification. Example: I will use as much Kratom as needed to get through jumping off DHC.
+Theme: Recovery Challenges  Description: Challenges and difficulties experienced during the recovery process, including anxiety, insomnia, and depression. Example: It's mainly been extreme insomnia, anxiety, currently low grade depression that I know will increase in PAWs.
+Theme: Fear of Relapse and Desire for Sobriety  Description: Fear of relapse and desire for stability and sobriety, including the use of kratom as a potential obstacle to recovery. Example: A part of you tries to tell you just to stabilize on Kratom, get back into society, and once you start to get things on track then work on getting off Kratom.
+Theme: Kratom vs Suboxone for Opiate Withdrawal Management  Description: Comparison between kratom use and suboxone use as a means of managing opiate withdrawal symptoms. Example: Kratom is very similar. Anyways, I took the last 5g dose of Bali on Wednesday morning at 4-5am.
+
+
+Post ID: 5q5z00
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 2 
+Theme: Withdrawal Symptoms and Emotional Struggles  Description: Description of withdrawal symptoms and emotional struggles during early recovery. Example: I still cry like a baby sometimes but less frequently. I still blow up the bathroom in the morning but it doesn't persist all day.
+Theme: Small Improvements and Glimmers of Hope  Description: Description of small improvements and glimmers of hope during early recovery. Example: I'm noticing glimmers. Sometimes they come and go in an instant, sometimes they stick around a few minutes, sometimes I can stretch them for 1-2 hours.
+Theme: Daily Effort for Recovery  Description: Description of the daily effort required to maintain recovery and avoid relapse. Example: I've been forcing my ass in the gym (sometimes having my partner force me), following a strict diet, working on breathing techniques and yoga stretches at night...
+Theme: Mindfulness and Self-Reflection  Description: Description of the importance of mindfulness and self-reflection in recovery. Example: looking within myself to identify why shit is happening, making a list of small daily objectives, talking and crying to my wife...
+Theme: Struggle with Motivation  Description: Description of the struggle with motivation and desire to engage in recovery activities. Example: Did I / Do I feel like doing any of it in the moment? Hell no.
+
+
+Post ID: 69xqnx
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I'm so damn excited. On Wednesday I'm getting some G74s, will be the first opana ive had since August and I LOVE opana (hence my username).
+Theme: Opiate Use Planning  Description: The user is planning to consume a specific amount of opiates. Example: Any dose recommendations if I do about a point of good dope at a time? I'm thinking maybe 20mg and another 10mg if that doesn't get me good.
+
+
+theme creator 2 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates. Example: I'm so damn excited. On Wednesday I'm getting some G74s, will be the first opana ive had since August and I LOVE opana (hence my username).
+Theme: Opiate Use  Description: The user is seeking information on dosage to enhance their opiate use experience. Example: Any dose recommendations if I do about a point of good dope at a time? I'm thinking maybe 20mg and another 10mg if that doesn't get me good.
+
+

@@ -1,0 +1,70 @@
+hallucinations/errors: 44
+Encodings:
+- True Encodings:
+    - Class 0: 894
+    - Class 1: 7
+- Predicted Encodings:
+    - Class 0: 718
+    - Class 1: 183
+
+Performance Metrics:
+- Accuracy: 0.7958
+- Macro Averages:
+    - F1 Score: 0.4587
+    - Precision: 0.5054
+    - Recall: 0.6136
+- Weighted Averages:
+    - F1 Score: 0.8792
+    - Precision: 0.9868
+    - Recall: 0.7958
+Confusion Matrix:
+    [[TP: 3 (0.33%), FP: 180 (19.98%)]
+     [FN: 4 (0.44%), TN: 714 (79.25%)]]
+"model": "llama3.1:70b",
+    "format": "json",
+      "options": {
+        "temperature": 0.0
+      },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a researcher in an academic research study focused on posts about opiate use on social media. Your task is to analyze the addiction state language in the posts and post titles and classify them according to specific rules based on tense and context. Respond in JSON format with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other descriptions, reasoning, or additional text in your response."
+      },
+      {
+            "role": "user",
+            "content": f"""
+Instructions:
+
+Analyze the addiction state language in the post and post title and classify it according to the following rules:
+
+1. Label '1': Assign label '1' if the state label is 'use' or 'recovery' and there is any language referring to withdrawal from opioids in the past tense. Provide a verbatim section of the text that supports the label.
+
+2. Label '0': Assign label '0' if the state label is 'withdrawal' or there is no language referring to the withdrawal from opioids in the past tense. Do not include a verbatim example.
+
+Important Notes:
+
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+- Tense refers to the grammatical tense (past, present, future) used when discussing the addiction state.
+
+Definitions of Addiction States Labels:
+
+    - Use: The state of use is characterized by opiate users who are in active use but may have contemplated or made plans for recovery but have not put them into action.
+
+    - Withdrawal: The state of withdrawal is lengthy and often involves difficult withdrawal symptoms. Withdrawal may be assisted through the use of medically prescribed opiates as a substitute, which can last up to 40 days after the start of treatment.
+
+    - Recovery: The state of recovery succeeds a complete withdrawal state and begins when an opiate user's efforts to cease intake have lasted long enough for withdrawal symptoms to largely subside. In this state, recovering users are in the Transtheoretical Model stage of maintenance, attempting to remain vigilant of their sobriety throughout the rest of their life.
+
+Based on the following inputs:
+
+**Post**: 
+{post}
+**Post Title**: 
+{title}
+**State Label**:
+{state_label}
+
+Your Response:
+
+Respond with a well-formatted JSON object with 'label': 0 or 1 and 'language': 'verbatim section of the text that supports the label, if it exists'. Do not include any other text."""
+        }
+    ]

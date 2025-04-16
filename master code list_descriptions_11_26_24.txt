@@ -1,0 +1,169 @@
+incorrect days clean: 
+	0. if days clean is accurate, or in use
+	1. if days clean is not accurate (i.e. contradictory) 
+	2. if days clean is not mentioned, unclear, multiple days clean mentioned, atypical (10,029 in title minutes in post, Clean since December 31! (7y61tu))
+
+tense:
+***Identify content in the post which refers to the users addiction state. With this identified content, determine the tense that a user refers
+to their addiction state. If all identified content which refers to the users addiction state is in the present tense, or has no tense, label the post 0. If
+at least some content is in the past or future tense, use labels 1-4 to appropriately label the post.
+
+	0. (present_tense)All addiction state language is present tense
+	1. (past_use) past tense to refer to use (in withdrawal or recovery)
+	2. (past_recovery) past tense to refer to withdrawal (in use or recovery)
+	3. (past_recovery) past tense to refer to recovery (in use or withdrawal)
+	4. (future_withdrawal)future tense to refer to withdrawling (i.e. planning to withdrawal)
+
+atypical_information:
+	1. (want_to_use) wanting to use (in withdrawal or recovery)
+		***The user expresses a desire to use opiates while in withdrawal or in recovery.[deprecated to withdrawal] 
+	2. (talking_about_withdrawal) talking about withdrawal: symptoms, methods, etc. (in use or recovery)
+	3. (talking_about_use) talking about use (in withdrawal or recovery)
+		***The user refers to the act of usings opiates while in withdrawal or recovery. 
+	4. (mentioning_withdrawal_drugs) mentioning withdrawal drugs (when in use or recovery)
+		***The user mentions withdrawal drugs such as, but not limited to, suboxone, kratom, methadone.
+	5. (not_mentioning_withdrawal) not mentioning withdrawal symptoms (in withdrawal)
+		***The user is classified as withdrawal but does not refer to their personal withdrawal symptoms.
+
+special_cases:
+	1. (relapse_mention) relapse mention
+		***The user mentions having relapsed from opiate recovery or withdrawal.
+	2. (unintentional_withdrawal) unintentional withdrawal
+		***The user is in withdrawal from opiates because they are unable to acquire more opiates.
+	3. (abusing_subs) abusing subs
+		***The user is using withdrawal drugs recreationally, and does not intend to cease or lower their intake.
+	4. (irregular_use) irregular use (chipping, on-and-off-again use, long term maintenence)
+		***The user is engaged in irregular opiate use, defined as engaging in periods of abstinance with the intention of returning to use, 
+		maintaining a reduced intake without the intention to cease use, or withdrawaling for the purpose of lowering their tolerance.
+	5. (use_for_pain_relief) mentioning using for pain relief
+		***The user uses opiates for pain relief.
+
+imputed:
+	1. is imputed
+		***There is no direct indication of a users addiction state in the post.
+	0: is not imputed
+		***There is a direct indication of a users addiction state in the post.
+
+use:
+	1. (personal_regimen) talking about current personal regimen
+		***The user refers to their personal opiate regimen.
+	2. (improper_administration) improper administration (snorting, shooting, anything besides taking a pill)
+		***The user refers to using improper administration when administering opiates such as, but not limited to, nasal administration or intravenous administration.
+	4. (purchase_of_drugs) discussing the purchase of drugs (anything to do with the acquisition of drugs)
+		***The user refers to the purchase or acquisition of opiates.
+	5. (negative_effects) negative effects of use (spefically effects framed in a negative way "I got really dizzy from using" "It burned really bad snorting")
+		***The user refers to effects of opiate use with a negative connotation.
+	7. (activity_on_opiates) mentioning activity done while on opiates (watching tv, exercising on opiates, playing video games, etc.)
+		***The user refers to an activity that they engage in while using opiates.
+	8. (positive_effects) positive effects of use (spefically effects framed in a positive way "I got a great high" "It made me feel so good")
+		***The user refers to the effects of opiate use with a positive connotation.
+
+withdrawal:
+***The user describes in the post that they are using the method indicated by the label in the post for the purpose of aiding in opiate withdrawal.
+	1. (subs_method) method: subutex/suboxone
+	2. (methadone_method) method: methadone
+	3. (zolpiclone_method)method: zolpiclone
+	4. (diazepam_method) method: diazepam
+	5. (kratom_method) method: kratom
+	6. (unmentioned_method) method: unmentioned or other
+	7. (xanax_method) method: xanax (benzo)
+	8. (sleeping_pills_method) method: sleeping pills
+	9. (loperamide_method) method: loperamide
+	12. (marijuana_method) method: marijuana
+	13. (gabapentin_method) method: gabapentin
+	14. (klonopin_method) method: klonopin
+	15. (rhodiola_method) method: Rhodiola
+	26. (vivitrol_method) method: vivitrol
+	27. (cigarette_methods) method: cigarettes
+	28. (caffine_method) method: caffine
+	29: (cold_turkey_method) method: cold turkey
+	20: (ibogaine_method) method: ibogaine
+
+***The user describes in the post a symptom of their opiate withdrawal indicated by the label.
+	10. (restless_legs_symptom) symptom: restless legs
+	11. (sleep_disorder_symptom) symptom: sleep disorder 
+	16. (GI_symptom) symptom: Gastrointestinal (GI) symptoms such as heartburn, indigestion/dyspepsia, bloating and constipation
+	17. (sweats_symptom) symptom: sweats
+	18. (cold_sensitivity_symptom) symptom: cold sensitivity	
+	19: (nausea_vomiting_symptom) symptom: nausea/vomiting
+	21: (memory_loss_symptom) symptom: memory loss
+	22: (heartburn_symptom) symptom: heartburn
+	23: (headache_symptom) symptom: headache
+	24: (sore_throat_symptom) symptom: sore throat
+	25: (cold_flu_fever_symptom) symtom: cold/flu/fever
+
+recovery:
+	1. (offering_advice) offering advice
+		***The user offers advice on opiate recovery or withdrawal.
+	2. (challenges_through_recovery) reflecting on the challenges/accomplishments through recovery
+		***The user describes challenges and accomplishments throughout the process of opiate withdrawal and recovery.
+	3. (danger_of_opiates) reflecting on the danger of drugs (cautionary, warning people against using opiates)
+		***The user describes dangers of using opiates.
+		
+
+co-use:
+***The user describes in the post co-use of the drug indicated by the label with opiates.
+	1. xanax (same as 2)
+	2. benzodiazepam
+	3. ambien
+	4. aderall
+	5. marijuana
+	6. cigarettes
+	7. cocaine
+	8. Ketorolac
+	9. vinegar
+	10. alchohol
+	11. amphetamine
+	12. imodium
+
+(renamed from imputed)
+off-topic:
+	1. (public_health_awareness) public health awareness statement
+		***The user makes a public health awareness statement regarding opiates.
+	5. (seeking_community) seeking community
+		***The user makes a post wherein they seek community with other users.
+	7. (other_persons_opiate_use) referring to someone elses opiate use
+		***The user refers to another persons opiate use.
+	8. (entertainment) statement about entertainment/news
+		***The user makes a statement regarding entertainment or news. They make link to an article or video.
+
+question:
+***The user asks a question that can be generally categorized by the cooresponding label. If they ask a question that does not
+coorespond to a label, it is labeled with 7: misc question.
+	1 (opioid_use_lifestyle) Opioid use lifestyle question (any question about opiates that isn't specifically about administration or effects)
+	2 (technical_drug_use) asking technical question about drug use (any question about opiates that is about administration or effects)		
+	3 (effects) asking about effects
+
+	General Sub questions
+	***The user asks a question regarding one of the withdrawal drugs listed here.
+		4 methadone
+		5 suboxone (bupe)
+		6 (improper_use) improper use
+		32 subutex
+		8 tramadol
+		25 weed
+		26 kratom
+		28 darvocet
+		29 vivitrol
+
+	asking to relate to an experience: (i.e. posts where users describe something and end their post with "can anyone relate?")
+		11 (relate_to_defeated) experience of being defeated
+		12 (relate_to_recovery) experience of recovery
+		20 (relate_to_withdrawal) experience of withdrawal
+		27 (relate_to_using) experience of using
+
+	29 (deal_with_relapse) dealing with relapse
+		33 (recover_again) question about how to recover again
+		18 (resetting_withrawal) asking about resetting withdrawal time with a relapse
+
+	13 withdrawal, general
+		14 (withdrawal_symptoms) asking how bad symptoms will be
+		15 (effects_of_withdrawal) asking about effects of withdrawal
+		16 (withdrawal_pain) asking how to deal with pain without opiates
+
+	23 (recovery_question) recovery (as in the period of time after withdrawal symptoms have passed)
+		24 (life_without_drugs) how to have a life in recovery or withdrawal without drugs
+	
+	17 (non-opiate_medication_question) non-opiate medication question
+
+	21 (NA_meeting_question) NA meeting question

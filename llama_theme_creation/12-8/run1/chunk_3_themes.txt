@@ -1,0 +1,67 @@
+Post ID: 1st6ax
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I made it through all of them and made it to day 9
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I made it through all of them and made it to day 9
+
+
+Post ID: 50r0kv
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is concerned about someone else's opiate use without expressing desire to stop using opiates to prepare to quit. Example: Have you ever wondered if your dboy/girl uses r/opiates?
+Theme: No explicit theme of Use, Withdrawal, or Recovery  Description: The post does not explicitly mention withdrawal or recovery, but it implies a concern about someone else's potential opiate use without addressing their own addiction state. Example: 
+
+
+theme creator 2 
+Theme: Concern for others' opiate use  Description: The user is concerned about someone else's opiate use, indicating a state of awareness or consideration of another person's addiction. Example: Have you ever wondered if your dboy/girl uses r/opiates?
+Theme: Lack of self-disclosure  Description: The post does not explicitly mention the user's own opiate use or recovery, but rather asks about someone else's potential involvement with opiates. Example: Weird thought I just had! Anyone ever have this happen?
+
+
+Post ID: 6nvhdx
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use  Description: The user is currently engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I've been using for 2 weeks now obviously.
+Theme: Transitioning from Use  Description: The user has expressed a desire to quit and is considering strategies for doing so, indicating an intention to transition out of the use state. Example: I want to quit now while I am still ahead to some extent and get back to my meetings and do the deal.
+Theme: Anticipating Withdrawal  Description: The user is anticipating withdrawal symptoms, indicating a recognition of the physical and emotional consequences of cessation. Example: I know that I will withdraw and have to go to work.
+
+
+theme creator 2 
+Theme: Use  Description: The user is currently engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I've been using for 2 weeks now obviously.
+Theme: Transitioning from Use  Description: The user has expressed a desire to quit and is considering strategies for doing so, indicating an intention to transition out of the use state. Example: I want to quit now while I am still ahead to some extent and get back to my meetings and do the deal.
+Theme: Anticipating Withdrawal  Description: The user is anticipating withdrawal symptoms, indicating a recognition of the physical and emotional consequences of cessation. Example: I know that I will withdraw and have to go to work.
+
+
+Post ID: 7lo8k1
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: Recovery from opiate addiction, characterized by attempts to sustain abstinence and manage withdrawal symptoms. Example: I’m closing in on about two weeks clean
+Theme: Withdrawal  Description: Experiencing physical and emotional symptoms of opiate withdrawal, including insomnia and fatigue. Example: I still can’t sleep to save my life. It’s starting to become a quality of life issue at this point.
+Theme: Seeking Support During Withdrawal  Description: Seeking advice and support for managing symptoms of opiate withdrawal, particularly insomnia. Example: Any advice? I feel like this insomnia will never end?
+
+
+theme creator 2 
+Theme: Recovery  Description: Recovery from opiate addiction, characterized by attempts to sustain abstinence and manage withdrawal symptoms. Example: I’m closing in on about two weeks clean
+Theme: Insomnia due to Opiate Withdrawal/Recovery  Description: Experiencing insomnia as a symptom of opiate withdrawal or recovery. Example: I still can’t sleep to save my life.
+Theme: Impact of Insomnia on Quality of Life  Description: Concerns about the long-term impact of insomnia on quality of life and overall well-being. Example: It’s starting to become a quality of life issue at this point.
+
+
+Post ID: zzech
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Use of opiates  Description: Lack of knowledge about opiate manufacturing process Example: Or is it because it's cheaper and easier to make heroin or opium and just sell that?
+Theme: Use of opiates  Description: Curiosity about the ease of illegal opiate manufacturing Example: I would think there would have been at least one scientist who loved opiates and decided to set up a little lab and make pure Oxy down in his basement.
+
+
+theme creator 2 
+Theme: Use of opiates  Description: Lack of knowledge about opiate manufacturing process Example: Or is it because it's cheaper and easier to make heroin or opium and just sell that?
+Theme: Use of opiates  Description: Curiosity about the ease of illegal opiate manufacturing Example: I would think there would have been at least one scientist who loved opiates and decided to set up a little lab and make pure Oxy down in his basement.
+
+

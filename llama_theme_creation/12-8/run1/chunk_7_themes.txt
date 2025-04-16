@@ -1,0 +1,79 @@
+Post ID: 5euhxf
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I scored a half teenth, shot up a couple of times
+Theme: Negative Emotions During Opiate Use  Description: The user is experiencing negative emotions such as boredom and loneliness while under the influence of opiates. Example: It's friday and I have no life. Sacrificed it to a fairly lame relapse... Anyone else high, bored and lonely want to go on the r/opiates tinychat?
+
+
+theme creator 2 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I scored a half teenth, shot up a couple of times
+Theme: Negative Emotions During Opiate Use  Description: The user is experiencing negative emotions such as boredom and loneliness while under the influence of opiates. Example: It's friday and I have no life. Sacrificed it to a fairly lame relapse... Anyone else high, bored and lonely want to go on the r/opiates tinychat?
+
+
+Post ID: 321w3c
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: The user has engaged in opiate use without consideration of quitting or expressing desire to stop using opiates. Example: I'm high as shit
+Theme: Recovery  Description: The user is attempting to sustain abstinence from opiates long term, despite the tone and language used in the post suggesting otherwise. Example: Yrs truly, SoberFace
+
+
+theme creator 2 
+Theme: Opiate Use  Description: The user has engaged in opiate use without consideration of quitting or expressing desire to stop using opiates. Example: I'm high as shit.
+Theme: Recovery  Description: The user is attempting to sustain abstinence from opiates long term, despite the post's tone suggesting otherwise. Example: Yrs truly, SoberFace
+
+
+Post ID: 2l1ir7
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Then I drove one town over to my home, where I proceeded to blow down the whole b in about an hour.
+Theme: Euphoric State Associated with Opiate Use  Description: The user is experiencing a state of being high and enjoying the moment, indicating a sense of euphoria associated with opiate use. Example: Now I'm just chillin smoking a cig, and the wind is fucking howling. The weather makes me very happy to be home, safe and high and enjoying the last few minutes of my night before I hit the rack.
+
+
+theme creator 2 
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: Drive about 40 min to score a bundle. Then I drove one town over to my home, where I proceeded to blow down the whole b in about an hour.
+Theme: Use  Description: The user is experiencing feelings of happiness and relaxation while under the influence of opiates. Example: Now I'm just chillin smoking a cig, and the wind is fucking howling. The weather makes me very happy to be home, safe and high and enjoying the last few minutes of my night before I hit the rack.
+
+
+Post ID: 8w46n9
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery Timeline  Description: Recovery from opiate addiction Example: 12 year off and on opiate user with ~3 years as longest clean time
+Theme: Support Group  Description: Use of support systems for recovery Example: I have sober friends I can talk to (one has 7 years off opiates), I have close relationships with my friends again (the ones who don't use).
+Theme: Psychologist/Psychiatrist Meds  Description: Use of medication for recovery Example: I know Meds aren't for everyone but wellbutrin has been a godsend for me.
+Theme: Staying Busy  Description: Engagement in activities to maintain sobriety Example: Staying busy Work, exercise, women, sports, games, self cranking, books, movies, TV, etc, etc.
+Theme: Change Your Habits/Lifestyle  Description: Change of habits and lifestyle for recovery Example: Change your habits/lifestyle  Again this one is difficult during early stages, shit it's difficult always.
+Theme: Play the Tape All the Way Through  Description: Visualization techniques to maintain sobriety Example: Play the tape all the way through  I used to see someone fucked up and get super jealous, and wanna be there. Again. That's the addict brain.
+Theme: Celebrating Recovery Milestones  Description: Celebration of recovery milestones Example: **I have had a solid BM once a day for 3 straight days!** Maybe I'm lucky, but there is light at the end of the tunnel.
+
+
+theme creator 2 
+Theme: Recovery Timeline  Description: Recovery from opiate addiction Example: 12 year off and on opiate user with ~3 years as longest clean time
+Theme: Support Group  Description: Use of support systems for recovery Example: I have sober friends I can talk to (one has 7 years off opiates), I have close relationships with my friends again (the ones who don't use).
+Theme: Psychologist/Psychiatrist Meds  Description: Use of medication for recovery Example: I know Meds aren't for everyone but wellbutrin has been a godsend for me.
+Theme: Staying Busy  Description: Engagement in activities to maintain sobriety Example: Staying busy Work, exercise, women, sports, games, self cranking, books, movies, TV, etc, etc.
+Theme: Change Your Habits/Lifestyle  Description: Change of habits and lifestyle for recovery Example: Change your habits/lifestyle  Again this one is difficult during early stages, shit it's difficult always.
+Theme: Play the Tape All the Way Through  Description: Visualization techniques to maintain sobriety Example: Play the tape all the way through  I used to see someone fucked up and get super jealous, and wanna be there. Again. That's the addict brain.
+Theme: Celebrating Recovery Milestones  Description: Celebration of recovery milestones Example: **I have had a solid BM once a day for 3 straight days!** Maybe I'm lucky, but there is light at the end of the tunnel.
+
+
+Post ID: 7ry0e9
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Relapse  Description: Opiate use after a period of abstinence Example: I used yesterday for the first time in 119 days, and again this morning.
+Theme: Stigma and Shame in Recovery  Description: Fear of returning to a support group due to feelings of shame or dishonesty Example: I don’t want to lie, because then I just won’t feel like I belong.
+Theme: Impact of Relapse on Relationships  Description: Concern about losing trust with loved ones after relapse Example: I’ve built up so much trust with my family and I can’t lose it all again by telling them I relapsed.
+Theme: Suicidal Thoughts in Opiate Addiction  Description: Suicidal ideation as a result of relapse Example: Today I would have 4 months clean. Instead I just want to die .
+
+
+theme creator 2 
+Theme: Relapse  Description: Opiate use after a period of abstinence Example: I used yesterday for the first time in 119 days, and again this morning.
+Theme: Stigma and Shame in Recovery  Description: Fear of returning to a support group due to feelings of shame or dishonesty Example: I don’t want to lie, because then I just won’t feel like I belong.
+Theme: Impact of Relapse on Relationships  Description: Concern about losing trust with loved ones after relapse Example: I’ve built up so much trust with my family and I can’t lose it all again by telling them I relapsed.
+Theme: Suicidal Thoughts in Opiate Addiction  Description: Suicidal ideation as a result of relapse Example: Today I would have 4 months clean. Instead I just want to die .
+
+

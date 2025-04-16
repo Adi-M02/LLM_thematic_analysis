@@ -1,0 +1,89 @@
+Post ID: 5mt9d3
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Withdrawal Experience  Description: Withdrawal symptoms are severe and debilitating, causing significant distress and impairment. Example: this morning was the worst so far. Haven't slept still at all, just absolutely miserable and losing my mind.
+Theme: Recovery from Opiate Addiction  Description: The user is in a state of recovery, having stopped using opiates and experiencing withdrawal symptoms. Example: Headed into day 5 of cold turkey with evening coming into sight....this morning was the worst so far.
+Theme: Exploring Alternative Methods for Withdrawal Management  Description: The user is seeking alternative methods to manage withdrawal symptoms, such as kratom. Example: So my mom and I looked at our options, got some info, and we decided to try kratom.
+Theme: Positive Experience with Kratom for Withdrawal Relief  Description: The user is experiencing relief from withdrawal symptoms after using kratom. Example: 2 hours have passed and my hellish withdrawals went from %99 to about %30 now. But God what a huge difference!
+Theme: Appreciation for Family Support during Recovery  Description: The user is grateful for their mother's support during the recovery process. Example: My mom and I have a rocky past but I'm her only child and today when I was at a breaking point she looked me in the eyes and told me I was sick, I was an addict and that she would do everything to help me she could as long as I wanted it bad enough.
+
+
+theme creator 2 
+Theme: Opiate Withdrawal Experience  Description: Withdrawal symptoms are severe and debilitating, causing significant distress and impairment. Example: this morning was the worst so far. Haven't slept still at all, just absolutely miserable and losing my mind.
+Theme: Recovery from Opiate Addiction  Description: The user is in a state of recovery, having stopped using opiates and experiencing withdrawal symptoms. Example: Headed into day 5 of cold turkey with evening coming into sight....this morning was the worst so far.
+Theme: Exploring Alternative Methods for Withdrawal Management  Description: The user is seeking alternative methods to manage withdrawal symptoms, such as kratom. Example: So my mom and I looked at our options, got some info, and we decided to try kratom.
+Theme: Positive Experience with Kratom for Withdrawal Relief  Description: The user is experiencing relief from withdrawal symptoms after using kratom. Example: 2 hours have passed and my hellish withdrawals went from %99 to about %30 now. But God what a huge difference!
+Theme: Appreciation for Family Support during Recovery  Description: The user is grateful for their mother's support during the recovery process. Example: My mom and I have a rocky past but I'm her only child and today when I was at a breaking point she looked me in the eyes and told me I was sick, I was an addict and that she would do everything to help me she could as long as I wanted it bad enough.
+
+
+Post ID: 5thap3
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Struggle with Recovery  Description: The user is expressing frustration with the concept of emotional sobriety, indicating a struggle with recovery. Example: My sponsor keeps talking to me about 'emotional sobriety' and im getting really fucking annoyed.
+Theme: Cravings for Opiates  Description: The user is experiencing cravings for opiates due to emotional distress, indicating a use state. Example: Man, i just really want to get high. Like seriously if something fucked happened in the world and i didnt get to get high before everything ends and goes to shit ill be pretty fucking pissed.
+Theme: Hopelessness and Despair  Description: The user is expressing feelings of hopelessness, despair, and detachment from life, indicating a potential relapse state. Example: And then i think, the world is going to shit, everyone lies, i cant trust anyone, and we're all fucked the world is FUCKED so whats the point i might as well get high.
+Theme: Emotional Disconnection  Description: The user has been clean for 9 months but still feels disconnected from their emotions, indicating a struggle with emotional regulation. Example: i, 9 months clean, still feel so closed off.
+
+
+theme creator 2 
+Theme: Struggle with Recovery  Description: The user is expressing frustration with the concept of emotional sobriety, indicating a struggle with recovery. Example: My sponsor keeps talking to me about 'emotional sobriety' and im getting really fucking annoyed.
+Theme: Cravings for Opiates  Description: The user is experiencing cravings for opiates due to emotional distress, indicating a use state. Example: Man, i just really want to get high. Like seriously if something fucked happened in the world and i didnt get to get high before everything ends and goes to shit ill be pretty fucking pissed.
+Theme: Hopelessness and Detachment  Description: The user is expressing feelings of hopelessness, despair, and detachment from life, indicating a potential relapse state. Example: And then i think, the world is going to shit, everyone lies, i cant trust anyone, and we're all fucked the world is FUCKED so whats the point i might as well get high.
+Theme: Struggle with Emotional Integration  Description: The user has been clean for 9 months but still feels closed off, indicating a struggle with emotional integration. Example: i, 9 months clean, still feel so closed off.
+
+
+Post ID: 6ulw5h
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: Recovery from opiate addiction, characterized by sustained abstinence from opiates long term. Example: the joy I saw on her face when I wished her a happy birthday before anything else and her knowing it was sincere and that I am sober
+Theme: Use  Description: Use of opiate addiction language to express motivation and positivity. Example: Stay clean everybody and have a great weekend.
+
+
+theme creator 2 
+Theme: Recovery  Description: Recovery from opiate addiction, characterized by sustained abstinence from opiates long term. Example: the joy I saw on her face when I wished her a happy birthday before anything else and her knowing it was sincere and that I am sober
+Theme: Use  Description: Use of opiate addiction language to express motivation and positivity. Example: Stay clean everybody and have a great weekend.
+
+
+Post ID: 2o2x9k
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: Use of opiates as a coping mechanism for emotional discomfort and self-identity issues. Example: I used because I did not feel comfortable in my own skin and wanted to be someone else.
+Theme: Consequences of Opiate Use  Description: Experiencing severe consequences of opiate use, including head injuries, overdoses, and loss of relationships. Example: Got into two serious head injuries over the course of the next 10 years and OD a few times.
+Theme: Relapse and Addiction Struggle  Description: Struggling with relapse and addiction despite attempts at recovery through rehab, AA, and NA. Example: Went to AA and NA as suggested but I was still getting fucked up.
+Theme: Opiate Withdrawal Symptoms  Description: Experiencing withdrawal symptoms and desperation for opiate use due to stress and lack of coping mechanisms. Example: Shooting dope became a urgency as I'd wake up frantically and call everybody trying to find someone to rip off or some way to score.
+Theme: Seeking Support for Recovery  Description: Seeking support and motivation for long-term recovery through outpatient treatment, meetings, and community. Example: Will go to outpatient and meetings as much as I can. Just got my second DWAI before rehab and lost my license so it will be hard but I need to take my time and slowly reintegrate into society so the stress does not overwhelm me.
+Theme: Progressive Nature of Addiction  Description: Acknowledging the progressive nature of addiction and the importance of making a final attempt at recovery. Example: It is truly progressive and every time I relapsed it got much worse. My final attempt.
+
+
+theme creator 2 
+Theme: Opiate Use  Description: Use of opiates as a coping mechanism for emotional discomfort and self-identity issues. Example: I used because I did not feel comfortable in my own skin and wanted to be someone else.
+Theme: Consequences of Opiate Use  Description: Experiencing severe consequences of opiate use, including head injuries, overdoses, and loss of relationships. Example: Got into two serious head injuries over the course of the next 10 years and OD a few times.
+Theme: Relapse and Addiction Struggle  Description: Struggling with relapse and addiction despite attempts at recovery through rehab, AA, and NA. Example: Went to AA and NA as suggested but I was still getting fucked up.
+Theme: Opiate Withdrawal Symptoms  Description: Experiencing withdrawal symptoms and desperation for opiate use due to stress and lack of coping mechanisms. Example: Shooting dope became a urgency as I'd wake up frantically and call everybody trying to find someone to rip off or some way to score.
+Theme: Seeking Support for Recovery  Description: Seeking support and motivation for long-term recovery through outpatient treatment, meetings, and community. Example: Will go to outpatient and meetings as much as I can. Just got my second DWAI before rehab and lost my license so it will be hard but I need to take my time and slowly reintegrate into society so the stress does not overwhelm me.
+Theme: Progressive Nature of Addiction  Description: Acknowledging the progressive nature of addiction and the importance of making a final attempt at recovery. Example: It is truly progressive and every time I relapsed it got much worse. My final attempt.
+
+
+Post ID: 2n5vj8
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Long-Term Recovery Progress  Description: Recovery, specifically long-term recovery with a focus on milestones and progress. Example: I'm at 105 days today.
+Theme: Mental Health Struggles in Long-Term Recovery  Description: Struggles with mental health symptoms such as depression and anxiety in early stages of long-term recovery. Example: Having extremely vivid bad dreams, or drug dreams, 4/7 night a week. Some depression/anxiety but nothing like when I was using or in early recovery.
+Theme: Support Group Involvement  Description: Involvement with support groups such as NA and key roles within the fellowship. Example: Still going to a lot of NA meetings. I've gotten pretty involved with the fellowship.
+Theme: Relationship Transition in Recovery  Description: Transitioning to new relationships, including counselors and sponsors, in recovery. Example: My counselor is leaving my program which is unfortunate... Over the next he'll be transitioning us to our new counselor. Got a sponsor, and working on a 90 in 90.
+Theme: Improved Quality of Life Post-Recovery  Description: Comparison of current life to pre-recovery state, highlighting improvements. Example: Life's so much fucking better now even on my worst days.
+
+
+theme creator 2 
+Theme: Long-Term Recovery Progress  Description: Recovery, specifically long-term recovery with a focus on milestones and progress. Example: I'm at 105 days today.
+Theme: Mental Health Struggles in Long-Term Recovery  Description: Struggles with mental health symptoms such as depression and anxiety in early stages of long-term recovery. Example: Having extremely vivid bad dreams, or drug dreams, 4/7 night a week. Some depression/anxiety but nothing like when I was using or in early recovery.
+Theme: Support Group Involvement  Description: Involvement with support groups such as NA and key roles within the fellowship. Example: Still going to a lot of NA meetings. I've gotten pretty involved with the fellowship.
+Theme: Relationship Transition in Recovery  Description: Transitioning to new relationships, including counselors and sponsors, in recovery. Example: My counselor is leaving my program which is unfortunate... Over the next he'll be transitioning us to our new counselor. Got a sponsor, and working on a 90 in 90.
+Theme: Improved Quality of Life Post-Recovery  Description: Comparison of current life to pre-recovery state, highlighting improvements. Example: Life's so much fucking better now even on my worst days.
+
+

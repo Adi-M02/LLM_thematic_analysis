@@ -13,7 +13,8 @@ def state_label_to_string(state_label):
     elif state_label == 4:
         return "unknown"
     
-def parse_csv(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+# def parse_csv(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_csv(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     posts_and_titles = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         # Use the csv.DictReader to read rows as dictionaries
@@ -84,7 +85,8 @@ def process_post_field(post_field):
     except Exception as e:
         return f"Error processing post field: {str(e)}"
 
-def parse_incorrext_days_clean(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+# def parse_incorrext_days_clean(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_incorrext_days_clean(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     incorrect_days_clean = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -119,31 +121,20 @@ def parse_incorrext_days_clean(coding_file='/Users/adimukundan/Downloads/Themati
 
         return incorrect_days_clean
     
-def parse_tense(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+# def parse_tense(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+def parse_tense(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
     tense_list = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         i = 0
         for row in reader:
             i+=1
-            user = row['User']
-            subreddit = row['Subreddit']
             post_id = row['Post ID']
-            date_time = row['Date/Time']
-            empty = row['Empty']
             state_label = row['State Label']
-            question = row['question']
-            incorrect_days_clean = row['incorrect days clean']
             tense = row['tense']
             tense = [int(num) for num in tense.split(',')] if tense else []
-            atypical_information = row['atypical information']
-            special_cases = row['special cases']
-            use = row['use']
-            withdrawal = row['withdrawal']
-            recovery = row['recovery']
-            co_use = row['co-use']
-            is_imputed = row['Is imputed']
-            imputed = row['imputed']
+            if int(row['State Label']) == 4:
+                continue
             try:
                 title, post = process_post_field(row['Post'])
                 post = html.unescape(post)
@@ -155,8 +146,10 @@ def parse_tense(coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opia
 
         return tense_list
     
-def parse_feature(feature, coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
-    mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co_use": "co-use", "is_imputed": "Is imputed", "imputed": "imputed"}
+# def parse_feature(feature, coding_file='/Users/adimukundan/Downloads/Thematic Analysis Opiate Subreddits/All_Codes_Manual_Analysis_fixEncoding.csv'):
+    # mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co_use": "co-use", "is_imputed": "Is imputed", "imputed": "imputed"}
+def parse_feature(feature, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv', skip_unknown=True):
+    mapping = {"question": "question", "incorrect_days_clean": "incorrect days clean", "tense": "tense", "atypical_information": "atypical information", "special_cases": "special cases", "use": "use", "withdrawal": "withdrawal", "recovery": "recovery", "co-use": "co-use", "off-topic": "off-topic", "imputed": "imputed"}
     out = []
     with open(coding_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -166,6 +159,9 @@ def parse_feature(feature, coding_file='/Users/adimukundan/Downloads/Thematic An
             state_label = row['State Label']
             feature_list = row[mapping[feature]]
             feature_list = [int(num) for num in feature_list.split(',')]
+            if skip_unknown:
+                if int(row['State Label']) == 4:
+                    continue
             try:
                 title, post = process_post_field(row['Post'])
                 post = html.unescape(post)
@@ -175,13 +171,62 @@ def parse_feature(feature, coding_file='/Users/adimukundan/Downloads/Thematic An
                 title = html.unescape(process_post_field(row['Post']))
                 out.append((post_id, None, title, state_label_to_string(int(state_label)), feature_list))
         return out
+    
+def get_post_title_string(logger, post_id, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
+    with open(coding_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['Post ID'] == post_id:
+                try:
+                    post, title = process_post_field(row['Post'])
+                    post = html.unescape(post)
+                    title = html.unescape(title)
+                    return str(post) + " " + str(title)
+                except:
+                    title = process_post_field(row['Post'])
+                    title = html.unescape(title)
+                    return str(title)
+        logger.error(f"Post ID {post_id} not found in the coding file.")
+        return " "
+                
+def word_count(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
+    with open(coding_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        i = 0
+        words = ""
+        logger = ""
+        for row in reader:
+            post_id = row['Post ID']
+            words += get_post_title_string(logger, post_id)
+    print(len(words))
 
-     
+def get_posts_and_titles_only(coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
+    posts_and_titles = []
+    with open(coding_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            post_content = row['Post']
+            if "title:" in post_content and "post:" in post_content:
+                # Extract title and post content
+                title_start = post_content.find("title:") + len("title:")
+                title_end = post_content.find("post:")
+                title = post_content[title_start:title_end].strip()
+                post = post_content[title_end + len("post:"):].strip()
+                title = html.unescape(title)
+                post = html.unescape(post)
+                posts_and_titles.append((row["Post ID"], post, title))
+    return posts_and_titles
+
+def get_post_theme_presence(post_id, coding_file='All_Codes_Manual_Analysis_fixEncoding.csv'):
+    with open(coding_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['Post ID'] == post_id:
+                themes = []
+                columns = ['question', 'tense', 'atypical information', 'special cases', 'use', 'withdrawal', 'recovery', 'co-use', 'off-topic']
+                for column in columns:
+                    themes.append((column, row[column]))
+    return themes
+
 if __name__ == "__main__":
-    total = 0
-    posts_titles = parse_csv()
-    for post_title in posts_titles:
-        if post_title[1]:
-            total += len(post_title[1])
-        total += len(post_title[0])
-    print(total)
+    word_count()

@@ -1,0 +1,60 @@
+hallucinations/errors: 7
+responses with some hallucinated portion: 60
+Encodings:
+- True Encodings:
+    - Class 0: 812
+    - Class 1: 126
+- Predicted Encodings:
+    - Class 0: 448
+    - Class 1: 490
+
+Performance Metrics:
+- Accuracy: 0.5991
+- Macro Averages:
+    - F1 Score: 0.5456
+    - Precision: 0.6158
+    - Recall: 0.7484
+- Weighted Averages:
+    - F1 Score: 0.6597
+    - Precision: 0.8870
+    - Recall: 0.5991
+Confusion Matrix:
+    [[TP: 120 (12.79%), FP: 370 (39.45%)]
+     [FN: 6 (0.64%), TN: 442 (47.12%)]]
+
+    data = {
+        {'model': 'llama3.3:70b', 'format': 'json', 'options': {'temperature': 0.0}, 'stream': False},
+    "messages": [
+        {"role:"system", "content"You are an academic researcher analyzing opiate use related social media posts. Your task is to examine the language in posts and post titles, identify semantic themes, and classify the language based on specific rules related to context and thematic content. Respond only in JSON format. Do not include any additional descriptions, reasoning, or text in your response.},
+        {"role": "user", "content": {
+    Instructions:
+
+    Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+  1. Label '1':
+    - Assign label '1' if addiction state label is 'withdrawal' or 'recovery' and the user refers to the act of using opiates. 
+    - Provide a verbatim section of the text that supports the label.
+
+  2. Label '0':
+    - Assign label '0' if the addiction state label is 'use' or if the user does not talk about the act of using opiates. 
+    - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+    - Response Format:
+     {"label": 0 or 1, "language": "verbatim section of the text that supports the label"}
+
+    - Respond based on the following inputs:
+    Post: {post}
+    Post Title: {title}
+    State Label: {state_label}
+        }},
+    ]
+    }
+    

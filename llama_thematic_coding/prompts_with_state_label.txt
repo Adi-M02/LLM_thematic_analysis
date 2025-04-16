@@ -1,0 +1,1761 @@
+Atypical information:
+
+want_to_use
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+  1. Label '1':
+    - Assign label '1' if the addiction state label is 'withdrawal' and the user expresses a desire to use opiates.
+    - Provide a verbatim section of the text that supports the label.
+
+  2. Label '0':
+    - Assign label '0' if the addiction state label is use or recovery or if the user does not express desire to use opiates. 
+    - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+talking_about_withdrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+  1. Label '1':
+    - Assign label '1' if addiction state label is 'use' or 'recovery' and the user is talking about withdrawal symptoms, methods, etc.
+    - Provide a verbatim section of the text that supports the label.
+
+  2. Label '0':
+    - Assign label '0' if the addiction state label is 'withdrawal' or if the user does not talk about withdrawal symptoms, methods, etc. 
+    - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+  - Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+  - Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+  - Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+  - Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+talking_about_use
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if addiction state label is 'withdrawal' or 'recovery' and the user refers to the act of using opiates. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the addiction state label is 'use' or if the user does not talk about the act of using opiates. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+mentioning_withdrawal_drugs
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if addiction state label is 'use' or 'recovery' and the user mentions opiate withdrawal drugs such as suboxone, kratom, methadone, etc. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the addiction state label is 'withdrawal' or if the user does not mention opiate withdrawal drugs such as suboxone, kratom, methadone, etc. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+not_mentioning_withdrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if addiction state label is 'withdrawal' and the user does not mention their personal opiate withdrawal symptoms. 
+  - Respond 'None' in the section of your response that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the addiction state label is 'use' or 'recovery' or if the user mentions their personal opiate withdrawal symptoms.
+  - Provide a verbatim section of the text that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+Special Cases: 
+
+relapse_mention
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user mentions having relapsed frm opiate recovery or opiate withdrawal.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention having relapsed frm opiate recovery or opiate withdrawal.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+unintentional_withdrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user is in withdrawal from opiates because they are unable to acquire more opiates.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is able to acquire opiates or does not mention being in opiate withdrawal. 
+  - Provide a verbatim section of the text that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+abusing_subs
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user is using withdrawal drugs such as suboxone, kratom, methadone, etc. recreationally and does not intend to cease or lower their intake. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is not using withdrawal drugs such as suboxone, kratom, methadone, etc. recreationally or is using these but intends to cease or lower their intake.
+  - Provide a verbatim section of the text that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+irregular_use
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user is engaged in irregular opiate use, which is periods of abstinence from opiates with the intention of returning to using opiates, or maintaining a reduced opiate intake without the intention to cease use, or withdrawing from opiates for the purpose of lowering their tolerance. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is not engaged in irregular opiate use.
+  - Provide a verbatim section of the text that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+use_for_pain_relief
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user mentions using opiates for pain relief. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using opiates for pain relief. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+Use:
+
+personal_regimen
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user refers to their personal opiate regimen. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not refer to their personal opiate regimen. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+improper_administration
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if user refers to improper administration of opiates. Which is snorting, shooting, or anything other than taking a pill to administer opiates. 
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not refer to improper administration of opiates.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+purchase_of_drugs
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' the user discusses anything related to the purchase of drugs.
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not discuss anything related to the purchase of drugs. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+negative_effects
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user refers to the effects of opiate use with a negative connotation.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not refer to the effects of opiate use with a negative connotation. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+activity_on_opiates
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user refers to an activity they engage in while on opiates.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not refer to an activity they engage in while on opiates.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+positive_effects
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user refers to the effects of opiates use with a positive connotation.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not refer to the effects of opiate use with a positive connotation. 
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+withdrawal:
+
+subs_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving subutex/suboxone to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving subutex/suboxone to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+methadone_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving methadone to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving methadone to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+zolpiclone_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving zolpiclone to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving zolpiclone to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+diazepam_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving diazepam to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving diazepam to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+kratom_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving kratom to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving kratom to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+unmentioned_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method other than subutex/suboxon, methadone, zolpiclone, diazepam, kratom, xanax, sleeping pills, loperamide, marijuana, gabapentin, klonopin, rhodiola, vivitrol, cigarettes, cafeeine, going cold turkey, or ibogaine to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+xanax_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving xanax to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving xanax to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+sleeping_pills_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving sleeping pills to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving sleeping pills to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+loperamide_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving loperamide to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving loperamide to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+marijuana_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving marijuana to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving marijuana to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+gabapentin_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving gabapentin to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving gabapentin to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+klonopin_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving klonopin to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving klonopin to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+rhodiola_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving rhodiola to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving rhodiola to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+vivitrol_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving vivitrol to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving vivitrol to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+cigarette_methods
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving cigarettes to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving cigarettes to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+caffine_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving caffeine to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving caffeine to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+cold_turkey_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving going cold turkey to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving going cold turkey to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+ibogaine_method
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using a method involving ibogaine to aid in opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not mention using a method involving ibogaine to aid in opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+restless_legs_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes restless legs as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe restless legs as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+sleep_disorder_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes being sleepless as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe being sleepless as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+GI_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes gastrointestinal symptoms ,such as heartburn, indigestion, bloating, or constipation, as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe gastrointestinal symptoms as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+sweats_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes sweats as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe sweats as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+cold_sensitivity_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes cold sensitivity as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe cold sensitivity as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+nausea_vomiting_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes nausea and or vomiting as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe nausea and or vomiting as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+memory_loss_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes memory loss as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe memory loss as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+heartburn_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes heartburn as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe heartburn as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+headache_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes headaches as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe headaches as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+sore_throat_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes sore throats as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe sore throats as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+cold_flu_fever_symptom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes the cold, flu or fevers as a symptom of their opiate withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe the cold, flu or fevers as a symptom of their opiate withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+recovery:
+
+offering_advice
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user offers advice on opiate recovery or withdrawal.  
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not offer advice on opiate recovery or withdrawal.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+challenges_through_recovery
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes challenges and accomplishments throughout the process of opiate withdrawal and recovery.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe challenges and accomplishments throughout the process of opiate withdrawal and recovery.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+danger_of_opiates
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes the dangers of using opiates.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe the dangers of using opiates.   
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+xanax
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and xanax.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and xanax.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+benzodiazepam
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and benzodiazepam.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and benzodiazepam.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+ambien
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and ambien.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and ambien.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+aderall
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and aderall.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and aderall.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+marijuana
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and marijuana.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and marijuana.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+cigarettes
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and cigarettes.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and cigarettes.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+cocaine
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and cocaine.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and cocaine.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+ketorolac
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and ketorolac.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and ketorolac.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+vinegar
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and vinegar.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and vinegar.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+alcohol
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and alcohol.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and alcohol.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+amphetamine
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and amphetamines.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and amphetamines.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+imodium
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user describes using both opiates and imodium.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not describe using both opiates and imodium.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+off-topic:
+
+public_health_awareness
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user is making a public health awareness statement regarding opiates.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is not making a public health awareness statement regarding opiates.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+seeking_community
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user is seeking community with other users in the post.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is not seeking community with other users in their post.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+other_persons_opiate_use
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user is referring to another persons opiate use.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is not referring to another persons opiate use.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+entertainment
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user makes a statement regarding entertainment or news with a link to an article or video.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user is does not make a statement regarding entertainment or the news with no link to an article or video.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+questions:
+
+opiate_use_lifestyle
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about opiate use lifestyle. That is any question about opiates that is not spicifically about administration or effects.   
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about opiate use lifestyle.  
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+technical_drug_use
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about technical opiate use. That is any question about opiates specifically about administration or effects.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about technical opiate use.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+effects
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about effects of opiates.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the effects of opiates.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+methadone
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug methadone.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug methadone.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+suboxone
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug suboxone.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug suboxone.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+improper_use
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about improper use for withdrawal.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about improper use for wihdrawal.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+misc_question
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a general question unrelated to opiate use.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+subutex
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug subutex.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug subutex.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+tramadol
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug tramadol.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug tramadol.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+weed
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug weed.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug weed.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+kratom
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug kratom.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug kratom.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+darvocet
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug darvocet.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug darvocet.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+vivitrol
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about the withdrawal drug vivitrol.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about the withdrawal drug vivitrol.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+relate_to_defeated
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks if others can relate to the experience of being defeated.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask if others can relate to the experience of being defeated.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+relate_to_recovery
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks if others can relate to the experience of recovery.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask if others can relate to the experience of recovery.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+relate_to_withdrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks if others can relate to the experience of withdrawal.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask if others can relate to the experience of withdrawal.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+relate_to_using
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks if others can relate to the experience of using.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask if others can relate to the experience of using.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+deal_with_relapse
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks how to deal with a relapse.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask how to deal with a relapse.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+recover_again
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks how to deal with a recover again after a relapse.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask how to recover again after a relapse.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+resetting_withrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks about resetting withdrawal time after a relapse.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask about resetting withdrawal time after a relapse.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+withdrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks general questions about withdrawal.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask general questions about withdrawal.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+withdrawal_symptoms
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks how bad withdrawal symptoms will be.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask how bad withdrawal symptoms will be.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+effects_of_withdrawal
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks about effects of withdrawal.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask about effects of withdrawal.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+withdrawal_pain
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks about how to deal with pain without opiates.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask about how to deal with pain without opiates.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+recovery_question
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks about recovery, the period of time after withdrawal symptoms have passed.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask about recovery.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+life_without_drugs
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks about how to have a life in recovery or withdrawal without drugs.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask about how to have a life in recovery or withdrawal without drugs.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+non-opiate_medication_question
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a non-opiate medication question.    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a non-opiate medication question.
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term.
+
+NA_meeting_question
+Analyze the addiction state language in the post and post title, and classify it according to the following rules:
+
+1. Label '1':
+  - Assign label '1' if the user asks a question about NA (Narcotics Anonymous).    
+  - Provide a verbatim section of the text that supports the label.
+
+2. Label '0':
+  - Assign label '0' if the user does not ask a question about NA (Narcotics Anonymous).
+  - Respond 'None' in the section of your response that supports the label.
+
+- Important Notes:
+- Addiction state language refers to mentions of use, withdrawal, or recovery related to opiate addiction.
+
+- Definitions of Addiction States:
+- Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. 
+- Withdrawal: The user has ceased or lowered their opiate intake. Opiate withdrawal is accompanied by a combination of physical and emotional symptoms.
+- Recovery: The user has finished detoxing and is attempting to sustain abstinence from opiates long term

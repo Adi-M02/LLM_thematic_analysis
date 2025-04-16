@@ -1,0 +1,73 @@
+Post ID: 2euvu7
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I was arrested and woke up in jail...what's the wackiest thing to happen to you or around you while you were out of your head?
+Theme: Opiate Use  Description: Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: while you were high
+
+
+theme creator 2 
+Theme: Opiate Use  Description: Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: I was arrested and woke up in jail...what's the wackiest thing to happen to you or around you while you were out of your head?
+Theme: Opiate Use  Description: Use: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: while you were high
+
+
+Post ID: 1nu173
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal from opiate use, characterized by physical and emotional symptoms experienced during detoxification.  Description: Recovery from opiate addiction, characterized by efforts to maintain abstinence and manage withdrawal symptoms. Example: I'm on day 3 of being clean after a couple of slip ups since deciding to get clean. I feel like death. My emotions are all over the place. Typical withdrawals.
+Theme: Seeking support and guidance from others who have experienced similar situations, as part of the recovery process.  Description: Fear of relapse into opiate addiction, particularly in situations that may trigger cravings or vulnerability. Example: I'm scared of how I'll react to it. Has anyone else been in this sort of situation? Any advice for getting through it without relapse?
+Theme: Use of prescription medication, particularly hydros, which are associated with the user's history of opiate addiction and potential triggers for relapse.  Description: Anxiety and stress related to upcoming events or situations that may trigger cravings or vulnerability. Example: The issue I've been dealing with today is almost silly in a way. It's something that I'm stressing out about a lot. I'm having my wisdom teeth removed in a few weeks.
+
+
+theme creator 2 
+Theme: Withdrawal from opiate use, characterized by physical and emotional symptoms experienced during detoxification.  Description: Recovery from opiate addiction, characterized by efforts to maintain abstinence and manage withdrawal symptoms. Example: I'm on day 3 of being clean after a couple of slip ups since deciding to get clean. I feel like death. My emotions are all over the place. Typical withdrawals.
+Theme: Seeking support and guidance from others who have experienced similar situations, as part of the recovery process.  Description: Fear of relapse into opiate addiction, particularly in situations that may trigger cravings or vulnerability. Example: I'm scared of how I'll react to it. Has anyone else been in this sort of situation? Any advice for getting through it without relapse?
+Theme: Stress and anxiety related to upcoming events or situations that may impact recovery, such as medical procedures.  Description: Use of opiate-related substances, such as hydromorphone, which can trigger cravings or vulnerability to relapse. Example: I know I'll be given a prescription of, most likely, hydros. Those are what I first got hooked on.
+
+
+Post ID: 2qhyvn
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery Progression  Description: Recovery, specifically discussing long-term abstinence from opiates Example: I am at solid landings rock solid recovery and am at day 5 of 90
+Theme: Barriers to Recovery  Description: Challenges in maintaining sobriety due to lack of resources (job, savings, support) Example: problem is i have no way to survive out here. no job no savings little to zero support.
+Theme: Access to Supportive Housing  Description: Seeking assistance with housing costs through sober living arrangements Example: So the only way would be to find a sober living that would pay half or some of the cost of the sober house.
+
+
+theme creator 2 
+Theme: Recovery Progression  Description: Recovery, specifically discussing long-term abstinence from opiates Example: I am at solid landings rock solid recovery and am at day 5 of 90
+Theme: Barriers to Recovery  Description: Challenges in maintaining sobriety due to lack of resources (job, savings, support) Example: problem is i have no way to survive out here. no job no savings little to zero support.
+Theme: Access to Supportive Housing  Description: Seeking assistance with housing costs through sober living arrangements Example: So the only way would be to find a sober living that would pay half or some of the cost of the sober house.
+
+
+Post ID: 651szn
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Tapering down opiate medication under medical supervision as part of the recovery process, indicating progress towards long-term abstinence from opiates without withdrawal symptoms or cravings for heroin use.   Description: Recovery from opiate addiction, characterized by sustained abstinence and progress towards long-term recovery. Example: I haven't had a dream about using in almost a month, I have a sweet new job lined up with benefits and a good, healthy living wage, and I'm on track from tapering down from 16mg to 2mg of suboxone daily.
+Theme: Self-reflection and personal growth through psychedelic experiences, leading to increased self-awareness and understanding of underlying motivations for addiction.  Description: Recovery milestones and achievements, such as maintaining sobriety, rebuilding relationships with non-using friends, and engaging in new experiences. Example: I got a lot of my core friends back, from before my addiction. Ones who don't use and are proud of the progress I've made.
+Theme: Gratitude for support from others and the desire to maintain a clean lifestyle, as expressed through the post title and closing message.  Description: Overcoming statistical odds of relapse and maintaining motivation towards long-term recovery. Example: I'm honestly surprised I'm doing so well solely because this is my first time ever, and statistically I should have relapsed a few times by now.
+
+
+theme creator 2 
+Theme: Tapering down opiate medication under medical supervision as part of the recovery process, indicating progress towards long-term abstinence from opiates without withdrawal symptoms or cravings for heroin use.   Description: Recovery from opiate addiction, characterized by sustained abstinence and progress towards long-term recovery. Example: I haven't had a dream about using in almost a month, I have a sweet new job lined up with benefits and a good, healthy living wage, and I'm on track from tapering down from 16mg to 2mg of suboxone daily.
+Theme: Self-reflection and personal growth through psychedelic experiences, leading to increased self-awareness and understanding of underlying motivations for addiction.  Description: Recovery milestones and achievements, such as maintaining sobriety, rebuilding relationships with non-using friends, and engaging in new experiences. Example: I got a lot of my core friends back, from before my addiction. Ones who don't use and are proud of the progress I've made.
+Theme: Gratitude for support from others in the recovery community and expressing hope for continued progress and success.  Description: Overcoming statistical odds of relapse and maintaining motivation towards long-term recovery. Example: I'm honestly surprised I'm doing so well solely because this is my first time ever, and statistically I should have relapsed a few times by now.
+Theme: Expressing appreciation for life's simple pleasures and finding joy in activities that bring happiness without substance use.  Description: Acknowledging the importance of mental health and self-care in maintaining sobriety and overall well-being. Example: I recently took a bunch of acid and thought about why I was addicted in the first place and learned a lot about myself, then I went to a glow-in-the-dark trampoline park (yes, while high on acid) and had a great time.
+Theme: Wishing others a 'clean day' and expressing solidarity with fellow individuals in recovery.  Description: Sharing personal experiences and milestones with others to maintain accountability and connection within the recovery community. Example: I just felt I'd check in and see how everyone is doing, as well as mark my time and talk a bit about how I'm doing.
+
+
+Post ID: 86dnqg
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: So August 1st I’ll be quitting my job and going back to school full time.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, experiencing withdrawal symptoms such as anxiety, vivid dreams, and fatigue. Example: I’ve been waking up with a lot of anxiety which sucks but it does seem to fade once I start my day and get moving. My sleep has been getting better, got 6 hours the past 2 nights which is great but still feel tired and unmotivated throughout the day and the dreams I’ve been getting have been super vivid and weird.
+
+
+theme creator 2 
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: So August 1st I’ll be quitting my job and going back to school full time.
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake, experiencing withdrawal symptoms such as anxiety, vivid dreams, and fatigue. Example: I’ve been waking up with a lot of anxiety which sucks but it does seem to fade once I start my day and get moving. My sleep has been getting better, got 6 hours the past 2 nights which is great but still feel tired and unmotivated throughout the day and the dreams I’ve been getting have been super vivid and weird.
+
+

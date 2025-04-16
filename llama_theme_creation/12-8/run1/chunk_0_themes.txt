@@ -1,0 +1,72 @@
+Post ID: 6trb3k
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Relapse Cravings  Description: The struggle with cravings and desire to relapse despite progress in recovery. Example: I just miss how good the needle feels and the warm rush. I miss the fast life, late nights, loud music, excitement, the uncertainty and danger.
+Theme: Fear of Relapse Consequences  Description: The fear of losing everything achieved in recovery due to relapse. Example: I really think that if I didn't have time hanging over my head and the possibility of losing my son if I fuck up again, I'd probably be high by now as bad as that sounds.
+Theme: Sobriety Boredom  Description: The struggle with feelings of boredom and isolation in sobriety. Example: Don't get me wrong, I'm grateful for everything and everyone in my life, but damn, being sober gets so boring sometimes.
+Theme: Recovery Loneliness  Description: The struggle with feelings of inadequacy and loneliness as a single mother in recovery. Example: And being a young single mom is hard. I feel like I'm going to be alone forever because no one wants a sober girl with a kid.
+Theme: Escapism Nostalgia  Description: The struggle with the desire for escapism and the nostalgia for past experiences. Example: Shit. I can't stop dreaming about going to cop, hitting up a safe spot, and nodding out. Good times?.. and then I forget about the nights of endless crying, multiple suicide attempts, and complete isolation.
+
+
+theme creator 2 
+Theme: Relapse Cravings  Description: The struggle with cravings and desire to relapse despite progress in recovery. Example: I just miss how good the needle feels and the warm rush. I miss the fast life, late nights, loud music, excitement, the uncertainty and danger.
+Theme: Fear of Relapse Consequences  Description: The fear of losing everything achieved in recovery due to relapse. Example: I really think that if I didn't have time hanging over my head and the possibility of losing my son if I fuck up again, I'd probably be high by now as bad as that sounds.
+Theme: Sobriety Boredom  Description: The struggle with feelings of boredom and isolation in sobriety. Example: Don't get me wrong, I'm grateful for everything and everyone in my life, but damn, being sober gets so boring sometimes.
+Theme: Recovery Loneliness  Description: The struggle with feelings of inadequacy and loneliness as a single mother in recovery. Example: And being a young single mom is hard. I feel like I'm going to be alone forever because no one wants a sober girl with a kid.
+Theme: Escapism Nostalgia  Description: The struggle with the desire for escapism and the nostalgia for past experiences. Example: Shit. I can't stop dreaming about going to cop, hitting up a safe spot, and nodding out. Good times?.. and then I forget about the nights of endless crying, multiple suicide attempts, and complete isolation.
+
+
+Post ID: 2po33a
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting, expressing desire to continue using or obtain more opiates. Example: You think I can get more or better pills if and when I go back?
+Theme: Seeking Medical Opiate Supply  Description: Request for medical professional's assistance in obtaining more opiates, indicating a desire to continue using them. Example: You think I can get more or better pills if and when I go back?
+
+
+theme creator 2 
+Theme: Opiate Use  Description: Use of opiates without consideration of quitting, expressing desire to continue using or obtain more. Example: You think I can get more or better pills if and when I go back?
+Theme: Request for Medical Assistance with Opiate Access  Description: Request for medical professional's assistance in obtaining opiates. Example: Any advice would be dank hahahah
+
+
+Post ID: 3le8du
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+
+
+theme creator 2 
+
+
+Post ID: 2i7zgb
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Recovery  Description: Recovery state characterized by a long-term commitment to abstinence from opiates. Example: I've been in recovery for two months, and I'm really looking forward to celebrating my friend's union sober.
+Theme: Recovery  Description: User is preparing for a challenging situation (social event) without using substances, indicating a strong commitment to their recovery. Example: I've decided to go to the wedding and will not be drinking with them. I have some Antabuse should I need it...
+Theme: Recovery  Description: User is reflecting on their progress in recovery, expressing gratitude for the positive changes they've experienced. Example: I thank god for this change, and I can't believe how good sobriety feels. Being clear minded, making real connections with people; I'm starting to love myself again.
+
+
+theme creator 2 
+Theme: Recovery Progress  Description: Recovery state characterized by a long-term commitment to abstinence from opiates. Example: I've hemmed and hauled about weather or not to go, but after getting advice from my IOP group, NA home group, and therapists; I have decided to go.
+Theme: Sobriety Benefits  Description: Recovery state characterized by a sense of accomplishment and gratitude for the change. Example: I thank god for this change, and I can't believe how good sobriety feels.
+Theme: Testing Sobriety  Description: Recovery state characterized by a desire to test one's resolve in challenging situations. Example: This will be the first trip I have every taken sober, and I'm really looking forward to it. This will be a good test.
+Theme: Self-Improvement in Recovery  Description: Recovery state characterized by a sense of self-improvement and self-love. Example: Being clear minded, making real connections with people; I'm starting to love myself again..
+
+
+Post ID: 5s9xqw
+Human generated themes:
+Theme: Opiate Use Discussion  value: 1 Theme: Withdrawal Methods  value: 0 Theme: Withdrawal Symptoms  value: 0 Theme: Tangentially Related Discussion  value: 0 Theme: Addiciton Self-Reflection and Advice  value: 1 LLM generated themes:
+theme creator 1 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing withdrawal symptoms. Example: I won't have access to any more for at least a week. I'm forcing myself to detox from a pretty large opiate habit,
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I really want to STAY clean this time,
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates to prepare to quit. Example: One month and 8 grams of OxyContin later here I am with no opiates and no way to get them. Prior to this I was doing a gram of heroin every two days,
+
+
+theme creator 2 
+Theme: Withdrawal  Description: The user has ceased or lowered their opiate intake and is experiencing withdrawal symptoms. Example: I won't have access to any more for at least a week. I'm forcing myself to detox from a pretty large opiate habit,
+Theme: Recovery  Description: The user has finished detoxing and is attempting to sustain abstinence from opiates long term. Example: I really want to STAY clean this time, and I'm hoping some of you guys will have advice on how to do so.
+Theme: Use  Description: The user is engaged in opiate use without consideration of quitting or expressing desire to stop using opiates. Example: Prior to this I was doing a gram of heroin every two days, so the oxy was actually a step down from what I was doing.
+
+

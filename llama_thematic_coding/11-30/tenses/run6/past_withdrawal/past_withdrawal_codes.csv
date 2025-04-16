@@ -1,0 +1,772 @@
+post_id,predicted_tense,true_tense,verbatim_example,exact_match
+3dy8wl,0,0,None,True
+3igqrf,0,1,None,True
+3igsr7,0,1,None,True
+3nt5ew,0,1,None,True
+3nt86s,0,1,None,True
+518v54,0,0,None,True
+5bd6hr,0,0,None,True
+5euhxf,0,0,None,True
+5fs1yf,0,0,None,True
+5phzns,0,0,None,True
+5uo9xj,0,0,None,True
+5yylq2,0,0,None,True
+6h9s3x,0,0,None,True
+6qiqc7,0,0,None,True
+7tks4h,0,0,None,True
+9k4o50,1,0,nearly a year clean,True
+ba5tou,0,0,None,True
+700v7d,0,0,None,True
+7063a7,0,0,None,True
+70ke56,0,0,None,True
+71trdu,0,0,None,True
+728w57,0,0,None,True
+3cqp6y,0,0,None,True
+3cqya9,0,0,None,True
+3e1b5s,0,0,None,True
+6zkt8s,0,0,None,True
+7004qt,1,0,I've been 4 months sober,True
+73ps8l,1,0,I've only got 5 months,True
+4uxokl,0,0,None,True
+4v188e,0,0,None,True
+516elz,0,0,None,True
+51asc3,0,0,None,True
+534g0g,0,0,None,True
+55a8ps,0,0,None,True
+57jr8x,0,0,None,True
+5ri9pf,0,0,None,True
+68a9dh,0,0,None,True
+6rltyf,0,0,None,True
+71cl8c,0,0,None,True
+71clao,0,0,None,True
+77f9yb,0,0,None,True
+607niv,0,0,None,True
+61qx2n,0,0,None,True
+62sbkv,0,0,None,True
+63rnxs,0,0,None,True
+64xkmj,0,0,None,True
+65uequ,0,0,None,True
+6a5yn8,1,0,Almost 50 days in,True
+6ebujs,0,0,None,True
+6inwke,1,0,Anniversary of my mom's passing and 90 days clean,True
+9x54pd,0,0,None,True
+a3ri4d,0,0,None,True
+a43ojt,0,0,None,True
+55ajwt,0,0,None,True
+57ejx7,0,0,None,True
+6icb2z,1,0,Six months ago I couldn't even go 60 minutes without having to use something,True
+6icc1u,1,0,Six months and some change ago I couldn't even go 60 minutes without having to use something,True
+6knqqt,1,0,get me through those hard times,True
+6xydw9,0,0,None,True
+725rhw,1,0,"9 months ago I was in a hospital bed, could barely walk and breathe",True
+725rta,1,0,Nine Months,True
+7lu1ed,1,0,a year ago I was in a hospital bed,True
+7lu2i9,1,0,I stopped withdrawing last week,False
+5oht74,0,0,None,True
+5ope6e,0,0,None,True
+5ow3t9,0,0,None,True
+5p45ip,0,0,None,True
+5paxbr,0,0,None,True
+5pieag,0,0,None,True
+5po74b,0,0,None,True
+5q2yd7,0,0,None,True
+5q5z00,0,0,None,True
+5qam5y,0,0,None,True
+5qh7o9,0,0,None,True
+5qnoyr,0,0,None,True
+5qul95,0,0,None,True
+5r0lya,0,0,None,True
+5r8afs,0,0,None,True
+5rf4hs,0,0,None,True
+5rmcy7,0,0,None,True
+5rtnk6,0,0,None,True
+5s0p8o,0,0,None,True
+5sdy7b,0,0,None,True
+5ssayz,0,0,None,True
+5szjvv,0,0,None,True
+5t6muw,0,0,None,True
+5tm4rq,0,0,None,True
+5uej8s,0,0,None,True
+2r79os,0,0,None,True
+2rb273,0,0,None,True
+2rfvru,0,0,None,True
+5sjje4,1,0,haven't been using for almost two months,True
+66t8t7,1,0,Day 3,True
+6e1wbk,0,0,None,True
+6jilbu,0,0,None,True
+6jkz19,1,0,Coming on three days,True
+6jprrk,0,0,None,True
+6jqqi2,0,0,None,True
+6jtam9,0,0,None,True
+6k0l82,0,0,None,True
+6k5gpv,1,0,Day 5,True
+6kkxof,1,0,I've made it this far,True
+6r2vt5,0,0,None,True
+6r4qyt,0,0,None,True
+7y61tu,1,0,Clean since December 31,True
+y55tq,0,0,None,True
+ygg2m,0,0,None,True
+zzech,0,0,None,True
+189jzm,0,0,None,True
+1dcxyt,0,0,None,True
+1ip2y2,0,0,None,True
+28ltk2,0,0,None,True
+2y148m,0,0,None,True
+379lfx,0,0,None,True
+3d7135,0,0,None,True
+3gezxz,0,0,None,True
+3glfpd,0,0,None,True
+3nqeie,1,0,nodding hard on the couch,True
+40inra,0,0,None,True
+49iuq9,0,0,None,True
+49ommq,0,0,None,True
+84utu0,0,0,None,True
+7k1few,0,0,None,True
+7tdpm3,1,0,found a bottle of morphine in the garage,True
+7xiifr,1,0,I stopped withdrawing last week,False
+8dfzx9,0,0,None,True
+8ektq0,ERROR,0,ERROR,False
+8o0sp1,1,0,nearly 6 months sober,True
+930v7p,0,0,None,True
+6io4hs,1,0,I stopped withdrawing last week and am starting to feel like myself again.,False
+77vqr1,1,0,None,True
+7dnif5,1,0,stopped withdrawing last week,False
+7sy08z,0,0,None,True
+8ro6ec,1,0,"I was in recovery, and actually a year or so into it at that point",True
+3l5nw6,0,0,None,True
+3m8tmw,0,0,None,True
+3rva6k,0,0,None,True
+3rveij,0,0,None,True
+422c1l,1,0,Been clean two years,True
+43l956,0,0,None,True
+481d1a,0,0,None,True
+49vwv2,1,0,I haven't shot dope in two years,True
+4bquxv,1,0,I haven't touched an opiate in over two years,True
+7pej2i,recovery,0,None,True
+7xpgw5,1,0,I stopped withdrawing last week and am starting to feel like myself again,False
+8s2nwu,0,0,None,True
+a041t0,1,0,had a rough time visiting home,True
+aahjui,1,0,over 1 year into sobriety,True
+5vveqc,0,0,None,True
+71ng3x,0,0,None,True
+72vmr4,0,0,None,True
+73yc0j,0,0,None,True
+74t8q6,0,0,None,True
+7brnf4,0,0,None,True
+7t9p86,0,0,None,True
+7tklhm,0,0,None,True
+7uke35,0,0,None,True
+819ivi,0,0,None,True
+81qb6u,0,0,None,True
+851jqd,0,0,None,True
+88dktr,0,0,None,True
+8a44dc,0,0,None,True
+8a8cwd,0,0,None,True
+8cdcoj,0,0,None,True
+8e12qh,0,0,None,True
+8ju7q8,0,0,None,True
+8lkudz,0,0,None,True
+8o62i0,0,0,None,True
+8pfne2,0,0,None,True
+8pm7yp,0,0,None,True
+8wmy45,0,0,None,True
+58dd82,0,0,None,True
+5qxv7q,0,0,None,True
+5r9qbq,0,0,None,True
+5t56zt,0,0,None,True
+5zg351,0,0,None,True
+67whz4,0,0,None,True
+6rly0p,0,0,None,True
+6u3x5c,0,0,None,True
+6u5lb7,0,0,None,True
+6u9715,1,0,I'm done with heroin for good,True
+6ualhi,0,0,None,True
+682d3b,0,0,None,True
+6eijd4,0,0,None,True
+6fg1j6,1,0,I've been at this particular house for a month,True
+6trb3k,1,0,I've been sober for 13 months,True
+7bmrck,0,0,None,True
+7ru9l7,1,0,7/18/16 was the day I actually got sober,True
+8lklgw,1,0,Almost sober 2 years,True
+962cbt,1,0,Its been so long,True
+6ecox4,0,0,None,True
+6ejlt5,1,0,Day 16 without heroin,True
+6errz8,0,0,None,True
+6exs63,0,0,None,True
+6eyew8,0,0,None,True
+6fcck9,0,0,None,True
+6g781q,0,0,None,True
+6golmf,0,0,None,True
+6gou8x,0,0,None,True
+6iaj3m,1,0,Today i am 15 days off heroin,True
+6ihpnl,0,0,None,True
+6jbkfz,0,0,None,True
+6jfyax,0,0,None,True
+6m41ju,0,0,None,True
+6n19x9,1,0,Day 39 Heroin Free,True
+6pbh75,1,0,made it this far,True
+6tx04u,0,0,None,True
+6wx3ln,1,0,Im day 86 heroin free,True
+6zbm1j,0,0,None,True
+71ehhl,0,0,None,True
+77yau9,0,0,None,True
+7exdor,0,0,None,True
+7gjwh1,0,0,None,True
+7hl33q,0,0,None,True
+822896,1,0,Out of hospital and still clean,True
+8vel4c,1,0,Back on the Road to Recovery,True
+9wveea,1,0,I have been in rehab for the passed 3 months,True
+1ym4ee,0,0,None,True
+1yops0,0,0,None,True
+212fta,0,0,None,True
+23nup6,0,0,None,True
+2fl0x9,1,0,"After about 2 months of clean time, I started using again...I used every day for about a month...I got back into my outpatient rehab program",False
+2g6agl,0,0,None,True
+2h5exs,0,0,None,True
+2hlh1z,0,0,None,True
+2irzez,0,0,None,True
+2jea88,1,0,when I first moved back to Michigan,True
+2jv8il,0,0,None,True
+2jytmb,0,0,None,True
+2ked9w,1,0,None,True
+2lnrmz,1,0,100+ days later,True
+1pbnkc,1,0,Four months clean today,True
+1pha2r,1,0,Day 122,True
+1pnpvq,1,0,my first sober Halloween in 5 years,True
+1tzncq,1,0,Six months clean this week,True
+7gq0yc,1,0,90 days ago I was sitting in the IOP program at the Betty Ford Center stung out of my mind,True
+5lob90,0,0,None,True
+5tqmox,0,0,None,True
+600t7j,0,0,None,True
+60s37k,0,0,None,True
+61o3re,0,0,None,True
+64ndta,0,0,None,True
+64q2i1,0,0,None,True
+67d3f9,0,0,None,True
+67guh7,0,0,None,True
+6bdi2u,0,0,None,True
+6gicm6,0,0,None,True
+4whcxi,0,0,None,True
+4wmevz,0,0,None,True
+4yj9xi,0,0,None,True
+4yyk78,0,0,None,True
+4z0ik4,0,0,None,True
+507vuc,0,0,None,True
+50t068,0,0,None,True
+511dtc,0,0,None,True
+51afdr,0,0,None,True
+51av7r,0,0,None,True
+51i5g8,0,0,None,True
+55fkee,0,0,None,True
+709dzb,0,0,None,True
+70i6vv,0,0,None,True
+70p8a0,0,0,None,True
+717jp7,0,0,None,True
+73dkzj,0,0,None,True
+75me0h,0,0,None,True
+75v3o8,0,0,None,True
+76s9o0,0,0,None,True
+7x8stk,0,0,None,True
+84a91v,0,0,None,True
+3gk4rv,0,0,None,True
+56784z,1,0,Fighting the temptations at 8 months clean,True
+586zw6,0,0,None,True
+4u51gl,0,0,None,True
+4ubmn6,0,0,None,True
+4vo6wf,0,0,None,True
+561s45,0,0,None,True
+56u4hy,0,0,None,True
+5kmnc9,0,0,None,True
+5lclr7,1,0,finishing up my fifth day sober-ish,True
+5liang,0,0,None,True
+5s9xqw,0,0,None,True
+65cv05,0,0,None,True
+66uruk,0,0,None,True
+67qd20,0,0,None,True
+684n6j,0,0,None,True
+68nqa7,0,0,None,True
+69xqnx,0,0,None,True
+6b9sv9,0,0,None,True
+6b9xty,0,0,None,True
+6ch1pr,0,0,None,True
+6f1fyi,0,0,None,True
+6iadgq,0,0,None,True
+6iafug,0,0,None,True
+71bh1s,1,0,was heavily addicted to heroin last year but have been clean since June 14,True
+7a369f,0,0,None,True
+7a37vk,0,0,None,True
+7bh2h1,0,0,None,True
+7d4os4,0,0,None,True
+7rtg8w,0,0,None,True
+7ry0e9,0,0,None,True
+7t7r8p,0,0,None,True
+8esvcs,0,0,None,True
+6pti31,1,0,Been two years since last opiate usage,True
+6rq4jr,0,0,None,True
+6s4f3m,0,0,None,True
+6s4g3u,0,0,None,True
+6s9hcr,0,0,None,True
+6sfhn8,0,0,None,True
+6t76hx,0,0,None,True
+6t7aid,0,0,None,True
+6t7dy4,0,0,None,True
+6te5tz,0,0,None,True
+6te81p,0,0,None,True
+6tkb44,0,0,None,True
+7aan22,1,0,Officially two years sober,True
+7d3drl,1,0,now that I'm sober,True
+7h5zeb,0,0,None,True
+81trra,0,0,None,True
+82kro2,0,0,None,True
+864n60,0,0,None,True
+866m4p,0,0,None,True
+86gisl,0,0,None,True
+86wml6,0,0,None,True
+8adleu,0,0,None,True
+8hk9f1,0,0,None,True
+8tn4nf,0,0,None,True
+8u4r94,0,0,None,True
+96dht9,0,0,None,True
+973ctk,0,0,None,True
+98i3nc,0,0,None,True
+9a8qun,0,0,None,True
+813uhb,0,0,None,True
+81bdva,0,0,None,True
+81nzm1,0,0,None,True
+82lbna,0,0,None,True
+83eb0b,0,0,None,True
+84cko6,0,0,None,True
+85p8rf,0,0,None,True
+8bd9d1,0,0,None,True
+8w46n9,1,0,just over 4 mos. clean,True
+958rvq,1,0,Made it through a pretty rough trigger,True
+au0blm,1,0,1 year removed from an addiction,False
+2ygt26,0,0,None,True
+2yr9h0,0,0,None,True
+2ytend,0,0,None,True
+2yv6rl,1,0,One. Week. CLEAN!,True
+2z48lr,0,0,None,True
+2zay7h,0,0,None,True
+2zh8zg,0,0,None,True
+2znfx6,1,0,I have been clean for two weeks now,True
+2zyvaz,0,0,None,True
+30g3oc,0,0,None,True
+30nqve,1,0,Three weeks ago My body went through an absolute horror show of pain.,False
+319i06,1,0,Four weeks ago,True
+31nhy0,0,0,None,True
+31u79l,0,0,None,True
+322nga,1,0,Five weeks sober,True
+32y8tc,1,0,Six weeks clean,True
+34h01x,1,0,"eight weeks, I think",True
+36d0kl,1,0,Getting off the shit was hell,True
+38qu2a,1,0,I haven't been here in a while... Still clean as a whistle,False
+300yu5,0,0,None,True
+3qjtg2,1,0,Today marks 1 year of Sobriety,True
+3qqd04,0,0,None,True
+3rf7l6,0,0,None,True
+59w2as,1,0,I have two years sober today,True
+5hqafy,0,0,None,True
+79cnsc,1,0,I stopped taking suboxone and was fully off any type of narcotic 3 years ago,False
+9sdokj,1,0,Yesterday was my 4 years sober,True
+7aua4u,1,0,8 months sober,True
+9p4b20,0,0,None,True
+9rnwdl,0,0,None,True
+9uia52,0,0,None,True
+9ulwjb,0,0,None,True
+33006o,0,0,None,True
+37aze9,0,0,None,True
+38m7en,0,0,None,True
+39zap1,0,0,None,True
+3e3bbi,0,0,None,True
+3up5g3,1,0,I haven't touched an opiate in almost 5 months,True
+4l2ag5,0,0,None,True
+4tpjx0,0,0,None,True
+51cous,0,0,None,True
+5d90vf,0,0,None,True
+6ozbun,0,0,None,True
+6rafnn,0,0,None,True
+7g1vqd,0,0,None,True
+7g5du4,0,0,None,True
+7gyelj,0,0,None,True
+7jw8g6,0,0,None,True
+7rgp0u,0,0,None,True
+7t30ft,0,0,None,True
+7tzxdn,1,0,kicked my h habit about 3 weeks ago,True
+8y0e1z,0,0,None,True
+949sge,0,0,None,True
+96lipy,0,0,None,True
+9xg6r4,1,0,Clean for 3 months,True
+9xi2xi,1,0,3 months clean,True
+aavq25,0,0,None,True
+afpnp5,0,0,None,True
+afx8yx,0,0,None,True
+al79i4,0,0,None,True
+alh546,0,0,None,True
+6s0j7i,0,0,None,True
+6s4xxo,1,0,Day 5,True
+6s7xs8,0,0,None,True
+6sar1g,0,0,None,True
+6sd792,1,0,Day 6,True
+6sljr4,0,0,None,True
+6svd9w,0,0,None,True
+6t3kmz,0,0,None,True
+6tftx6,0,0,None,True
+6txtfr,0,0,None,True
+6ulw5h,0,0,None,True
+72a4kn,1,0,Day 50 something,True
+56618n,0,0,None,True
+6u5ay9,1,0,I genuinely feel like I'm almost back to who I was before the opiates took over my life,True
+8fyak2,0,0,None,True
+95rt7a,1,0,Now I am one of those people,True
+9lvjm6,1,0,it's been about 4 months off opiates,True
+1lnlpj,0,0,None,True
+1tf3eu,0,0,None,True
+21twgm,0,0,None,True
+2270sz,1,0,I felt completely fine,True
+2e3dti,0,0,None,True
+2o2x9k,0,0,None,True
+2p3z7g,0,0,None,True
+2qazkg,1,0,been clean now from heroin,True
+2qyi32,1,0,stay sober now for 6 weeks and 3 days,True
+32g10n,1,0,Sober roughly four months now,True
+3igjpx,1,0,10 months sober,True
+3qpa18,1,0,wrote in impatient almost a year ago,True
+3t0tvc,1,0,Now sober,True
+6goqfz,1,0,Exactly 5 months from my 3 years being sober,True
+7ja12y,0,0,None,True
+7k5hvx,0,0,None,True
+7km083,0,0,None,True
+7lowxe,0,0,None,True
+7p6600,0,0,None,True
+7svg3u,0,0,None,True
+7tj2l7,0,0,None,True
+7triel,0,0,None,True
+7u95fx,0,0,None,True
+8glscb,0,0,None,True
+8gtkgq,0,0,None,True
+96xltz,0,0,None,True
+97ozql,1,0,Two months off heroin,True
+9dyqcs,0,0,None,True
+9pvhtb,0,0,None,True
+9v6zja,0,0,None,True
+c94690,0,0,None,True
+c9vpjg,0,0,None,True
+cggvwi,0,0,None,True
+2po33a,0,0,None,True
+2tln7x,0,0,None,True
+37oykz,0,0,None,True
+3d87cf,0,0,None,True
+3lh2yv,0,0,None,True
+3li7sr,0,0,None,True
+3lnjiv,0,0,None,True
+3o1ofl,0,0,None,True
+3omxe0,0,0,None,True
+31jxvi,0,0,None,True
+39mu1q,0,0,None,True
+3d63dz,0,0,None,True
+3djk9q,0,0,None,True
+3erc0l,0,0,None,True
+3irkvv,0,0,None,True
+3k3ymy,0,0,None,True
+3xgj38,0,0,None,True
+459p1q,0,0,None,True
+6nvhdx,0,0,None,True
+6w6ajl,0,0,None,True
+6w6ct6,0,0,None,True
+75qae3,0,0,None,True
+75r713,0,0,None,True
+75z5f4,0,0,None,True
+76n8qh,0,0,None,True
+76susr,0,0,None,True
+7bwab7,0,0,None,True
+7d78f1,0,0,None,True
+7imefg,0,0,None,True
+7kf1zl,0,0,None,True
+7l47az,0,0,None,True
+7lo8k1,0,0,None,True
+7lo9eb,0,0,None,True
+7mvmnk,0,0,None,True
+7npcnm,0,0,None,True
+7szari,0,0,None,True
+8461tt,0,0,None,True
+86dnqg,0,0,None,True
+88suop,0,0,None,True
+8ch13k,0,0,None,True
+8e96en,0,0,None,True
+8rw114,0,0,None,True
+8rw3kr,0,0,None,True
+9a289p,0,0,None,True
+9oq7uc,0,0,None,True
+4su46z,0,0,None,True
+4weq7w,0,0,None,True
+4wz1zk,0,0,None,True
+4x0qdw,0,0,None,True
+4xhg43,0,0,None,True
+3vgc3p,0,0,None,True
+5b0wy1,0,0,None,True
+5hievf,0,0,None,True
+5k1o0g,0,0,None,True
+5k1oee,0,0,None,True
+5ogbx0,0,0,None,True
+5tkele,0,0,None,True
+6pevu3,0,0,None,True
+6so434,0,0,None,True
+6yx7cl,0,0,None,True
+7g4wqe,0,0,None,True
+7utwml,0,0,None,True
+7wgn6u,0,0,None,True
+7zoddk,0,0,None,True
+8ty54o,0,0,None,True
+9eheaz,0,0,None,True
+64ib16,1,0,90 days sober,True
+65amiz,1,0,Now that I'm sober,True
+6bungt,0,0,None,True
+6bv001,0,0,None,True
+6d0m6u,0,0,None,True
+6eni2i,0,0,None,True
+6f6hm3,0,0,None,True
+6gquvp,0,0,None,True
+6jsh71,0,0,None,True
+6s32sv,0,0,None,True
+6vx1z8,0,0,None,True
+75usyl,0,0,None,True
+9r7jvb,0,0,None,True
+9rgnuu,0,0,None,True
+akkd6f,0,0,None,True
+21qjm8,ERROR,0,ERROR,False
+2chamm,0,0,None,True
+2dgb15,0,0,None,True
+2dqm1m,0,0,None,True
+2dtp5p,0,0,None,True
+2ekc5q,0,0,None,True
+2eu61b,0,0,None,True
+2f6l3u,0,0,None,True
+2fqh63,0,0,None,True
+2fyi7y,0,0,None,True
+2g8wqx,0,0,None,True
+2h236d,1,0,I am clean,True
+2hcdfs,1,0,had a minor drug dream last night,True
+2i7zgb,1,0,I've decided to go,False
+2ivdyt,1,0,"I stopped withdrawing last week is not present but I've now officially moved from the rehabilitation phase, to the aftercare phase",False
+2lr7de,0,0,None,True
+2n5vj8,1,0,105 days today,True
+2nkbfq,1,0,It's day 110 for me since I last used opiates,True
+3gcc7r,1,0,I finally asked for help and went to rehab,True
+2hoo9h,0,0,None,True
+2icg4d,0,0,None,True
+2j8zso,0,0,None,True
+2jlf7o,0,0,None,True
+2johmn,0,0,None,True
+2ljykd,0,0,None,True
+8jsh11,0,0,None,True
+8kow2v,0,0,None,True
+912r36,0,0,None,True
+930pja,0,0,None,True
+18hogu,0,0,None,True
+1g3x3z,0,0,None,True
+1m04ox,0,0,None,True
+24oizv,1,0,after quitting H for almost 2 years,True
+2eo8fu,0,0,None,True
+2qegjj,0,0,None,True
+2qraq3,0,0,None,True
+2uted8,0,0,None,True
+2zlapn,0,0,None,True
+2ztmsi,0,0,None,True
+354b3f,0,0,None,True
+356qxg,0,0,None,True
+374yoy,0,0,None,True
+3b662j,1,0,"After 90 hours since my last oxycodone dose, I can officially say that I am withdrawal free",True
+5cfk3y,0,0,None,True
+5do5w4,0,0,None,True
+5e021n,0,0,None,True
+5lmr46,0,0,None,True
+5m7uxx,0,0,None,True
+5m8cbd,0,0,None,True
+5vz0c8,0,0,None,True
+5wa2x6,0,0,None,True
+5wbuio,0,0,None,True
+5wvc6g,0,0,None,True
+626yao,0,0,None,True
+65cetl,ERROR,0,ERROR,False
+69elm6,1,0,addict in early recovery (Feb. 22),True
+6w32fm,1,0,six months clean,True
+5eyu2c,1,0,I stopped withdrawing last week and am starting to feel like myself again,False
+5fakxa,0,0,None,True
+5gec3u,0,0,None,True
+5k5ef8,0,0,None,True
+6h5m7b,1,0,managed to kick a 8 ball a day habit,True
+4g4vh6,0,1,None,True
+4i9974,0,0,None,True
+4ml4hi,0,0,None,True
+4op8in,0,0,None,True
+4z2mam,0,0,None,True
+557aht,0,0,None,True
+5899fw,0,0,None,True
+7v4a5x,0,0,None,True
+8e2q2w,0,0,None,True
+8foj96,0,0,None,True
+3l9j7c,0,0,None,True
+3le8du,ERROR,0,ERROR,False
+3lelam,Analysis,0,None,True
+3mo5w2,0,0,None,True
+3n2ovm,0,0,None,True
+3ntap0,0,0,None,True
+3plm0v,0,0,None,True
+5m1kxs,0,0,None,True
+5mois4,0,0,None,True
+5mt9d3,0,0,None,True
+5mybow,0,0,None,True
+5nrffi,0,0,None,True
+70e73c,0,0,None,True
+71fs3w,0,0,None,True
+73aox3,0,0,None,True
+82lvqg,0,0,None,True
+8y5xe0,1,0,celebrated 18 months clean,True
+913j09,1,0,I have a little over 18 months clean,True
+1d1z30,0,0,None,True
+1fi63n,0,0,None,True
+1mdn4w,1,0,have been opiate free for a respectable amount of time,True
+3ec0k1,0,0,None,True
+47821b,0,0,None,True
+2usdaq,1,0,60 days clean today,True
+3p630r,1,0,recovering,True
+42jqib,1,0,"I stopped withdrawing is not present in the text, but '6 months ago I overdosed' implies past withdrawal",False
+5tk2th,1,0,January 26th was my 18 months,True
+5y34e5,1,0,has (very) slowly improved over the last 20 months,True
+4wghw3,0,0,None,True
+4wn4lx,0,0,None,True
+4x22ko,0,0,None,True
+4x2cmy,0,0,None,True
+4x5tju,0,0,None,True
+4xfdei,0,0,None,True
+4xolj8,0,0,None,True
+4xth55,1,0,W/D's finished,True
+4xwgnk,0,0,None,True
+4y60d1,0,0,None,True
+4yd4cu,0,0,None,True
+4zfsrv,0,0,None,True
+50eob3,0,0,None,True
+50fctm,0,0,None,True
+50r0kv,0,0,None,True
+50uqqk,0,0,None,True
+51jogj,0,0,None,True
+51mlcc,0,0,None,True
+52f0y8,0,0,None,True
+52mzs8,0,0,None,True
+52no2p,0,0,None,True
+52qzf0,0,0,None,True
+60lats,0,0,None,True
+651szn,0,0,None,True
+6th6ut,0,0,None,True
+6toxjp,0,0,None,True
+722d29,0,0,None,True
+1k5gaz,0,0,None,True
+1lmluc,0,0,None,True
+1m1di0,0,0,None,True
+1ni8o7,0,0,None,True
+1vp1ae,0,0,None,True
+1wquz1,0,0,None,True
+1xeg63,0,0,None,True
+1zqlhf,0,0,None,True
+23pv38,0,0,None,True
+23vo4z,0,0,None,True
+25wok0,0,0,None,True
+25xrjo,0,0,None,True
+27hc44,0,0,None,True
+29pe97,0,0,None,True
+2b0q0j,0,0,None,True
+2c7h7s,0,0,None,True
+2o3xge,0,0,None,True
+2ocg89,0,0,None,True
+2xnxmu,0,0,None,True
+36cxa9,0,0,None,True
+5sb0ez,0,0,None,True
+5thap3,0,0,None,True
+5ura51,0,0,None,True
+5v9njc,0,0,None,True
+64ohbl,0,0,None,True
+65nbjs,0,0,None,True
+1peg8y,0,0,None,True
+1rpx11,0,0,None,True
+1s505e,0,0,None,True
+1s80yh,0,0,None,True
+1sez54,0,0,None,True
+2522nd,0,0,None,True
+27ilju,0,0,None,True
+27q7rn,0,0,None,True
+2cgdn8,1,0,Just got out of inpatient rehab,True
+2gyhsa,0,0,None,True
+2o8onl,0,0,None,True
+2qinso,1,0,"I stopped withdrawing last week is not present in the text but I have 93 days clean today!! Huge accomplishment for me, this is the longest I've been clean ever.",False
+53g3xm,0,0,None,True
+8fwt2u,0,0,None,True
+8je6i3,0,0,None,True
+8k1ipv,0,0,None,True
+8k1k5h,0,0,None,True
+8l6lf1,0,0,None,True
+94hw0w,1,0,Just hit 30 days clean,True
+99v50z,0,0,None,True
+9ty9nh,0,0,None,True
+a9vnxz,1,0,55 days sober today,True
+ah3b4a,1,0,since getting clean,True
+btujsy,1,1,almost 7 months clean,True
+bz8m4u,1,0,suffered for years quitting and relapsing,True
+5zufu4,0,0,None,True
+6onjd6,0,0,None,True
+6ooeq0,0,0,None,True
+6q4a92,0,0,None,True
+6qgu9j,0,0,None,True
+6r08x3,0,0,None,True
+6tjed3,0,0,None,True
+6vtbvd,0,0,None,True
+6ycv55,0,0,None,True
+6zysjf,0,0,None,True
+70fisp,0,0,None,True
+7bvqvj,0,0,None,True
+7k3g81,0,0,None,True
+8b1hh0,0,0,None,True
+8h9u39,1,1,I finally got off of dope using a sub taper. Coming up on 6 months clean from heroin/fent.,True
+3x916d,0,0,None,True
+3y8uqq,0,0,None,True
+3yo8bf,0,0,None,True
+431q6i,0,0,None,True
+456ewl,0,0,None,True
+45afjw,0,0,None,True
+4g8w0z,0,0,None,True
+4hv25r,0,0,None,True
+4zos1m,1,0,during WD,True
+5sl9q2,1,0,1 year clean today,True
+60a2qw,0,0,None,True
+8vcvnf,1,0,I have been off opiates for 3 years now,True
+bnfbis,1,0,I am long since clean,True
+6213cc,0,0,None,True
+65x0y0,0,0,None,True
+68tugp,0,0,None,True
+69rsvb,1,0,I couldn't take a damn nap to save my life,True
+6ubnhg,1,0,"I stopped withdrawing last week is not present but the post title and content indicate past withdrawal, so using 'had numerous chances to relapse' as evidence",False
+7b8yd7,1,0,I stopped withdrawing last week is not present in the text but 'I DID end up getting my life back' supports the label,False
+7pbgsj,1,0,experiencing withdrawal,True
+95s5im,0,0,None,True
+yrdfn,0,0,None,True
+11t3ai,0,0,None,True
+13hkwt,0,0,None,True
+16ksus,0,0,None,True
+1gd80o,0,0,None,True
+1t80g3,1,0,Just got back from rehab,True
+2h6z88,1,0,getting sober was the hardest thing I've ever gone through in my life,True
+3hgu09,0,0,None,True
+4tssfz,0,0,None,True
+4turk4,0,0,None,True
+4ty1r4,0,0,None,True
+4tydti,0,0,None,True
+4uimtr,0,0,None,True
+4vauox,0,0,None,True
+57t3eo,0,0,None,True
+5d3b6i,1,0,I'm finally over the worst of WD,True
+5nmk3j,1,0,I've been clean for a few months,True
+5xb5zz,0,0,None,True
+68t4xs,0,0,None,True
+6eatyc,0,0,None,True
+6fbatf,0,0,None,True
+6k1z9f,0,0,None,True
+7a1qci,0,0,None,True
