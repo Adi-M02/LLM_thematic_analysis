@@ -155,6 +155,8 @@ def prepare_data_for_excel(all_metrics, auc_results):
             'Hallucination Rate': hallucination_rate,
             'Accuracy': accuracy,
             'Macro F1': macro_f1,
+            'Macro Precision': metrics['macro_averages']['precision'],
+            'Macro Recall': metrics['macro_averages']['recall'],
             'Weighted F1': weighted_f1,
             'Weighted Precision': weighted_precision,
             'Weighted Recall': weighted_recall,
@@ -190,10 +192,14 @@ def collect_codes_metrics(base_dir):
 
 
 if __name__ == "__main__":
-    all_metrics = parse_all_metrics('val_set_results')
-    all_auc = calculate_all_auc(all_metrics)
+    # all_metrics = parse_all_metrics('val_set_results')
+    # all_auc = calculate_all_auc(all_metrics)
 
-    # Prepare and save data
-    df = prepare_data_for_excel(all_metrics, all_auc)
-    output_file = 'val_set_results_metrics.xlsx'
+    # # Prepare and save data
+    # df = prepare_data_for_excel(all_metrics, all_auc)
+    # output_file = 'val_set_results_metrics.xlsx'
+    # save_to_excel(df, output_file)
+    all_metrics = parse_all_metrics('llama_thematic_coding/12-7/test4')
+    df = prepare_data_for_excel(all_metrics, {})
+    output_file = 'llama_thematic_coding/12-7/test4_metrics.xlsx'
     save_to_excel(df, output_file)

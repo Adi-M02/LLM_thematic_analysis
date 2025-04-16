@@ -285,5 +285,5 @@ def get_post_theme_presence(post_id, coding_file='All_Codes_Manual_Analysis_fixE
     return themes
 
 if __name__ == "__main__":
-    # word_count()
-    parse_all_features()
+    word_count()
+    # parse_all_features()
